@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 // New Code
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/slomo_db');
+// var db = monk('localhost:27017/slomo_db');
+var db = monk('mongodb://slomo_mlab_user:alsterterasse1@ds127065.mlab.com:27065/slomo_mlab_db');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
