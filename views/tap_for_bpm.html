@@ -64,25 +64,31 @@
             if (bpmAvg < 1)
                 return
 
+            document.getElementById("submit_feedback").innerHTML = "sending...";
+//            document.submit_feedback.value = "sending...";
+
             var newResult = {'bpm': bpmAvg}
 
             // Use AJAX to post the object addresult service
             $.ajax({
                 type: 'POST',
                 data: newResult,
-                url: '/addresult',
-                dataType: 'JSON'
+                url: '/addresult'
+//                dataType: 'JSON'
             }).done(function (response) {
-//                // Check for successful (blank) response
-//                if (response.msg === '') {
-//                    // Clear the form inputs
+                //todo: not working, returning "undefined"
+//                document.getElementById("submit_feedback").innerHTML = "RESPONSE:";
+                // Check for successful (blank) response
+                if (response.msg === '') {
+                    document.getElementById("submit_feedback").innerHTML = "SUCCESS";
+                    // Clear the form inputs
 //                    $('#addUser fieldset input').val('');
-//                    // Update the table
-//                    populateTable();
-//                } else {
-//                    // If something goes wrong, alert the error message that our service returned
+                } else {
+                    // If something goes wrong, alert the error message that our service returned
+                    document.getElementById("submit_feedback").innerHTML = "FAILURE: " + response.msg;
+//                    document.getElementById("submit_feedback").innerHTML = "FAILURE: " + response.message;
 //                    alert('Error: ' + response.msg);
-//                }
+                }
             });
         }
 
@@ -183,6 +189,8 @@
         <p>(Tap once per measure for Measures Per Minute - set Pause to 5 seconds)</p>
 
         <input type="button" name="submit_button" value="SUBMIT" onclick="postResult()">
+
+        <p id="submit_feedback"></p>
 
 </center>
 

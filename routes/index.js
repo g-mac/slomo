@@ -8,22 +8,23 @@ router.get('/', function (req, res, next) {
 });
 
 /* POST to Add User Service */
-router.post('/addresult', function(req, res) {
+router.post('/addresult', function (req, res) {
     var db = req.db;
     var bpm = req.body.bpm;
     var collection = db.get('xpresults');
 
     // Submit to the DB
     collection.insert({
-        "bpm" : bpm,
+        "bpm": bpm,
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
             res.send("There was a problem adding the information to the database.");
-        }
-        else {
+        } else {
             // And forward to success page
-            res.redirect("/");
+            // res.send([{"message":"success!"}]);
+            res.send("");
+            // res.redirect("/");
         }
     });
 
