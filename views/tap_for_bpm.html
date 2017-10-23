@@ -1,7 +1,10 @@
 <html>
 <head>
     <title>Tap for Beats Per Minute BPM</title>
-    <script language="JavaScript">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="js/script.js"></script>-->
+    <script>
+
         var count = 0;
         var msecsFirst = 0;
         var msecsPrevious = 0;
@@ -54,9 +57,36 @@
             msecsPrevious = msecs;
             return true;
         }
+
         document.onkeypress = TapForBPM;
 
-        //  End -->
+        function postResult() {
+            if (bpmAvg < 1)
+                return
+
+            var newResult = {'bpm': bpmAvg}
+
+            // Use AJAX to post the object addresult service
+            $.ajax({
+                type: 'POST',
+                data: newResult,
+                url: '/addresult',
+                dataType: 'JSON'
+            }).done(function (response) {
+
+//                // Check for successful (blank) response
+//                if (response.msg === '') {
+//                    // Clear the form inputs
+//                    $('#addUser fieldset input').val('');
+//                    // Update the table
+//                    populateTable();
+//                } else {
+//                    // If something goes wrong, alert the error message that our service returned
+//                    alert('Error: ' + response.msg);
+                }
+            });
+        }
+
     </script>
 </head>
 
@@ -151,7 +181,10 @@
 
     <font face="arial, helvetica" size="-2">
 
-        <p>(Tap once per measure for Measures Per Minute - set Pause to 5 seconds)
+        <p>(Tap once per measure for Measures Per Minute - set Pause to 5 seconds)</p>
+
+        <input type="button" name="submit_button" value="SUBMIT" onclick="postResult()">
+
 </center>
 
 
