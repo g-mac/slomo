@@ -1,18 +1,134 @@
 <html lang="en">
 
 <head>
-    <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--custom css-->
     <link href="/stylesheets/style.css" rel="stylesheet">
+
+    <script>
+        var duration = 5;
+        var count = 0;
+        var msecsFirst = 0;
+        var msecsPrevious = 0;
+        var alternate = false;
+        var rotate = 0;
+
+        function TapForBPM(e) {
+//            document.getElementById("key_pressed").innerHTML = String.fromCharCode(e.which)
+
+            timeSeconds = new Date;
+            msecs = timeSeconds.getTime();
+
+
+//            if (alternate) {
+//                document.getElementById("switch").src = "/images/off1.png"
+////                document.getElementById("switch").src = "/images/off.png"
+//                alternate = false
+//            } else {
+//                document.getElementById("switch").src = "/images/on1.png"
+////                document.getElementById("switch").src = "/images/on.png"
+//                alternate = true
+//            }
+
+            switch (rotate) {
+                case 0:
+                    document.getElementById("switch").src = "/images/wheel2.png";
+                    rotate = 1;
+                    break;
+                case 1:
+                    document.getElementById("switch").src = "/images/wheel3.png";
+                    rotate = 2;
+                    break;
+                case 2:
+                    document.getElementById("switch").src = "/images/wheel4.png";
+                    rotate = 3;
+                    break;
+                case 3:
+                    document.getElementById("switch").src = "/images/wheel5.png";
+                    rotate = 4;
+                    break;
+                case 4:
+                    document.getElementById("switch").src = "/images/wheel1.png";
+                    rotate = 0;
+                    break;
+            }
+
+
+            if (count == 0) {
+                startTimer();
+                msecsFirst = msecs;
+                count = 1;
+            } else {
+                bpmAvg = 60000 * count / (msecs - msecsFirst);
+                count++;
+//                document.getElementById("bpm_avg").innerHTML = Math.round(bpmAvg * 100) / 100;
+//                document.TAP_DISPLAY.T_WHOLE.value = Math.round(bpmAvg);
+//                document.TAP_DISPLAY.T_TAP.value = count;
+            }
+            msecsPrevious = msecs;
+            return true;
+        }
+
+        document.onkeypress = TapForBPM;
+
+
+        function progress(timeleft, timetotal, $element) {
+            var progressBarWidth = $element.width() - ((timeleft - 1) / timetotal * $element.width());
+            $element.find('div').animate({width: progressBarWidth}, 1000, "linear");
+            if (timeleft > 1) {
+                setTimeout(function () {
+                    progress(timeleft - 1, timetotal, $element);
+                }, 1000);
+            } else {
+                setTimeout(function () {
+                    load_feedback();
+                    postResult();
+//                    experimentFinished();
+                }, 1000);
+            }
+        };
+
+        function startTimer() {
+            $('#progressBar').width =
+                progress(duration, duration, $('#progressBar'));
+        }
+
+        function experimentFinished() {
+        }
+
+    </script>
 </head>
 
 <body>
 <h1 class="display-4">Experiment</h1>
 <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
     tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_feedback()">Weiter</a></p>
+
+<!--<img id="switch" src="/images/off.png" style="width:100px">-->
+<!--<img id="switch" src="/images/off1.png" style="width:150px">-->
+<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">
+
+<br>
+<br>
+<br>
+
+
+<!--<br>-->
+<!--<p>KEY PRESSED:-->
+    <!--<font id="key_pressed" color="FF0000">none</font>-->
+<!--</p>-->
+
+<!--<p>BPM AVERAGE:-->
+    <!--<font id="bpm_avg" color="FF0000">none</font>-->
+<!--</p>-->
+<!--<br>-->
+
+
+<div id="progressBar">
+    <div style="width: 0"></div>
+</div>
+<br>
+
+<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="start()">Weiter</a></p>-->
+<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_feedback()">Weiter</a></p>-->
 </body>
 </html>

@@ -80,3 +80,19 @@ body {
         border-bottom: 0;
     }
 }
+
+#progressBar {
+    /*width: 90%;*/
+    /*margin: 10px auto;*/
+    height: 22px;
+    background-color: #b5b5b5;
+}
+
+#progressBar div {
+    height: 100%;
+    /*text-align: right;*/
+    /*padding: 0 10px;*/
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    /*width: 0;*/
+    background-color: #a15b59;
+}
