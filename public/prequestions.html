@@ -1,18 +1,76 @@
 <html lang="en">
 
 <head>
+
     <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<link rel="stylesheet" href="/javascripts/bootstrap.min.css">-->
+    <!--<script src="/javascripts/bootstrap.min.js"></script>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+    <!--jquery-->
+    <!--<script src="/javascripts/jquery.min.js"></script>-->
+
     <!--custom css-->
     <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--bootstrap-datepicker-->
+    <script type="text/javascript" src="/javascripts/bootstrap_datepicker/bootstrap-datepicker.min.js"></script>
+    <link href="/javascripts/bootstrap_datepicker/bootstrap-datepicker3.css" rel="stylesheet"/>
+
+    <!--bootstrap helpers-->
+    <link href="/javascripts/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/javascripts/bootstrap-formhelpers.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            var date_input = $('input[name="birthdate"]'); //our date input has the name "date"
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            var options = {
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            };
+            date_input.datepicker(options);
+        });
+
+    </script>
 </head>
 
 <body>
+
 <h1 class="display-4">Questionnaire</h1>
-<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
-    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+<br>
+<br>
+
+<div align="left">
+
+    <!--date of birth-->
+    <label for="dob">Date of Birth:</label>
+    <input class="form-control" type="text" name="birthdate" value="DD/MM/YYYY" id="dob"/>
+    <br>
+
+    <!--gender-->
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select class="form-control" id="gender">
+            <option>male</option>
+            <option>female</option>
+            <option>other</option>
+        </select>
+    </div>
+
+    <!--heritage-->
+    <label for="dob">Heritage:</label>
+    <form><select id="heritage" class="form-control bfh-countries"></select></form>
+    <!--<select class="form-control bfh-countries"></select>-->
+    <br>
+
+</div>
+
 <p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_experiment()">Start</a></p>
 </body>
 </html>
