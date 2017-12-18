@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {
     // res.render('index', {title: 'Express'});
-    res.render('tap_for_bpm', {title: 'EJS'});
+    res.render('main', {title: 'EJS'});
 });
 
 /* POST to Add User Service */
