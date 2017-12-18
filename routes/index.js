@@ -11,11 +11,21 @@ router.get('/', function (req, res, next) {
 router.post('/addresult', function (req, res) {
     var db = req.db;
     var bpm = req.body.bpm;
+    var lat = req.body.lat;
+    var long = req.body.long;
+    var accuracy = req.body.accuracy;
+    var userAgent = req.body.userAgent;
+    var date = generateDate();
     var collection = db.get('xpresults');
 
     // Submit to the DB
     collection.insert({
         "bpm": bpm,
+        "date": date,
+        "lat": lat,
+        "long": long,
+        "accuracy": accuracy,
+        "userAgent": userAgent
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
@@ -29,6 +39,14 @@ router.post('/addresult', function (req, res) {
     });
 
 });
+
+function generateDate() {
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+    return dateTime;
+}
 
 // -------- NOT IN USE --------
 

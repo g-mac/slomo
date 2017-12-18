@@ -9,6 +9,9 @@
         var msecsFirst = 0;
         var msecsPrevious = 0;
         var alternate = false;
+        var lat = 0;
+        var long = 0;
+        var accuracy = 0;
 
         function ResetCount() {
             count = 0;
@@ -67,7 +70,14 @@
             document.getElementById("submit_feedback").innerHTML = "sending...";
 //            document.submit_feedback.value = "sending...";
 
-            var newResult = {'bpm': bpmAvg}
+            var newResult = {
+                'bpm': bpmAvg,
+                'userAgent': navigator.userAgent,
+                'lat': lat,
+                'long': long,
+                'accuracy': accuracy,
+        }
+
 
             // Use AJAX to post the object addresult service
             $.ajax({
@@ -91,6 +101,15 @@
                 }
             });
         }
+
+        $(document).ready(function () {
+//            window.alert("document lodaded");
+            navigator.geolocation.getCurrentPosition(function(location){
+                lat = location.coords.latitude;
+                long = location.coords.longitude;
+                accuracy = location.coords.accuracy;
+            })
+        })
 
     </script>
 </head>
