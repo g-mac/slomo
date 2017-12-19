@@ -35,6 +35,23 @@
             date_input.datepicker(options);
         });
 
+        function onContinue() {
+
+            date_of_birth = $('#dob').val();
+            gender = $('#gender').val();
+            heritage = $('#heritage').val();
+            city_size = $('#size').val();
+
+            if (date_of_birth==""
+                || gender==""
+                || heritage==""
+                || city_size=="") {
+                window.alert("Please answer all the questions above to continue");
+            } else {
+                load_experiment();
+            }
+        }
+
     </script>
 </head>
 
@@ -70,8 +87,8 @@
 
     <!--city size-->
     <div class="form-group">
-        <label for="sel1">How many people live in your current city / place of residence?</label>
-        <select class="form-control" id="sel1">
+        <label for="size">How many people live in your current city / place of residence?</label>
+        <select class="form-control" id="size">
             <option></option>
             <option>> 10 million (group of large cities)</option>
             <option>3 - 10 million (group of large cities)</option>
@@ -89,6 +106,6 @@
 
 </div>
 
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_experiment()">Start</a></p>
+<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="onContinue()">Start</a></p>
 </body>
 </html>

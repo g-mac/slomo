@@ -4,6 +4,11 @@ var long = 0;
 var accuracy = 0;
 var bpmAvg = 0;
 
+var date_of_birth = "";
+var gender = "";
+var heritage = "";
+var city_size = "";
+
 function postResult() {
     if (bpmAvg < 1)
         return
@@ -57,7 +62,6 @@ function load_welcome() {
 }
 
 function load_experiment() {
-    bpmAvg = 0;
     $("#content").load("experiment.html");
 }
 

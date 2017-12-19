@@ -2,10 +2,19 @@
 <head>
     <!--bootstrap-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"-->
-          <!--integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">-->
+    <!--integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
     <!--custom css-->
     <!--<link href="/stylesheets/style.css" rel="stylesheet">-->
+    <script>
+        function onContinue() {
+            if ($('#tc_checkbox').is(":checked")) {
+                load_prequestions();
+            } else {
+                window.alert("Please accept the Terms & Conditions to continue");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -13,10 +22,9 @@
 <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
     tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 <div class="checkbox">
-    <label><input type="checkbox" value=""> I have read and accept the Terms & Conditions</label>
+    <label><input type="checkbox" id="tc_checkbox" value="test"> I have read and accept the Terms & Conditions</label>
 </div>
 <br>
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_prequestions()">Weiter</a></p>
-<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_postquestions()">Weiter</a></p>-->
+<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="onContinue()">Weiter</a></p>
 </body>
 </html>
