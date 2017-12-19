@@ -12,10 +12,12 @@
 
     <script>
         $(document).ready(function () {
-            document.getElementById("bpm_avg").innerHTML = bpmAvg;
+            document.getElementById("bpm_avg").innerHTML = Math.round(bpmAvg);
+            document.getElementById("s_deviation").innerHTML = Math.round(std_deviation) + " ms";
 
             // With JQuery
             $('#ex1').slider({
+                value: (100 - std_deviation),
                 formatter: function (value) {
                     return 'Current value: ' + value;
                 }
@@ -32,12 +34,15 @@
 
 <br>
 <p>BPM AVERAGE:
-    <font id="bpm_avg" color="00FF00">none</font>
+    <font id="bpm_avg" color="0000FF">none</font>
+</p>
+<p>STANDARD DEVIATION:
+    <font id="s_deviation" color="0000FF">none</font>
 </p>
 <br>
 <image src="/images/sad.png" style="width:5%"/>
 <input id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text" data-slider-min="0"
-       data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
+       data-slider-max="100" data-slider-step="1"/>
 <image src="/images/happy.png" style="width:5%"/>
 <br>
 <br>

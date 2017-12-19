@@ -3,6 +3,7 @@ var lat = 0;
 var long = 0;
 var accuracy = 0;
 var bpmAvg = 0;
+var std_deviation = 0;
 
 var date_of_birth = "";
 var gender = "";
