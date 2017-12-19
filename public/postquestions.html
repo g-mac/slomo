@@ -1,18 +1,45 @@
 <html lang="en">
 
 <head>
-    <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--bootstrap-slider-->
+    <link href="/javascripts/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/javascripts/bootstrap-slider/bootstrap-slider.min.js"></script>
     <!--custom css-->
     <link href="/stylesheets/style.css" rel="stylesheet">
+
+    <script>
+        $(document).ready(function () {
+            $("#ex13").slider();
+            $("#ex14").slider();
+        })
+
+    </script>
 </head>
 
 <body>
 <h1 class="display-4">More Questions...</h1>
+<br>
 <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
     tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_finish()">Start</a></p>
+
+<br>
+<div class="form-group">
+    <label for="comment">What is this questions goint to be?</label>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+<br>
+
+<label for="ex13">Could this be even another question?</label>
+<input id="ex13" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"
+       data-slider-ticks-labels='["1", "2", "3", "4", "5"]'/>
+<br><br>
+
+<label for="ex14">Could this be even another question?</label>
+<input id="ex14" type="text" />
+<br><br>
+
+<br>
+<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_finish()">Send</a></p>
+
 </body>
 </html>

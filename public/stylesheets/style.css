@@ -38,6 +38,7 @@ body {
         max-width: 46rem;
     }
 }
+
 .container-narrow > hr {
     margin: 2rem 0;
 }
@@ -47,6 +48,7 @@ body {
     text-align: center;
     border-bottom: .05rem solid #e5e5e5;
 }
+
 .jumbotron .btn {
     padding: .75rem 1.5rem;
     font-size: 1.5rem;
@@ -56,6 +58,7 @@ body {
 .marketing {
     margin: 3rem 0;
 }
+
 .marketing p + h4 {
     margin-top: 1.5rem;
 }
@@ -96,3 +99,48 @@ body {
     /*width: 0;*/
     background-color: #a15b59;
 }
+
+/*#ex1Slider .slider-selection {*/
+    /*background: #BABABA;*/
+    /*!*width: 1000px !important;*!*/
+    /*!*width: 100px;*!*/
+/*}*/
+
+/*.slider {*/
+    /*width: 800px;*/
+/*}*/
+
+
+.slider.slider-horizontal {
+    width: 80%
+}
+
+.slider.slider-horizontal .slider-selection {
+    background: white;
+}
+
+.slider.slider-horizontal .slider-tick {
+    background: white;
+}
+
+.slider.slider-disabled {
+    width: 80%;
+}
+
+.slider.slider-disabled .slider-handle {
+    /*background: #2f5dc7;*/
+    background: grey;
+}
+
+.slider.slider-disabled .slider-track {
+    background: white;
+}
+
+.slider.slider-disabled .slider-selection {
+    background: white;
+    /*background: #cbdaff;*/
+}
+
+/*.slider.slider-horizontal .slider-selection {*/
+    /*background: #cbdaff;*/
+/*}*/

@@ -1,12 +1,27 @@
 <html lang="en">
 
 <head>
+
+
+    <!--bootstrap-slider-->
+    <link href="/javascripts/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/javascripts/bootstrap-slider/bootstrap-slider.min.js"></script>
+
     <!--custom css-->
     <link href="/stylesheets/style.css" rel="stylesheet">
+
     <script>
         $(document).ready(function () {
             document.getElementById("bpm_avg").innerHTML = bpmAvg;
+
+            // With JQuery
+            $('#ex1').slider({
+                formatter: function (value) {
+                    return 'Current value: ' + value;
+                }
+            });
         })
+
     </script>
 </head>
 
@@ -17,12 +32,20 @@
 
 <br>
 <p>BPM AVERAGE:
-    <font id="bpm_avg" color="FF0000">none</font>
+    <font id="bpm_avg" color="00FF00">none</font>
 </p>
 <br>
+<image src="/images/sad.png" style="width:5%"/>
+<input id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text" data-slider-min="0"
+       data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
+<image src="/images/happy.png" style="width:5%"/>
+<br>
+<br>
+<br>
 
-<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_postquestions()">Weiter</a></p>-->
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_experiment()">Weiter</a></p>
+
+<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_postquestions()">Weiter</a></p>
+<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_experiment()">Weiter</a></p>-->
 
 
 </body>
