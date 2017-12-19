@@ -22,6 +22,10 @@ function postResult() {
         'lat': lat,
         'long': long,
         'accuracy': accuracy,
+        'date_of_birth': date_of_birth,
+        'gender': gender,
+        'heritage': heritage,
+        'city_size': city_size,
     }
 
 

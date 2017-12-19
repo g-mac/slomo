@@ -15,6 +15,10 @@ router.post('/addresult', function (req, res) {
     var long = req.body.long;
     var accuracy = req.body.accuracy;
     var userAgent = req.body.userAgent;
+    var date_of_birth = req.body.date_of_birth;
+    var gender = req.body.gender;
+    var heritage = req.body.heritage;
+    var city_size = req.body.city_size;
     var date = generateDate();
     var collection = db.get('xpresults');
 
@@ -25,7 +29,11 @@ router.post('/addresult', function (req, res) {
         "lat": lat,
         "long": long,
         "accuracy": accuracy,
-        "userAgent": userAgent
+        "userAgent": userAgent,
+        "date_of_birth": date_of_birth,
+        "gender": gender,
+        "heritage": heritage,
+        "city_size": city_size
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
