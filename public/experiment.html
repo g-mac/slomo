@@ -7,7 +7,7 @@
     <script>
         bpmAvg = 0;
         std_deviation = 0;
-        var duration = 20;
+        var duration = 10;
         var count = 0;
         var msecsFirst = 0;
         var msecsPrevious = 0;
@@ -23,6 +23,16 @@
             msecs = timeSeconds.getTime();
 
 
+            document.getElementById("switch").src = "/images/on3.png";
+//            document.getElementById("switch").fadeOut(1000);
+
+//            $("#switch2").fadeIn();
+//            $("#switch2").fadeOut(1000);
+
+            setTimeout(function () {
+                document.getElementById("switch").src = "/images/off3.png";
+            }, 100);
+
 //            if (alternate) {
 //                document.getElementById("switch").src = "/images/off1.png"
 ////                document.getElementById("switch").src = "/images/off.png"
@@ -33,28 +43,28 @@
 //                alternate = true
 //            }
 
-            switch (rotate) {
-                case 0:
-                    document.getElementById("switch").src = "/images/wheel2.png";
-                    rotate = 1;
-                    break;
-                case 1:
-                    document.getElementById("switch").src = "/images/wheel3.png";
-                    rotate = 2;
-                    break;
-                case 2:
-                    document.getElementById("switch").src = "/images/wheel4.png";
-                    rotate = 3;
-                    break;
-                case 3:
-                    document.getElementById("switch").src = "/images/wheel5.png";
-                    rotate = 4;
-                    break;
-                case 4:
-                    document.getElementById("switch").src = "/images/wheel1.png";
-                    rotate = 0;
-                    break;
-            }
+//            switch (rotate) {
+//                case 0:
+//                    document.getElementById("switch").src = "/images/wheel2.png";
+//                    rotate = 1;
+//                    break;
+//                case 1:
+//                    document.getElementById("switch").src = "/images/wheel3.png";
+//                    rotate = 2;
+//                    break;
+//                case 2:
+//                    document.getElementById("switch").src = "/images/wheel4.png";
+//                    rotate = 3;
+//                    break;
+//                case 3:
+//                    document.getElementById("switch").src = "/images/wheel5.png";
+//                    rotate = 4;
+//                    break;
+//                case 4:
+//                    document.getElementById("switch").src = "/images/wheel1.png";
+//                    rotate = 0;
+//                    break;
+//            }
 
 
             if (count == 0) {
@@ -76,6 +86,8 @@
         }
 
         document.onkeypress = TapForBPM;
+        document.getElementById("switch").onmousedown = TapForBPM;
+        document.getElementById("switch2").onmousedown = TapForBPM;
 
 
         function progress(timeleft, timetotal, $element) {
@@ -130,9 +142,11 @@
 <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
     tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
-<!--<img id="switch" src="/images/off.png" style="width:100px">-->
-<!--<img id="switch" src="/images/off1.png" style="width:150px">-->
-<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">
+<br>
+<!--<div style="position: relative; left: 0; top: 0;">-->
+<!--<img id="switch" src="/images/off.png" style="width:100px" onclick="TapForBPM()">-->
+<img id="switch" src="/images/off3.png" style="width:250px;">
+<!--<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">-->
 
 <br>
 <br>
