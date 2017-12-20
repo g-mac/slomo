@@ -84,8 +84,12 @@
         }
 
         document.onkeypress = TapForBPM;
-        document.getElementById("switch").onmousedown = TapForBPM;
-        document.getElementById("switch").ontouchstart = TapForBPM;
+        var touchArea = document.getElementById("switch");
+        touchArea.addEventListener("mousedown", TapForBPM, false);
+        touchArea.addEventListener("touchstart", TapForBPM, false);
+
+        //        document.getElementById("switch").onmousedown = TapForBPM;
+        //        document.getElementById("switch").ontouchstart = TapForBPM;
 
 
         function progress(timeleft, timetotal, $element) {
@@ -142,10 +146,10 @@
 
 <br>
 <!--<div align="center" style="width:250px; height:250px; background: greenyellow" >-->
-    <!--<img id="switch" src="/images/off3.png" style="width:250px; height:250px; position: absolute; top: 0%">-->
-    <!--<img id="switch2" src="/images/on3.png" style="width:250px; height:250px; position: absolute">-->
-    <!--&lt;!&ndash;<img id="switch" src="/images/off3.png" style="width:250px;">&ndash;&gt;-->
-    <!--&lt;!&ndash;style="width:250px; height:250px; background: greenyellow"&ndash;&gt;-->
+<!--<img id="switch" src="/images/off3.png" style="width:250px; height:250px; position: absolute; top: 0%">-->
+<!--<img id="switch2" src="/images/on3.png" style="width:250px; height:250px; position: absolute">-->
+<!--&lt;!&ndash;<img id="switch" src="/images/off3.png" style="width:250px;">&ndash;&gt;-->
+<!--&lt;!&ndash;style="width:250px; height:250px; background: greenyellow"&ndash;&gt;-->
 <!--</div>-->
 
 <!--<div style="position: relative; left: 0; top: 0;">-->
