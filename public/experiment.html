@@ -23,12 +23,10 @@
             msecs = timeSeconds.getTime();
 
 
-            document.getElementById("switch").src = "/images/on3.png";
-//            document.getElementById("switch").fadeOut(1000);
-
 //            $("#switch2").fadeIn();
 //            $("#switch2").fadeOut(1000);
 
+            document.getElementById("switch").src = "/images/on3.png";
             setTimeout(function () {
                 document.getElementById("switch").src = "/images/off3.png";
             }, 100);
@@ -87,7 +85,7 @@
 
         document.onkeypress = TapForBPM;
         document.getElementById("switch").onmousedown = TapForBPM;
-        document.getElementById("switch2").onmousedown = TapForBPM;
+        document.getElementById("switch").ontouchstart = TapForBPM;
 
 
         function progress(timeleft, timetotal, $element) {
@@ -143,6 +141,13 @@
     tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
 <br>
+<!--<div align="center" style="width:250px; height:250px; background: greenyellow" >-->
+    <!--<img id="switch" src="/images/off3.png" style="width:250px; height:250px; position: absolute; top: 0%">-->
+    <!--<img id="switch2" src="/images/on3.png" style="width:250px; height:250px; position: absolute">-->
+    <!--&lt;!&ndash;<img id="switch" src="/images/off3.png" style="width:250px;">&ndash;&gt;-->
+    <!--&lt;!&ndash;style="width:250px; height:250px; background: greenyellow"&ndash;&gt;-->
+<!--</div>-->
+
 <!--<div style="position: relative; left: 0; top: 0;">-->
 <!--<img id="switch" src="/images/off.png" style="width:100px" onclick="TapForBPM()">-->
 <img id="switch" src="/images/off3.png" style="width:250px;">
