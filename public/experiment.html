@@ -26,20 +26,20 @@
 //            $("#switch2").fadeIn();
 //            $("#switch2").fadeOut(1000);
 
-            document.getElementById("switch").src = "/images/on3.png";
-            setTimeout(function () {
-                document.getElementById("switch").src = "/images/off3.png";
-            }, 100);
+//            document.getElementById("switch").src = "/images/on3.png";
+//            setTimeout(function () {
+//                document.getElementById("switch").src = "/images/off3.png";
+//            }, 100);
 
-//            if (alternate) {
-//                document.getElementById("switch").src = "/images/off1.png"
-////                document.getElementById("switch").src = "/images/off.png"
-//                alternate = false
-//            } else {
-//                document.getElementById("switch").src = "/images/on1.png"
-////                document.getElementById("switch").src = "/images/on.png"
-//                alternate = true
-//            }
+            if (alternate) {
+                document.getElementById("switch").src = "/images/off3.png"
+//                document.getElementById("switch").src = "/images/off.png"
+                alternate = false
+            } else {
+                document.getElementById("switch").src = "/images/on3.png"
+//                document.getElementById("switch").src = "/images/on.png"
+                alternate = true
+            }
 
 //            switch (rotate) {
 //                case 0:
