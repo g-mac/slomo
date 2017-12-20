@@ -84,9 +84,9 @@
         }
 
         document.onkeypress = TapForBPM;
-        var touchArea = document.getElementById("switch");
-        touchArea.addEventListener("mousedown", TapForBPM, false);
-        touchArea.addEventListener("touchstart", TapForBPM, false);
+        //        var touchArea = document.getElementById("switch");
+        //        touchArea.addEventListener("mousedown", TapForBPM, false);
+        //        touchArea.addEventListener("touchstart", TapForBPM, false);
 
         //        document.getElementById("switch").onmousedown = TapForBPM;
         //        document.getElementById("switch").ontouchstart = TapForBPM;
@@ -154,7 +154,7 @@
 
 <!--<div style="position: relative; left: 0; top: 0;">-->
 <!--<img id="switch" src="/images/off.png" style="width:100px" onclick="TapForBPM()">-->
-<img id="switch" src="/images/off3.png" style="width:250px;">
+<img id="switch" src="/images/off3.png" style="width:250px;" onclick="TapForBPM()">
 <!--<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">-->
 
 <br>
