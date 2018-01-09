@@ -19,25 +19,26 @@
         var imageOn;
         var imageOff;
 
-        function loadImages(){
+        function loadImages() {
             imageOn = new Image();
-            imageOn.src ="/images/on3.png";
+            imageOn.src = "/images/on3.png";
             imageOff = new Image();
-            imageOff.src ="/images/off3.png";
+            imageOff.src = "/images/off3.png";
         }
 
         function TapForBPM(e) {
 //            document.getElementById("key_pressed").innerHTML = String.fromCharCode(e.which)
 
-            timeSeconds = new Date;
-            msecs = timeSeconds.getTime();
-
 //            $("#switch2").fadeIn();
 //            $("#switch2").fadeOut(1000);
 
+            if (alternate) return;
+
             document.getElementById("switch").src = imageOn.src;
+            alternate = true;
             setTimeout(function () {
                 document.getElementById("switch").src = imageOff.src;
+                alternate = false;
             }, 100);
 
 //            if (alternate) {
@@ -73,6 +74,8 @@
 //                    break;
 //            }
 
+            timeSeconds = new Date;
+            msecs = timeSeconds.getTime();
 
             if (count == 0) {
                 startTimer();
@@ -148,7 +151,7 @@
         $(document).ready(function () {
             loadImages();
 
-            window.oncontextmenu = function(event) {
+            window.oncontextmenu = function (event) {
                 event.preventDefault();
                 event.stopPropagation();
                 return false;
@@ -176,7 +179,7 @@
 <!--<img id="switch" src="/images/off.png" style="width:100px" onclick="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onclick="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onmousedown="TapForBPM()">-->
-<img id="switch" src="/images/off3.png" style="width:250px;" ontouchend="" ontouchstart="TapForBPM()" onmousedown="TapForBPM()" >
+<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()" onmousedown="TapForBPM()">
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onkeydown="TapForBPM()">-->
 <!--<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">-->
 
