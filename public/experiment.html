@@ -16,6 +16,16 @@
 
         var intervals = [];
 
+        var image1;
+        var image2;
+
+        function loadImages(){
+            image1 = new Image();
+            image1.src ="/images/on3.png";
+            image2 = new Image();
+            image2.src ="/images/off3.png";
+        }
+
         function TapForBPM(e) {
 //            document.getElementById("key_pressed").innerHTML = String.fromCharCode(e.which)
 
@@ -26,10 +36,10 @@
 //            $("#switch2").fadeIn();
 //            $("#switch2").fadeOut(1000);
 
-            document.getElementById("switch").src = "/images/on3.png";
-//            setTimeout(function () {
-//                document.getElementById("switch").src = "/images/off3.png";
-//            }, 100);
+            document.getElementById("switch").src = image1.src;
+            setTimeout(function () {
+                document.getElementById("switch").src = image2.src;
+            }, 100);
 
 //            if (alternate) {
 //                document.getElementById("switch").src = "/images/off3.png"
@@ -135,6 +145,11 @@
 //            alert(SDresult);
             return SDresult;
         }
+
+        $(document).ready(function () {
+            loadImages();
+        })
+
 
     </script>
 </head>
