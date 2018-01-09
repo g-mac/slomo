@@ -31,38 +31,38 @@
 //                document.getElementById("switch").src = "/images/off3.png";
 //            }, 100);
 
-//            if (alternate) {
-//                document.getElementById("switch").src = "/images/off3.png"
-////                document.getElementById("switch").src = "/images/off.png"
-//                alternate = false
-//            } else {
-//                document.getElementById("switch").src = "/images/on3.png"
-////                document.getElementById("switch").src = "/images/on.png"
-//                alternate = true
-//            }
-
-            switch (rotate) {
-                case 0:
-                    document.getElementById("switch").src = "/images/wheel2.png";
-                    rotate = 1;
-                    break;
-                case 1:
-                    document.getElementById("switch").src = "/images/wheel3.png";
-                    rotate = 2;
-                    break;
-                case 2:
-                    document.getElementById("switch").src = "/images/wheel4.png";
-                    rotate = 3;
-                    break;
-                case 3:
-                    document.getElementById("switch").src = "/images/wheel5.png";
-                    rotate = 4;
-                    break;
-                case 4:
-                    document.getElementById("switch").src = "/images/wheel1.png";
-                    rotate = 0;
-                    break;
+            if (alternate) {
+                document.getElementById("switch").src = "/images/off3.png"
+//                document.getElementById("switch").src = "/images/off.png"
+                alternate = false
+            } else {
+                document.getElementById("switch").src = "/images/on3.png"
+//                document.getElementById("switch").src = "/images/on.png"
+                alternate = true
             }
+
+//            switch (rotate) {
+//                case 0:
+//                    document.getElementById("switch").src = "/images/wheel2.png";
+//                    rotate = 1;
+//                    break;
+//                case 1:
+//                    document.getElementById("switch").src = "/images/wheel3.png";
+//                    rotate = 2;
+//                    break;
+//                case 2:
+//                    document.getElementById("switch").src = "/images/wheel4.png";
+//                    rotate = 3;
+//                    break;
+//                case 3:
+//                    document.getElementById("switch").src = "/images/wheel5.png";
+//                    rotate = 4;
+//                    break;
+//                case 4:
+//                    document.getElementById("switch").src = "/images/wheel1.png";
+//                    rotate = 0;
+//                    break;
+//            }
 
 
             if (count == 0) {
