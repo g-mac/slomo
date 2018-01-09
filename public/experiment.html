@@ -12,6 +12,7 @@
         var msecsFirst = 0;
         var msecsPrevious = 0;
         var alternate = false;
+        var handled = false;
         var rotate = 0;
 
         var intervals = [];
@@ -26,19 +27,22 @@
             imageOff.src = "/images/off3.png";
         }
 
+        function mouseUp(){
+            handled=false;
+        }
+
         function TapForBPM(e) {
 //            document.getElementById("key_pressed").innerHTML = String.fromCharCode(e.which)
 
 //            $("#switch2").fadeIn();
 //            $("#switch2").fadeOut(1000);
 
-            if (alternate) return;
+            if (handled) return;
 
             document.getElementById("switch").src = imageOn.src;
-            alternate = true;
+            handled = true;
             setTimeout(function () {
                 document.getElementById("switch").src = imageOff.src;
-                alternate = false;
             }, 100);
 
 //            if (alternate) {
@@ -179,7 +183,7 @@
 <!--<img id="switch" src="/images/off.png" style="width:100px" onclick="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onclick="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onmousedown="TapForBPM()">-->
-<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()" onmousedown="TapForBPM()">
+<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()" ontouchend="mouseUp()" onmouseup="mouseUp()" onmousedown="TapForBPM()">
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onkeydown="TapForBPM()">-->
 <!--<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">-->
