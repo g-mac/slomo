@@ -11,46 +11,93 @@
     <link href="/stylesheets/style.css" rel="stylesheet">
 
     <script>
-        $(document).ready(function () {
-            document.getElementById("bpm_avg").innerHTML = Math.round(bpmAvg);
-            document.getElementById("s_deviation").innerHTML = Math.round(std_deviation) + " ms";
 
-            // With JQuery
+        var min_taps = 8;
+        var min_tap_time = 15000;
+        var max_cv = 0.063;
+
+        $(document).ready(function () {
+            var pass = true;
+
+            document.getElementById("no_of_taps").innerHTML = Math.round(tap_count_total);
+            document.getElementById("cv_value").innerHTML = (100 - Math.round(coefficient_of_variation * 100)) + " %";
             $('#ex1').slider({
-                value: (100 - std_deviation),
+                value: (100 - (coefficient_of_variation * 100)),
                 formatter: function (value) {
                     return 'Current value: ' + value;
                 }
             });
+
+            if (tap_count_total < min_taps) {
+                pass = false;
+                $('#min_taps').css('color', 'rgb(255,0,0)');
+            }
+            if (coefficient_of_variation > max_cv) {
+                pass = false;
+                $('#min_cv').css('color', 'rgb(255,0,0)');
+            }
+            if (total_tap_time > min_tap_time) {
+                $('#too_short').hide();
+            } else pass = false;
+
+            if (pass) {
+                $('#fail_message').hide();
+                $('#continue_button').text("Continue");
+                $('#continue_button').attr('onclick', 'load_postquestions()');
+
+            } else {
+                $('#success_message').hide();
+                $('#continue_button').text("Try again");
+                $('#continue_button').attr('onclick', 'load_experiment()');
+            }
         })
+
+        function onContinue() {
+            if (pass) {
+                load_postquestions();
+            } else {
+                load_experiment();
+            }
+        }
 
     </script>
 </head>
 
 <body>
-<h1 class="display-4">Feedback</h1>
-<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
-    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<h1 class="display-4">Results</h1>
+<br>
+<p class="lead" id="fail_message">Sorry, but your taps were either not even enough or too few.
+    <br>Remember, try to pace taps evenly at your most comfortable rate for as long as indicated by the timer.
+    <br>Please try again!</p>
+<p class="lead" id="success_message">Very good! Your taps were even!
+    <br>Please click on 'Continue', we have a few more questions for you.</p>
 
 <br>
-<p>BPM AVERAGE:
-    <font id="bpm_avg" color="0000FF">none</font>
+<p>NUMBER OF TAPS:
+    <br>
+    <span id="no_of_taps" style="color: rgba(0,59,247,0.86); ">none</span>
+    <span id="min_taps" style="color: rgba(111,111,111,0.86); ">(min. 8 taps required)</span>
 </p>
-<p>STANDARD DEVIATION:
-    <font id="s_deviation" color="0000FF">none</font>
+<p>EVENNESS OF TAPS:
+    <br>
+    <span id="cv_value" style="color: rgba(0,59,247,0.86); ">none</span>
+    <span id="min_cv" style="color: rgba(111,111,111,0.86); ">(min. 93,7% required)</span>
 </p>
+<p id="too_short"><span
+        style="color: rgb(255,0,0); ">You need to tap as long as the timer is running, please try again.</span></p>
 <br>
-<image src="/images/sad.png" style="width:5%"/>
-<input id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text" data-slider-min="0"
-       data-slider-max="100" data-slider-step="1"/>
+< 80%
+<image id="sad" src="/images/sad.png" style="width:5%"/>
+<input id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text" data-slider-min="80"
+       data-slider-max="100" data-slider-step="1"
+       data-slider-rangeHighlights='[{ "start": 93, "end": 93.5}]'/>
 <image src="/images/happy.png" style="width:5%"/>
+100%
 <br>
 <br>
 <br>
 
-
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_postquestions()">Weiter</a></p>
-<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_experiment()">Weiter</a></p>-->
+<p><a id="continue_button" class="btn btn-lg btn-success" href="#" role="button">Continue</a></p>
 
 
 </body>

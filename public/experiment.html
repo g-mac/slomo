@@ -6,8 +6,7 @@
 
     <script>
         bpmAvg = 0;
-        std_deviation = 0;
-        var duration = 10;
+        var duration = 20;
         var count = 0;
         var msecsFirst = 0;
         var msecsPrevious = 0;
@@ -15,7 +14,6 @@
         var handled = false;
         var rotate = 0;
 
-        var intervals = [];
 
         var imageOn;
         var imageOff;
@@ -98,7 +96,7 @@
             return true;
         }
 
-//        document.onkeypress = TapForBPM;
+        //        document.onkeypress = TapForBPM;
         document.addEventListener("keydown", TapForBPM, false);
         document.addEventListener("keyup", mouseUp, false);
 
@@ -120,8 +118,11 @@
             } else {
                 setTimeout(function () {
 //                    window.alert(intervals + ", " + Math.round(standardDeviation(intervals)));
-                    std_deviation = standardDeviation(intervals);
+                    coefficient_of_variation = calculateCV(intervals);
+                    tap_count_total = (intervals.length + 1);
+                    total_tap_time = msecs - msecsFirst;
                     load_feedback();
+                    experimentTries = experimentTries + 1;
                     postResult();
 //                    experimentFinished();
                 }, 1000);
@@ -133,25 +134,26 @@
                 progress(duration, duration, $('#progressBar'));
         }
 
-        function standardDeviation(numbersArr) {
+        function calculateCV(numbersArr) {
             //--CALCULATE AVAREGE--
             var total = 0;
             for (var key in numbersArr)
                 total += numbersArr[key];
             var meanVal = total / numbersArr.length;
-            //--CALCULATE AVAREGE--
 
             //--CALCULATE STANDARD DEVIATION--
             var SDprep = 0;
             for (var key in numbersArr)
                 SDprep += Math.pow((parseFloat(numbersArr[key]) - meanVal), 2);
-            var SDresult = Math.sqrt(SDprep / numbersArr.length);
-            //--CALCULATE STANDARD DEVIATION--
-//            alert(SDresult);
-            return SDresult;
+            var standardDeviation = Math.sqrt(SDprep / numbersArr.length);
+
+            //--CALCULATE COEFFICIENT OF VARIATION--
+            var cv = standardDeviation / meanVal;
+            return cv;
         }
 
         $(document).ready(function () {
+            intervals = []; //reset
             loadImages();
 
             window.oncontextmenu = function (event) {
@@ -167,7 +169,8 @@
 
 <body>
 <h1 class="display-4">Main Experiment</h1>
-<p class="lead"><br>Your task is now to tap steadily for 20 seconds. <br><br> Try to keep the time between each tap as even as possible. Choose a pace that feels most comfortable and natural to you right now.
+<p class="lead"><br>Your task is now to tap steadily for 20 seconds. <br><br> Try to keep the time between each tap as
+    even as possible. Choose a pace that feels most comfortable and natural to you right now.
     When using a touchscreen display, please use your finger to tap in the circle that appears after you press “Start”.
     <br><br>If you use a computer, you can use any key on your keyboard or use the mouse to click into the circle.
     The experiment and timer starts with you first tap.</p>

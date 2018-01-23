@@ -1,8 +1,13 @@
 var lat = 0;
 var long = 0;
 var accuracy = 0;
+
 var bpmAvg = 0;
-var std_deviation = 0;
+var tap_count_total = 0;
+var coefficient_of_variation = 0;
+var total_tap_time = 0;
+var intervals = [];
+var experimentTries = 0;
 
 var date_of_birth = "";
 var gender = "";
@@ -59,15 +64,30 @@ function postQuestionResults() {
 
 }
 
+function arrayAsString(values) {
+    var result = "";
+    for (var i = 0; i < values.length; i++) {
+        if (i !== 0)
+            result = result.concat(",");
+        result = result.concat(values[i]);
+    }
+    return result;
+}
+
 function postResult() {
     if (bpmAvg < 1)
-        return
+        return;
 
     // document.getElementById("submit_feedback").innerHTML = "sending...";
 //            document.submit_feedback.value = "sending...";
 
+    var intervalsAsString = arrayAsString(intervals);
+
     var newResult = {
+        'tries': experimentTries,
         'bpm': bpmAvg,
+        'cv': coefficient_of_variation,
+        'intervals': intervalsAsString,
         'userAgent': navigator.userAgent,
         'lat': lat,
         'long': long,

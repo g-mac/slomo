@@ -5,9 +5,11 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     // res.render('index', {title: 'Express'});
     res.render('main', {title: 'EJS'});
+    //reset
+    insertedDocId = "";
 });
 
-var insertedDocId;
+var insertedDocId = "";
 
 router.post('/postemail', function (req, res) {
     var db = req.db;
@@ -62,32 +64,57 @@ router.post('/addresult', function (req, res) {
     var date = generateDate();
     var collection = db.get('xpresults');
 
-    // Submit to the DB
-    collection.insert({
-        "bpm": req.body.bpm,
-        "date": date,
-        "lat": req.body.lat,
-        "long": req.body.long,
-        "accuracy": req.body.accuracy,
-        "userAgent": req.body.userAgent,
-        "date_of_birth": req.body.date_of_birth,
-        "gender": req.body.gender,
-        "heritage": req.body.heritage,
-        "city_size": req.body.city_size
-    }, function (err, docInserted) {
-        if (err) {
-            // If it failed, return error
-            res.send("There was a problem adding the information to the database.");
-        } else {
-            // And forward to success page
-            // res.send([{"message":"success!"}]);
-            console.log(docInserted);
-            console.log(docInserted._id);
-            insertedDocId = docInserted._id;
-            res.send("")
-        }
-    });
-
+    if (insertedDocId === "") {
+        // Insert to the DB
+        collection.insert({
+            "tries": req.body.tries,
+            "bpm": req.body.bpm,
+            "cv": req.body.cv,
+            "intervals": req.body.intervals,
+            "date": date,
+            "lat": req.body.lat,
+            "long": req.body.long,
+            "accuracy": req.body.accuracy,
+            "userAgent": req.body.userAgent,
+            "date_of_birth": req.body.date_of_birth,
+            "gender": req.body.gender,
+            "heritage": req.body.heritage,
+            "city_size": req.body.city_size
+        }, function (err, docInserted) {
+            if (err) {
+                // If it failed, return error
+                res.send("There was a problem adding the information to the database.");
+            } else {
+                // And forward to success page
+                // res.send([{"message":"success!"}]);
+                console.log(docInserted);
+                console.log(docInserted._id);
+                insertedDocId = docInserted._id;
+                res.send("")
+            }
+        });
+    } else {
+        //Update to the DB
+        collection.update({_id: insertedDocId},
+            {
+                $set:
+                    {
+                        "tries": req.body.tries,
+                        "bpm": req.body.bpm,
+                        "cv": req.body.cv,
+                        "intervals": req.body.intervals
+                    }
+            }, function (err, docUpdated) {
+                if (err) {
+                    // If it failed, return error
+                    res.send("There was a problem adding the information to the database.");
+                } else {
+                    // And forward to success page
+                    // res.send([{"message":"success!"}]);
+                    res.send("")
+                }
+            });
+    }
 });
 
 function generateDate() {

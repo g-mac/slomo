@@ -111,8 +111,12 @@ body {
 /*}*/
 
 
+
+/*----------*/
+
+
 .slider.slider-horizontal {
-    width: 80%
+    width: 70%
 }
 
 .slider.slider-horizontal .slider-selection {
@@ -123,24 +127,16 @@ body {
     background: white;
 }
 
-.slider.slider-disabled {
-    width: 80%;
-}
-
 .slider.slider-disabled .slider-handle {
     /*background: #2f5dc7;*/
-    background: grey;
+    background: #3876e1;
+    background: #3876e1;
 }
 
 .slider.slider-disabled .slider-track {
     background: white;
 }
 
-.slider.slider-disabled .slider-selection {
-    background: white;
-    /*background: #cbdaff;*/
+.slider.slider-horizontal .slider-rangeHighlight{
+    background: rgba(80, 208, 37, 0.86);
 }
-
-/*.slider.slider-horizontal .slider-selection {*/
-    /*background: #cbdaff;*/
-/*}*/
