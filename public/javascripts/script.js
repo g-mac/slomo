@@ -17,6 +17,26 @@ var q5 = "";
 var q6 = "";
 var q7 = "";
 
+var emailAddress = "";
+
+function postEmailAddress() {
+
+    if (emailAddress === "") return;
+
+    var emailResult = {
+        'email': emailAddress
+    };
+
+    $.ajax({
+        type: 'POST',
+        data: emailResult,
+        url: '/postemail'
+    }).done(function (response) {
+
+    });
+
+}
+
 function postQuestionResults() {
 
     var updateResult = {
