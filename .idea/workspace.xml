@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/experiment.html" afterPath="$PROJECT_DIR$/public/experiment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/prequestions.html" afterPath="$PROJECT_DIR$/public/prequestions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/welcome.html" afterPath="$PROJECT_DIR$/public/welcome.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main.html" afterPath="$PROJECT_DIR$/views/main.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -65,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="215">
+              <caret line="70" column="47" lean-forward="false" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
               <folding>
                 <element signature="e#3428#3435#1" expanded="true" />
               </folding>
@@ -110,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -160,6 +156,7 @@
       <find>tick</find>
       <find>align</find>
       <find>public</find>
+      <find>the inner</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -192,10 +189,10 @@
         <option value="$PROJECT_DIR$/public/javascripts/script.js" />
         <option value="$PROJECT_DIR$/public/feedback.html" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/main.html" />
         <option value="$PROJECT_DIR$/public/experiment.html" />
         <option value="$PROJECT_DIR$/public/prequestions.html" />
         <option value="$PROJECT_DIR$/public/welcome.html" />
+        <option value="$PROJECT_DIR$/views/main.html" />
       </list>
     </option>
   </component>
@@ -349,14 +346,7 @@
       <workItem from="1516182508834" duration="6000" />
       <workItem from="1516349700661" duration="2092000" />
       <workItem from="1516570050644" duration="14000" />
-      <workItem from="1516640314317" duration="6129000" />
-    </task>
-    <task id="LOCAL-00002" summary="implemented simple connection to mongo DB and created pages for inserting and displaying data">
-      <created>1508761986334</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1508761986334</updated>
+      <workItem from="1516640314317" duration="6379000" />
     </task>
     <task id="LOCAL-00003" summary="db and ejs files?!">
       <created>1508762029240</created>
@@ -694,20 +684,26 @@
       <option name="project" value="LOCAL" />
       <updated>1515534266751</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="started finalisation of first version of welcome and prequestion pages">
+      <created>1516667212582</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1516667212583</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92263000" />
+    <option name="totallyTimeSpent" value="92513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="734" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27561557" sideWeight="0.6853147" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39749607" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39593115" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12946783" sideWeight="0.3146853" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36150235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1124,16 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="40" />
-          <folding>
-            <element signature="e#3428#3435#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -1155,6 +1141,16 @@
         <state relative-caret-position="360">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="70" column="47" lean-forward="false" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+          <folding>
+            <element signature="e#3428#3435#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
