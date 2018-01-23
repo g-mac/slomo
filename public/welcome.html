@@ -1,31 +1,39 @@
 <html lang="en">
 <head>
+
     <!--bootstrap-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">-->
     <!--integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
     <!--custom css-->
     <!--<link href="/stylesheets/style.css" rel="stylesheet">-->
     <script>
         function onContinue() {
-            if ($('#tc_checkbox').is(":checked")) {
+//            if ($('#tc_checkbox').is(":checked")) {
                 load_prequestions();
-            } else {
-                window.alert("Please accept the Terms & Conditions to continue");
-            }
+//            } else {
+//                window.alert("Please accept the Terms & Conditions to continue");
+//            }
         }
     </script>
 </head>
 
 <body>
-<h1 class="display-4">How fast does <br>the world tick?</h1>
-<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
-    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-<div class="checkbox">
-    <label><input type="checkbox" id="tc_checkbox" value="test"> I have read and accept the Terms & Conditions</label>
-</div>
+
+<h1 class="display-4">How good is your <br>inner timing? Test it!</h1>
+<p class="lead">Thank you for your interest in this study! We are investigating how evenly people can tap without influences such as music. Your task is to tap evenly on your device for 20 seconds. Afterwards, you will get feedback about your performance. We would like you to answer a few simple questions. It only takes about 2 minutes.</p>
+
+<!--<div class="checkbox">-->
+    <!--<label><input type="checkbox" id="tc_checkbox" value="test"> I have read and accept the Terms & Conditions</label>-->
+<!--</div>-->
+
 <br>
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="onContinue()">Weiter</a></p>
-<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_experiment()">Weiter</a></p>-->
+<a href="" data-toggle="modal" data-target="#exampleModal"><font color="#777777" size="3">terms and conditions</font></a>
+<br>
+<br>
+<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_experiment()">Agree and start here</a></p>-->
+<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="onContinue()">Agree and continue here</a></p>
+
+
 </body>
 </html>

@@ -98,7 +98,10 @@
             return true;
         }
 
-        document.onkeypress = TapForBPM;
+//        document.onkeypress = TapForBPM;
+        document.addEventListener("keydown", TapForBPM, false);
+        document.addEventListener("keyup", mouseUp, false);
+
         //        var touchArea = document.getElementById("switch");
         //        touchArea.addEventListener("mousedown", TapForBPM, false);
         //        touchArea.addEventListener("touchstart", TapForBPM, false);
