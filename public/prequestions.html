@@ -25,6 +25,12 @@
 
         $(document).ready(function () {
 
+            navigator.geolocation.getCurrentPosition(function (location) {
+                lat = location.coords.latitude;
+                long = location.coords.longitude;
+                accuracy = location.coords.accuracy;
+            })
+
             var $select = $("#dob");
             for (i=1917;i<=2018;i++){
                 $select.append($('<option></option>').val(i).html(i))

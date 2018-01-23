@@ -4,42 +4,138 @@
     <!--bootstrap-slider-->
     <link href="/javascripts/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet"/>
     <script type="text/javascript" src="/javascripts/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <!--bootstrap helpers-->
+    <link href="/javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.js"></script>
     <!--custom css-->
     <link href="/stylesheets/style.css" rel="stylesheet">
 
+
     <script>
         $(document).ready(function () {
-            $("#ex13").slider();
-            $("#ex14").slider();
+            $("#q1").slider({value: 3});
+            $("#q2").slider({value: 3});
+            $("#q4").slider({value: 3});
+            $("#q5").slider({value: 3});
+            $("#q6").slider({value: 3});
+            $("#q7").slider({value: 3});
         })
+
+        function onContinue() {
+
+            q1 = $('#q1').val();
+            q2 = $('#q2').val();
+            q3 = $('#q3').val();
+            q4 = $('#q4').val();
+            q5 = $('#q5').val();
+            q6 = $('#q6').val();
+            q7 = $('#q7').val();
+
+            postQuestionResults();
+
+//            window.alert("q1=" + q1);
+
+//            if (true) {
+//                window.alert("Please answer all the questions above to continue");
+//            } else {
+//                load_finish();
+//            }
+        }
 
     </script>
 </head>
 
 <body>
-<h1 class="display-4">More Questions...</h1>
-<br>
-<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,
-    tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<h1 class="display-4">Questionnaire</h1>
+<!--<br>-->
+<!--<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,-->
+<!--tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
 
 <br>
+
+<!--q1-->
+<label for="q1">Do you make music?</label>
+<input id="q1" type="text" data-slider-ticks="[1, 2, 3, 4, 5, 6]" data-slider-ticks-snap-bounds="1"
+       data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often", "I am a<br>professional"]'/>
+<br><br>
+
+<!--q2-->
+<label for="q2">How do you feel right now?</label>
+<input id="q2" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"
+       data-slider-ticks-labels='["very<br>calm", "rather<br>calm", "neutral<br><br>", "rather<br>excited", "very<br>excited"]'/>
+<br><br>
+
+<!--q3-->
 <div class="form-group">
-    <label for="comment">What is this questions goint to be?</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <label for="q3">In the last month, how many hours did you spend studying/working in a typical week?</label>
+    <select class="form-control" id="q3">
+        <option></option>
+        <option>none</option>
+        <option>up to 10 hours</option>
+        <option>up to 20 hours</option>
+        <option>up to 30 hours</option>
+        <option>up to 40 hours</option>
+        <option>up to 50 hours</option>
+        <option>more than 50 hours</option>
+    </select>
 </div>
-<br>
-
-<label for="ex13">Could this be even another question?</label>
-<input id="ex13" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"
-       data-slider-ticks-labels='["1", "2", "3", "4", "5"]'/>
-<br><br>
-
-<label for="ex14">Could this be even another question?</label>
-<input id="ex14" type="text" />
-<br><br>
 
 <br>
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_finish()">Send</a></p>
+<p class="lead">The following questions are about your feelings and thoughts during the last month. You will be asked to
+    indicate how often you felt or thought a certain way. They may explain your inner timing.</p>
+
+
+<!--q4-->
+<label for="q4">In the last month, how often have you felt that you were unable to control the important things in your
+    life?</label>
+<input id="q4" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"
+       data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>
+<br><br>
+
+<!--q5-->
+<label for="q5">In the last month, how often have you felt confident about your ability to handle your personal
+    problems?</label>
+<input id="q5" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"
+       data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>
+<br><br>
+
+<!--q6-->
+<label for="q6">In the last month, how often have you felt that things were going your way?</label>
+<input id="q6" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"
+       data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>
+<br><br>
+
+<!--q7-->
+<label for="q7">In the last month, how often have you felt difficulties were piling up so high that you could not
+    overcome them?</label>
+<input id="q7" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"
+       data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>
+<br><br>
+
+<!--&lt;!&ndash;q4&ndash;&gt;-->
+<!--<label for="q4">n the last month, how often have you felt that you were unable to control the important things in your life?</label>-->
+<!--<input id="q4" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
+<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>-->
+<!--<br><br>-->
+
+<!--<div class="form-group">-->
+<!--<label for="comment">What is this questions goint to be?</label>-->
+<!--<textarea class="form-control" rows="5" id="comment"></textarea>-->
+<!--</div>-->
+<!--<br>-->
+
+<!--<label for="ex13">Could this be even another question?</label>-->
+<!--<input id="ex13" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
+<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>-->
+<!--<br><br>-->
+
+<!--<label for="ex14">Could this be even another question?</label>-->
+<!--<input id="ex14" type="text" />-->
+<!--<br><br>-->
+
+<br>
+<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="onContinue()">Send</a></p>
+<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_finish()">Send</a></p>-->
 
 </body>
 </html>

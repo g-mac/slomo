@@ -1,4 +1,3 @@
-
 var lat = 0;
 var long = 0;
 var accuracy = 0;
@@ -9,6 +8,36 @@ var date_of_birth = "";
 var gender = "";
 var heritage = "";
 var city_size = "";
+
+var q1 = "";
+var q2 = "";
+var q3 = "";
+var q4 = "";
+var q5 = "";
+var q6 = "";
+var q7 = "";
+
+function postQuestionResults() {
+
+    var updateResult = {
+        'q1': q1,
+        'q2': q2,
+        'q3': q3,
+        'q4': q4,
+        'q5': q5,
+        'q6': q6,
+        'q7': q7
+    };
+
+    $.ajax({
+        type: 'POST',
+        data: updateResult,
+        url: '/updateresult'
+    }).done(function (response) {
+
+    });
+
+}
 
 function postResult() {
     if (bpmAvg < 1)
@@ -26,8 +55,8 @@ function postResult() {
         'date_of_birth': date_of_birth,
         'gender': gender,
         'heritage': heritage,
-        'city_size': city_size,
-    }
+        'city_size': city_size
+    };
 
 
     // Use AJAX to post the object addresult service
@@ -53,14 +82,9 @@ function postResult() {
     });
 }
 
-$(document).ready(function () {
+// $(document).ready(function () {
 //            window.alert("document lodaded");
-    navigator.geolocation.getCurrentPosition(function (location) {
-        lat = location.coords.latitude;
-        long = location.coords.longitude;
-        accuracy = location.coords.accuracy;
-    })
-})
+// })
 
 function load_welcome() {
     $("#content").load("welcome.html");

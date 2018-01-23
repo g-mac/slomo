@@ -7,42 +7,63 @@ router.get('/', function (req, res, next) {
     res.render('main', {title: 'EJS'});
 });
 
-/* POST to Add User Service */
+var insertedDocId;
+
+router.post('/updateresult', function (req, res) {
+    var db = req.db;
+    var collection = db.get('xpresults');
+    collection.update({_id: insertedDocId},
+        {
+            $set:
+                {
+                    "q1": req.body.q1,
+                    "q2": req.body.q2,
+                    "q3": req.body.q3,
+                    "q4": req.body.q4,
+                    "q5": req.body.q5,
+                    "q6": req.body.q6,
+                    "q7": req.body.q7
+                }
+        }, function (err, docUpdated) {
+            if (err) {
+                // If it failed, return error
+                res.send("There was a problem adding the information to the database.");
+            } else {
+                // And forward to success page
+                // res.send([{"message":"success!"}]);
+                res.send("")
+            }
+        });
+});
+
 router.post('/addresult', function (req, res) {
     var db = req.db;
-    var bpm = req.body.bpm;
-    var lat = req.body.lat;
-    var long = req.body.long;
-    var accuracy = req.body.accuracy;
-    var userAgent = req.body.userAgent;
-    var date_of_birth = req.body.date_of_birth;
-    var gender = req.body.gender;
-    var heritage = req.body.heritage;
-    var city_size = req.body.city_size;
     var date = generateDate();
     var collection = db.get('xpresults');
 
     // Submit to the DB
     collection.insert({
-        "bpm": bpm,
+        "bpm": req.body.bpm,
         "date": date,
-        "lat": lat,
-        "long": long,
-        "accuracy": accuracy,
-        "userAgent": userAgent,
-        "date_of_birth": date_of_birth,
-        "gender": gender,
-        "heritage": heritage,
-        "city_size": city_size
-    }, function (err, doc) {
+        "lat": req.body.lat,
+        "long": req.body.long,
+        "accuracy": req.body.accuracy,
+        "userAgent": req.body.userAgent,
+        "date_of_birth": req.body.date_of_birth,
+        "gender": req.body.gender,
+        "heritage": req.body.heritage,
+        "city_size": req.body.city_size
+    }, function (err, docInserted) {
         if (err) {
             // If it failed, return error
             res.send("There was a problem adding the information to the database.");
         } else {
             // And forward to success page
             // res.send([{"message":"success!"}]);
-            res.send("");
-            // res.redirect("/");
+            console.log(docInserted);
+            console.log(docInserted._id);
+            insertedDocId = docInserted._id;
+            res.send("")
         }
     });
 
@@ -50,9 +71,9 @@ router.post('/addresult', function (req, res) {
 
 function generateDate() {
     var today = new Date();
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date+' '+time;
+    var dateTime = date + ' ' + time;
     return dateTime;
 }
 
