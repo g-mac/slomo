@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="reinsert deleted line (hopefully fixing size on mobile devices)">
+    <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -78,8 +78,8 @@
       <file leaf-file-name="experiment.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/experiment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="181" column="53" lean-forward="false" selection-start-line="181" selection-start-column="53" selection-end-line="181" selection-end-column="53" />
+            <state relative-caret-position="189">
+              <caret line="188" column="54" lean-forward="false" selection-start-line="188" selection-start-column="54" selection-end-line="188" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -361,14 +361,7 @@
       <workItem from="1516570050644" duration="14000" />
       <workItem from="1516640314317" duration="35551000" />
       <workItem from="1516799245686" duration="2214000" />
-      <workItem from="1516974421369" duration="4999000" />
-    </task>
-    <task id="LOCAL-00021" summary="some refactoring">
-      <created>1513632434591</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1513632434591</updated>
+      <workItem from="1516974421369" duration="5280000" />
     </task>
     <task id="LOCAL-00022" summary="implemented different kinds of approached for the experiment">
       <created>1513640637600</created>
@@ -706,25 +699,33 @@
       <option name="project" value="LOCAL" />
       <updated>1516983988750</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="--">
+      <created>1516984539573</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1516984539573</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128898000" />
+    <option name="totallyTimeSpent" value="129179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="734" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.223193" sideWeight="0.6853147" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5978091" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5978091" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36150235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12946783" sideWeight="0.3146853" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22378717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27230048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -796,7 +797,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="started with implementation of feedback and postquestions views" />
     <MESSAGE value="set duration to 20" />
     <MESSAGE value="implemented logic for welcome and prequestions view" />
     <MESSAGE value="added prequestion answers to database entry" />
@@ -821,7 +821,8 @@
     <MESSAGE value="open slomo page in new window" />
     <MESSAGE value="improved welcome view" />
     <MESSAGE value="reinsert deleted line (hopefully fixing size on mobile devices)" />
-    <option name="LAST_COMMIT_MESSAGE" value="reinsert deleted line (hopefully fixing size on mobile devices)" />
+    <MESSAGE value="--" />
+    <option name="LAST_COMMIT_MESSAGE" value="--" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1155,8 +1156,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/experiment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="181" column="53" lean-forward="false" selection-start-line="181" selection-start-column="53" selection-end-line="181" selection-end-column="53" />
+        <state relative-caret-position="189">
+          <caret line="188" column="54" lean-forward="false" selection-start-line="188" selection-start-column="54" selection-end-line="188" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
