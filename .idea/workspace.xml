@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main.html" afterPath="$PROJECT_DIR$/views/main.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -370,13 +369,6 @@
       <workItem from="1516799245686" duration="2214000" />
       <workItem from="1516974421369" duration="5561000" />
     </task>
-    <task id="LOCAL-00026" summary="added prequestion answers to database entry">
-      <created>1513691220068</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1513691220068</updated>
-    </task>
     <task id="LOCAL-00027" summary="started implementation of standard deviation logic">
       <created>1513695575320</created>
       <option name="number" value="00027" />
@@ -713,11 +705,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516986630555</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="mobile_dev: trying to optimize experiment for mobile">
+      <created>1516986765164</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1516986765164</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130665000" />
+    <option name="totallyTimeSpent" value="130687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="734" extended-state="6" />
