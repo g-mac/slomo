@@ -8,13 +8,19 @@
     <!--custom css-->
     <!--<link href="/stylesheets/style.css" rel="stylesheet">-->
     <script>
+        $(document).ready(function () {
+            $("#text").text("Thank you for your interest in this study! We are investigating how good people can tap without" +
+                "    influences such as music. Your task is to tap evenly on your device for " + duration + " seconds. Afterwards, you will get" +
+                "    feedback about your performance. We would like you to answer a few simple questions.")
+        });
+
         function onContinue() {
 //            if ($('#tc_checkbox').is(":checked")) {
             load_prequestions();
 //            } else {
 //                window.alert("Please accept the Terms & Conditions to continue");
 //            }
-        }
+        };
     </script>
 </head>
 
@@ -22,10 +28,8 @@
 
 <h1 class="display-4">How good is your <br>inner timing? Test it!</h1>
 <br>
-<p class="lead">Thank you for your interest in this study! We are investigating how good people can tap without
-    influences such as music. Your task is to tap evenly on your device for 20 seconds. Afterwards, you will get
-    feedback about your performance. We would like you to answer a few simple questions. It only takes about 2
-    minutes.</p>
+<p class="lead" id="text"></p>
+<p class="lead">It only takes about 2 minutes.</p>
 
 <!--<div class="checkbox">-->
 <!--<label><input type="checkbox" id="tc_checkbox" value="test"> I have read and accept the Terms & Conditions</label>-->
