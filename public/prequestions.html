@@ -32,7 +32,7 @@
             })
 
             var $select = $("#dob");
-            for (i=1917;i<=2018;i++){
+            for (i=2018;i>=1917;i--){
                 $select.append($('<option></option>').val(i).html(i))
             }
 //            $select.val('1980') //todo check if really wanted or maybe this might be a bad idea
@@ -106,7 +106,7 @@
 
     <!--city size-->
     <div class="form-group">
-        <label for="size">How large is the population of the area you live in now?</label>
+        <label for="size">How large is the population of the area you currently live in?</label>
         <select class="form-control" id="size">
             <option></option>
             <option>More than 10 million people</option>
