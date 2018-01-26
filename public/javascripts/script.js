@@ -1,3 +1,12 @@
+// CONFIG
+
+var duration = 15;
+var min_taps = 8;
+var min_tap_time = (0.8 * duration);
+var max_cv = 0.063;
+
+// --------
+
 var lat = 0;
 var long = 0;
 var accuracy = 0;
