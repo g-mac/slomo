@@ -25,15 +25,19 @@
 
         function mouseUp() {
             handled = false;
+            console.log("mouseUp");
         }
 
         function TapForBPM(e) {
 //            document.getElementById("key_pressed").innerHTML = String.fromCharCode(e.which)
 
+
 //            $("#switch2").fadeIn();
 //            $("#switch2").fadeOut(1000);
 
             if (handled) return;
+            console.log("TapForBPM");
+
             handled = true;
             document.getElementById("switch").src = imageOn.src;
             setTimeout(function () {
