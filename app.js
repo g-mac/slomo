@@ -12,7 +12,6 @@ var monk = require('monk');
 var db = monk('mongodb://slomo_mlab_user:alsterterasse1@ds127065.mlab.com:27065/slomo_mlab_db');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -39,7 +38,6 @@ app.use(function(req,res,next){
 });
 
 app.use('/', index);
-app.use('/users', users);
 
 
 // -------- ERROR HANDLING ------------------------
