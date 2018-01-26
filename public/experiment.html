@@ -155,6 +155,8 @@
             intervals = [];
             loadImages();
 
+            $("#first_sentence").text("Your task is now to tap steadily for " + duration + " seconds.")
+
             window.oncontextmenu = function (event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -168,10 +170,12 @@
 
 <body>
 <h1 class="display-4">Main Experiment</h1>
-<p class="lead"><br>Your task is now to tap steadily for 15 seconds. <br><br> Try to keep the time between each tap as
-    even as possible. Choose a pace that feels most comfortable and natural to you right now.
-    When using a touchscreen display, please use your finger to tap in the circle below.
-    <br><br>If you use a computer, you can use any key on your keyboard or use the mouse to click into the circle.
+<br>
+<p class="lead" id="first_sentence"></p>
+<p class="lead">Try to keep the time between each tap as
+    even as possible. Choose a pace that feels most comfortable and natural to you right now. </p>
+<p class="lead">When using a touchscreen display, please use your finger to tap in the circle below.
+    If you use a computer, you can use any key on your keyboard or use the mouse to click into the circle.
     The experiment and timer starts with you first tap.</p>
 
 <br>
