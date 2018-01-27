@@ -8,6 +8,9 @@ body {
     .display-4 {
         font-size: 2.5rem;
     }
+    .slider-label{
+        font-size: 0.7rem;
+    }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -122,7 +125,7 @@ body {
 
 
 .slider.slider-horizontal {
-    width: 70%
+    width: 60%
 }
 
 .slider.slider-horizontal .slider-selection {
@@ -136,7 +139,6 @@ body {
 .slider.slider-disabled .slider-handle {
     /*background: #2f5dc7;*/
     background: #3876e1;
-    background: #3876e1;
 }
 
 .slider.slider-disabled .slider-track {
@@ -146,3 +148,4 @@ body {
 .slider.slider-horizontal .slider-rangeHighlight{
     background: rgba(80, 208, 37, 0.86);
 }
+

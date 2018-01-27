@@ -16,7 +16,7 @@
             var pass = true;
 
             document.getElementById("no_of_taps").innerHTML = Math.round(tap_count_total);
-            document.getElementById("cv_value").innerHTML = (100 - Math.round(coefficient_of_variation * 100)) + " %";
+            document.getElementById("cv_value").innerHTML = (100 - Math.round(coefficient_of_variation * 100 * 10) / 10) + " %";
             $('#ex1').slider({
                 value: (100 - (coefficient_of_variation * 100)),
                 formatter: function (value) {
@@ -82,13 +82,13 @@
 <p id="too_short"><span
         style="color: rgb(255,0,0); ">You need to tap as long as the timer is running, please try again.</span></p>
 <br>
-< 80%
+<span class="slider-label">< 80%</span>
 <image id="sad" src="/images/sad.png" style="width:5%"/>
 <input id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text" data-slider-min="80"
        data-slider-max="100" data-slider-step="1"
        data-slider-rangeHighlights='[{ "start": 93, "end": 93.5}]'/>
 <image src="/images/happy.png" style="width:5%"/>
-100%
+<span class="slider-label">100%</span>
 <br>
 <br>
 <br>
