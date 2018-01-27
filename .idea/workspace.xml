@@ -81,8 +81,8 @@
       <file leaf-file-name="experiment.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/experiment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="212" column="46" lean-forward="true" selection-start-line="212" selection-start-column="46" selection-end-line="212" selection-end-column="46" />
+            <state relative-caret-position="191">
+              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -369,13 +369,6 @@
       <workItem from="1516640314317" duration="35551000" />
       <workItem from="1516799245686" duration="2214000" />
       <workItem from="1516974421369" duration="5561000" />
-    </task>
-    <task id="LOCAL-00030" summary="improved experiment implementation">
-      <created>1513786459406</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1513786459406</updated>
     </task>
     <task id="LOCAL-00031" summary="improved experiment implementation">
       <created>1513786715056</created>
@@ -713,11 +706,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516989013508</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="mobile_dev: trying to optimize experiment for mobile">
+      <created>1517053645709</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1517053645709</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132540000" />
+    <option name="totallyTimeSpent" value="133221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="734" extended-state="6" />
@@ -1116,8 +1116,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/experiment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="212" column="46" lean-forward="true" selection-start-line="212" selection-start-column="46" selection-end-line="212" selection-end-column="46" />
+        <state relative-caret-position="191">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
