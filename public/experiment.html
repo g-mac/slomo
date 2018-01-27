@@ -23,6 +23,19 @@
             imageOff.src = "/images/off3.png";
         }
 
+        function touchStart() {
+            console.log("touchStart");
+        }
+
+        function touchEnd() {
+            handled = false;
+            console.log("touchEnd");
+        }
+
+        function mouseDown() {
+            console.log("mouseDown");
+        }
+
         function mouseUp() {
             handled = false;
             console.log("mouseUp");
@@ -195,9 +208,9 @@
 <!--<img id="switch" src="/images/off3.png" style="width:250px ;" onclick="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onmousedown="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onmousedown="TapForBPM()" onmouseup="mouseUp()">-->
-<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()" ontouchend="mouseUp()">
-<!--<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()" onmousedown="TapForBPM()"-->
-     <!--ontouchend="mouseUp()" onmouseup="mouseUp()">-->
+<!--<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()" ontouchend="mouseUp()">-->
+<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="touchStart()" onmousedown="mouseDown()"
+ontouchend="touchEnd()" onmouseup="mouseUp()">
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px;" onkeydown="TapForBPM()">-->
 <!--<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">-->
