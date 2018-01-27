@@ -27,25 +27,25 @@
         }
 
         function touchStart() {
-            console.log("touchStart");
+//            console.log("touchStart");
             usedTouch = true;
             TapForBPM();
         }
 
         function touchEnd() {
-            console.log("touchEnd");
+//            console.log("touchEnd");
             handled = false;
         }
 
         function mouseDown() {
-            console.log("mouseDown");
-            if(usedTouch) return;
+//            console.log("mouseDown");
+            if (usedTouch) return;
             TapForBPM();
         }
 
         function mouseUp() {
-            console.log("mouseUp");
-            if(usedTouch) return;
+//            console.log("mouseUp");
+            if (usedTouch) return;
             handled = false;
         }
 
@@ -213,37 +213,18 @@
 <!--<div style="position: relative; left: 0; top: 0;">-->
 <!--<img id="switch" src="/images/off.png" style="width:100px" onclick="TapForBPM()">-->
 <!--<img id="switch" src="/images/off3.png" style="width:250px ;" onclick="TapForBPM()">-->
-<!--<img id="switch" src="/images/off3.png" style="width:250px;" onmousedown="TapForBPM()">-->
-<!--<img id="switch" src="/images/off3.png" style="width:250px;" onmousedown="TapForBPM()" onmouseup="mouseUp()">-->
-<!--<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()" ontouchend="mouseUp()">-->
 <img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="touchStart()" onmousedown="mouseDown()"
      ontouchend="touchEnd()" onmouseup="mouseUp()">
-<!--<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="TapForBPM()">-->
-<!--<img id="switch" src="/images/off3.png" style="width:250px;" onkeydown="TapForBPM()">-->
 <!--<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">-->
 
 <br>
 <br>
 <br>
 
-
-<!--<br>-->
-<!--<p>KEY PRESSED:-->
-<!--<font id="key_pressed" color="FF0000">none</font>-->
-<!--</p>-->
-
-<!--<p>BPM AVERAGE:-->
-<!--<font id="bpm_avg" color="FF0000">none</font>-->
-<!--</p>-->
-<!--<br>-->
-
-
 <div id="progressBar">
     <div style="width: 0"></div>
 </div>
 <br>
 
-<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="start()">Weiter</a></p>-->
-<!--<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="load_feedback()">Weiter</a></p>-->
 </body>
 </html>
