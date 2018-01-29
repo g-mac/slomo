@@ -32,10 +32,9 @@
             })
 
             var $select = $("#dob");
-            for (i=2018;i>=1917;i--){
+            for (i = 2018; i >= 1917; i--) {
                 $select.append($('<option></option>').val(i).html(i))
             }
-//            $select.val('1980') //todo check if really wanted or maybe this might be a bad idea
 
 //            var date_input = $('input[name="birthdate"]'); //our date input has the name "date"
 //            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
@@ -55,15 +54,24 @@
             heritage = $('#heritage').val();
             city_size = $('#size').val();
 
-            if (date_of_birth==""
-                || gender==""
-                || heritage==""
-                || city_size=="") {
+            if (date_of_birth == ""
+                || gender == ""
+                || heritage == ""
+                || city_size == "") {
                 window.alert("Please answer all the questions above to continue");
             } else {
                 load_experiment();
             }
         }
+
+        function onDob() {
+            $("#dob").val('1980');
+        }
+
+        function onHeritage() {
+            $("#heritage").val('DE');
+        }
+
 
     </script>
 </head>
@@ -80,7 +88,7 @@
     <!--date of birth-->
     <div class="form-group">
         <label for="dob">Which year were you born?</label>
-        <select class="form-control" id="dob">
+        <select class="form-control" id="dob" onmousedown="onDob()">
             <option></option>
         </select>
     </div>
@@ -101,7 +109,7 @@
 
     <!--heritage-->
     <label for="heritage">In which country have you spent most of your life?</label>
-    <form><select id="heritage" class="form-control bfh-countries"></select></form>
+    <form><select id="heritage" class="form-control bfh-countries" onmousedown="onHeritage()"></select></form>
     <!--<select class="form-control bfh-countries"></select>-->
 
     <!--city size-->

@@ -55,7 +55,7 @@
 //            $("#switch2").fadeIn();
 //            $("#switch2").fadeOut(1000);
 
-            if (handled) return;
+            if (handled || !allowedToStart) return;
             console.log("TapForBPM");
 
             handled = true;
@@ -187,7 +187,18 @@
                 return false;
             };
 
-        })
+            $("#switch").hide();
+            $("#progressBar").hide();
+        });
+
+        var allowedToStart = false;
+
+        function startExperiment() {
+            $("#start_experiment_button").hide();
+            $("#switch").show();
+            $("#progressBar").show();
+            allowedToStart = true;
+        }
 
     </script>
 </head>
@@ -198,9 +209,9 @@
 <p class="lead" id="first_sentence"></p>
 <p class="lead">Try to keep the time between each tap as
     even as possible. Choose a pace that feels most comfortable and natural to you right now. </p>
-<p class="lead">When using a touchscreen display, please use your finger to tap in the circle below.
+<p class="lead">When using a touchscreen display, please use your finger to tap in the circle that will appear below.
     If you use a computer, you can use any key on your keyboard or use the mouse to click into the circle.
-    The experiment and timer starts with you first tap.</p>
+    Please click "Start" when you are ready. The experiment timer will then start running with your first tap.</p>
 
 <br>
 <!--<div align="center" style="width:250px; height:250px; background: greenyellow" >-->
@@ -209,6 +220,9 @@
 <!--&lt;!&ndash;<img id="switch" src="/images/off3.png" style="width:250px;">&ndash;&gt;-->
 <!--&lt;!&ndash;style="width:250px; height:250px; background: greenyellow"&ndash;&gt;-->
 <!--</div>-->
+
+<p><a id="start_experiment_button" class="btn btn-lg btn-success" href="#" role="button" onclick="startExperiment()">Start</a>
+</p>
 
 <!--<div style="position: relative; left: 0; top: 0;">-->
 <!--<img id="switch" src="/images/off.png" style="width:100px" onclick="TapForBPM()">-->

@@ -3,7 +3,7 @@
 var duration = 15;
 var min_taps = 8;
 var min_tap_time = (1000 * 0.8 * duration);
-var max_cv = 0.063;
+var max_cv = 0.09875;
 
 // --------
 
