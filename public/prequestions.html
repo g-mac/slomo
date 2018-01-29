@@ -64,14 +64,20 @@
             }
         }
 
+        var dobPreselected = false;
+
         function onDob() {
+            if (dobPreselected) return;
             $("#dob").val('1980');
+            dobPreselected = true;
         }
 
+        var heritagePreselected = false;
         function onHeritage() {
+            if (heritagePreselected) return;
             $("#heritage").val('DE');
+            heritagePreselected = true;
         }
-
 
     </script>
 </head>
@@ -142,6 +148,6 @@
 
 </div>
 
-<p><a class="btn btn-lg btn-success" href="#" role="button" onclick="onContinue()">Start</a></p>
+<p><a class="btn btn-lg btn-success btn-simon" href="#" role="button" onclick="onContinue()">Start</a></p>
 </body>
 </html>
