@@ -73,6 +73,14 @@ function postQuestionResults() {
 
 }
 
+function getLocation(){
+    navigator.geolocation.getCurrentPosition(function (location) {
+        lat = location.coords.latitude;
+        long = location.coords.longitude;
+        accuracy = location.coords.accuracy;
+    });
+}
+
 function arrayAsString(values) {
     var result = "";
     for (var i = 0; i < values.length; i++) {
@@ -132,7 +140,6 @@ function postResult() {
 }
 
 // $(document).ready(function () {
-//            window.alert("document lodaded");
 // })
 
 function load_welcome() {

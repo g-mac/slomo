@@ -25,11 +25,7 @@
 
         $(document).ready(function () {
 
-            navigator.geolocation.getCurrentPosition(function (location) {
-                lat = location.coords.latitude;
-                long = location.coords.longitude;
-                accuracy = location.coords.accuracy;
-            })
+            getLocation();
 
             var $select = $("#dob");
             for (i = 2018; i >= 1917; i--) {
@@ -73,6 +69,7 @@
         }
 
         var heritagePreselected = false;
+
         function onHeritage() {
             if (heritagePreselected) return;
             $("#heritage").val('DE');
