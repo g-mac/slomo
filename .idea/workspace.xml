@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="improved email send functionality (validation and UI)">
+    <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,21 +19,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -269,7 +270,6 @@
         <option value="$PROJECT_DIR$/views/welcome.html" />
         <option value="$PROJECT_DIR$/public/javascripts/bootstrap-slider/bootstrap-slider.min.css" />
         <option value="$PROJECT_DIR$/views/tap_for_bpm.html" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/public/welcome.html" />
         <option value="$PROJECT_DIR$/public/prequestions.html" />
@@ -280,6 +280,7 @@
         <option value="$PROJECT_DIR$/public/finish.html" />
         <option value="$PROJECT_DIR$/views/main.html" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -438,14 +439,7 @@
       <workItem from="1516974421369" duration="5561000" />
       <workItem from="1517166210252" duration="228000" />
       <workItem from="1517239192846" duration="10027000" />
-      <workItem from="1517318628140" duration="196000" />
-    </task>
-    <task id="LOCAL-00040" summary="improved experiment implementation">
-      <created>1515524281702</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1515524281702</updated>
+      <workItem from="1517318628140" duration="2862000" />
     </task>
     <task id="LOCAL-00041" summary="improved experiment implementation">
       <created>1515524468623</created>
@@ -783,11 +777,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517256175672</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="created new collection for DEV environment (need to remember to switch this every time when deploying to master)">
+      <created>1517318852631</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1517318852632</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151219000" />
+    <option name="totallyTimeSpent" value="153885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="734" extended-state="6" />
@@ -873,7 +874,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="started finalisation of first version of welcome and prequestion pages" />
     <MESSAGE value="changed title" />
     <MESSAGE value="changed prequestion texts" />
     <MESSAGE value="continued finalisation of first version (implemented questionnaire and more)" />
@@ -898,7 +898,8 @@
     <MESSAGE value="implemented changes as required after team meeting" />
     <MESSAGE value="implemented remaining requested changes and optimized views further" />
     <MESSAGE value="improved email send functionality (validation and UI)" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved email send functionality (validation and UI)" />
+    <MESSAGE value="created new collection for DEV environment (need to remember to switch this every time when deploying to master)" />
+    <option name="LAST_COMMIT_MESSAGE" value="created new collection for DEV environment (need to remember to switch this every time when deploying to master)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1219,18 +1220,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
