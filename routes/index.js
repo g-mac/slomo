@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+// var collection = 'xpresults'; //production
+var collection = 'xpresults_dev'; //dev
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -13,7 +15,7 @@ var insertedDocId = "";
 
 router.post('/postemail', function (req, res) {
     var db = req.db;
-    var collection = db.get('xpresults');
+    var collection = db.get(collection);
     collection.update({_id: insertedDocId},
         {
             $set:
@@ -34,7 +36,7 @@ router.post('/postemail', function (req, res) {
 
 router.post('/updateresult', function (req, res) {
     var db = req.db;
-    var collection = db.get('xpresults');
+    var collection = db.get(collection);
     collection.update({_id: insertedDocId},
         {
             $set:
@@ -62,7 +64,7 @@ router.post('/updateresult', function (req, res) {
 router.post('/addresult', function (req, res) {
     var db = req.db;
     var date = generateDate();
-    var collection = db.get('xpresults');
+    var collection = db.get(collection);
 
     if (insertedDocId === "") {
         // Insert to the DB
