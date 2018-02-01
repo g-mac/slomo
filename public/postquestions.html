@@ -38,15 +38,19 @@
 //            q5 = $('#q5').val();
 //            q6 = $('#q6').val();
 //            q7 = $('#q7').val();
-//
-            $("#content").hide();
-            postQuestionResults();
 
-            //            if (true) {
-//                window.alert("Please answer all the questions above to continue");
-//            } else {
-//                load_finish();
-//            }
+            if (q1 == null ||
+                q2 == null ||
+                q3 == null ||
+                q4 == null ||
+                q5 == null ||
+                q6 == null ||
+                q7 == null) {
+                window.alert("Please answer all the questions above to continue");
+            } else {
+                $("#content").hide();
+                postQuestionResults();
+            }
         }
 
     </script>
@@ -61,7 +65,7 @@
 <br>
 
 <!--q1-->
-<label for="q1">Do you make music?</label>
+<label for="q1"><b>Do you make music?</b></label>
 <br>
 <div id="q1" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
@@ -111,7 +115,7 @@
 <!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often", "I am a<br>professional"]'/>-->
 
 <!--q2-->
-<label for="q2">How do you feel right now?</label>
+<label for="q2"><b>How do you feel right now?</b></label>
 <br>
 <div id="q2" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
@@ -146,7 +150,7 @@
 <!--<br><br>-->
 
 <!--q3-->
-<label for="q3">How many hours do you spend studying/working in a typical week?</label>
+<label for="q3"><b>How many hours do you spend studying/working in a typical week?</b></label>
 <br>
 <div id="q3" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
@@ -202,8 +206,9 @@
 
 
 <!--q4-->
-<label for="q4">In the last month, how often have you felt that you were unable to control the important things in your
-    life?</label>
+<label for="q4"><b>In the last month, how often have you felt that you were unable to control the important things in
+    your
+    life?</b></label>
 <br>
 <div id="q4" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
@@ -237,8 +242,8 @@
 <br><br>
 
 <!--q5-->
-<label for="q5">In the last month, how often have you felt confident about your ability to handle your personal
-    problems?</label>
+<label for="q5"><b>In the last month, how often have you felt confident about your ability to handle your personal
+    problems?</b></label>
 <br>
 <div id="q5" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
@@ -272,7 +277,7 @@
 <br><br>
 
 <!--q6-->
-<label for="q6">In the last month, how often have you felt that things were going your way?</label>
+<label for="q6"><b>In the last month, how often have you felt that things were going your way?</b></label>
 <br>
 <div id="q6" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
@@ -305,8 +310,8 @@
 <br><br>
 
 <!--q7-->
-<label for="q7">In the last month, how often have you felt difficulties were piling up so high that you could not
-    overcome them?</label>
+<label for="q7"><b>In the last month, how often have you felt difficulties were piling up so high that you could not
+    overcome them?</b></label>
 <br>
 <div id="q7" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">

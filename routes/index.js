@@ -13,23 +13,19 @@ var insertedDocId = "";
 
 router.post('/postemail', function (req, res) {
     var db = req.db;
-    var collection = db.get('xpresults');
-    collection.update({_id: insertedDocId},
-        {
-            $set:
-                {
-                    "email": req.body.email
-                }
-        }, function (err, docUpdated) {
-            if (err) {
-                // If it failed, return error
-                res.send("There was a problem adding the information to the database.");
-            } else {
-                // And forward to success page
-                // res.send([{"message":"success!"}]);
-                res.send("")
-            }
-        });
+    var collection = db.get('emails');
+    collection.insert({
+        "email": req.body.email
+    }, function (err, docUpdated) {
+        if (err) {
+            // If it failed, return error
+            res.send("There was a problem adding the information to the database.");
+        } else {
+            // And forward to success page
+            // res.send([{"message":"success!"}]);
+            res.send("")
+        }
+    });
 });
 
 router.post('/updateresult', function (req, res) {
