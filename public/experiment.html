@@ -139,11 +139,11 @@
                 }, 1000);
             } else {
                 setTimeout(function () {
+                    $("#content").hide();
 //                    window.alert(intervals + ", " + Math.round(standardDeviation(intervals)));
                     coefficient_of_variation = calculateCV(intervals);
                     tap_count_total = (intervals.length + 1);
                     total_tap_time = msecs - msecsFirst;
-                    load_feedback();
                     experimentTries = experimentTries + 1;
                     postResult();
 //                    experimentFinished();
@@ -189,6 +189,8 @@
 
             $("#switch").hide();
             $("#progressBar").hide();
+
+            $("#content").show();
         });
 
         var allowedToStart = false;

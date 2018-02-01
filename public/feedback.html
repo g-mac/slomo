@@ -12,8 +12,10 @@
 
     <script>
 
+        var pass = false;
+
         $(document).ready(function () {
-            var pass = true;
+
 
             document.getElementById("no_of_taps").innerHTML = Math.round(tap_count_total);
             document.getElementById("cv_value").innerHTML = (100 - Math.round(coefficient_of_variation * 100 * 10) / 10) + " %";
@@ -24,6 +26,7 @@
                 }
             });
 
+            pass = true;
             if (tap_count_total < min_taps) {
                 pass = false;
                 $('#min_taps').css('color', 'rgb(255,0,0)');
@@ -46,7 +49,8 @@
                 $('#continue_button').text("Try again");
                 $('#continue_button').attr('onclick', 'load_experiment()');
             }
-        })
+            $("#content").show();
+        });
 
         function onContinue() {
             if (pass) {

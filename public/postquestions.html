@@ -12,14 +12,15 @@
 
 
     <script>
-        //        $(document).ready(function () {
-        //            $("#q1").slider({value: 3});
-        //            $("#q2").slider({value: 3});
-        //            $("#q4").slider({value: 3});
-        //            $("#q5").slider({value: 3});
-        //            $("#q6").slider({value: 3});
-        //            $("#q7").slider({value: 3});
-        //        })
+        $(document).ready(function () {
+            //            $("#q1").slider({value: 3});
+            //            $("#q2").slider({value: 3});
+            //            $("#q4").slider({value: 3});
+            //            $("#q5").slider({value: 3});
+            //            $("#q6").slider({value: 3});
+            //            $("#q7").slider({value: 3});
+            $("#content").show();
+        });
 
         function onContinue() {
 
@@ -38,10 +39,10 @@
 //            q6 = $('#q6').val();
 //            q7 = $('#q7').val();
 //
+            $("#content").hide();
             postQuestionResults();
-            load_finish();
 
-//            if (true) {
+            //            if (true) {
 //                window.alert("Please answer all the questions above to continue");
 //            } else {
 //                load_finish();

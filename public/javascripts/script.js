@@ -44,9 +44,13 @@ function postEmailAddress() {
     $.ajax({
         type: 'POST',
         data: emailResult,
-        url: '/postemail'
-    }).done(function (response) {
-
+        url: '/postemail',
+        success: function (data) {
+            submitEmailSuccess();
+        },
+        error: function () {
+            window.alert("Connection failed, please click ok to try again...");
+        }
     });
 
 }
@@ -66,14 +70,20 @@ function postQuestionResults() {
     $.ajax({
         type: 'POST',
         data: updateResult,
-        url: '/updateresult'
-    }).done(function (response) {
-
+        url: '/updateresult',
+        success: function (data) {
+            load_finish();
+        },
+        error: function () {
+            window.alert("Connection failed, please click ok to try again...");
+            postQuestionResults();
+            //handle
+        }
     });
 
 }
 
-function getLocation(){
+function getLocation() {
     navigator.geolocation.getCurrentPosition(function (location) {
         lat = location.coords.latitude;
         long = location.coords.longitude;
@@ -120,22 +130,16 @@ function postResult() {
     $.ajax({
         type: 'POST',
         data: newResult,
-        url: '/addresult'
-//                dataType: 'JSON'
-    }).done(function (response) {
-        //todo: not working, returning "undefined"
-//                document.getElementById("submit_feedback").innerHTML = "RESPONSE:";
-        // Check for successful (blank) response
-        if (response.msg === '') {
-            // document.getElementById("submit_feedback").innerHTML = "SUCCESS";
-            // Clear the form inputs
-//                    $('#addUser fieldset input').val('');
-        } else {
-            // If something goes wrong, alert the error message that our service returned
-            // document.getElementById("submit_feedback").innerHTML = "FAILURE: " + response.msg;
-//                    document.getElementById("submit_feedback").innerHTML = "FAILURE: " + response.message;
-//                    alert('Error: ' + response.msg);
+        url: '/addresult',
+        success: function (data) {
+            load_feedback();
+        },
+        error: function () {
+            window.alert("Connection failed, please click ok to try again...");
+            postResult();
+            //handle
         }
+        // ,dataType: 'JSON'
     });
 }
 
@@ -147,22 +151,27 @@ function load_welcome() {
 }
 
 function load_experiment() {
+    $("#content").hide();
     $("#content").load("experiment.html");
 }
 
 function load_feedback() {
+    $("#content").hide();
     $("#content").load("feedback.html");
 }
 
 function load_prequestions() {
+    $("#content").hide();
     $("#content").load("prequestions.html");
 }
 
 function load_postquestions() {
+    $("#content").hide();
     $("#content").load("postquestions.html");
 }
 
 function load_finish() {
+    $("#content").hide();
     $("#content").load("finish.html");
 }
 

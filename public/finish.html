@@ -7,6 +7,7 @@
         $(document).ready(function () {
             $('#submit_success').hide()
             $('#submit_fail').hide()
+            $("#content").show();
         })
 
         function onEmailSend() {
@@ -14,12 +15,15 @@
             if (emailAddress === "") return;
             if (validateEmail(emailAddress)) {
                 postEmailAddress();
-                $('#submit_success').show();
-                $('#submit_fail').hide();
             } else {
                 $('#submit_fail').show();
                 $('#submit_success').hide();
             }
+        }
+
+        function submitEmailSuccess(){
+            $('#submit_success').show();
+            $('#submit_fail').hide();
         }
 
         function validateEmail(email) {
