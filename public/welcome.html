@@ -9,10 +9,8 @@
     <!--<link href="/stylesheets/style.css" rel="stylesheet">-->
     <script>
         $(document).ready(function () {
-            $("#text").text("Thank you for your interest in this study! As part of a research project, we are investigating how well people can tap without" +
-                "    influences such as music. Your task is to tap evenly on your device for " + duration + " seconds. Afterwards, you will get" +
-                "    feedback about your performance. Additionally, we would like you to answer a few simple questions.")
             $("#content").show();
+            setContentText();
         });
 
         function onContinue() {
@@ -21,26 +19,37 @@
 //            } else {
 //                window.alert("Please accept the Terms & Conditions to continue");
 //            }
-        };
+        }
+
+        function setContentText() {
+            $("#welcome_title").html(langJson.welcome_title);
+            $("#welcome_text").html(langJson.welcome_text.replace("%d", duration + ""));
+            $("#welcome_lead").html(langJson.welcome_lead);
+            $("#welcome_tc").html(langJson.welcome_tc);
+            $("#welcome_start").html(langJson.welcome_start);
+        }
+
     </script>
 </head>
 
 <body>
 
-<h1 class="display-4">How good is your <br>inner timing? Test it!</h1>
+<h1 id="welcome_title" class="display-4">How good is your <br>inner timing? Test it!</h1>
 <br>
-<p class="lead" id="text"></p>
-<p class="lead">It only takes about 2 minutes.</p>
+<p class="lead" id="welcome_text"></p>
+<p id="welcome_lead" class="lead">It only takes about 2 minutes.</p>
 
 <!--<div class="checkbox">-->
 <!--<label><input type="checkbox" id="tc_checkbox" value="test"> I have read and accept the Terms & Conditions</label>-->
 <!--</div>-->
 
 <br>
-<a href="" data-toggle="modal" data-target="#exampleModal"><font color="#777777" size="3">Terms & Conditions</font></a>
+<a id="welcome_tc" href="" data-toggle="modal" data-target="#exampleModal" style="color: #777777; font-size: 100%">Terms
+    & Conditions</a>
 <br>
 <br>
-<p><a class="btn btn-lg btn-success btn-simon" href="#" role="button" onclick="onContinue()">Agree and start</a>
+<p><a id="welcome_start" class="btn btn-lg btn-success btn-simon" href="#" role="button" onclick="onContinue()">Agree
+    and start</a>
 </p>
 
 

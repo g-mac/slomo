@@ -43,10 +43,54 @@
     <script src="/javascripts/script.js" type="text/javascript"></script>
 
     <script>
+
+        var langJson;
+
         $(document).ready(function () {
-//            load_experiment();
+//            load_finish();
             load_welcome();
+            setLanguage("en");
         });
+
+        function setLanguage(language) {
+//            window.alert("setLanguage: " + language);
+            switch (language) {
+                case "de":
+                    $.getJSON("/javascripts/lang_de.json", function (json) {
+                        langJson = json;
+                        onLanguageLoaded();
+                    });
+                    break;
+                case "fr":
+                    $.getJSON("/javascripts/lang_fr.json", function (json) {
+                        langJson = json;
+                        onLanguageLoaded();
+                    });
+                    break;
+                default: //en
+                    $.getJSON("/javascripts/lang_en.json", function (json) {
+                        langJson = json;
+                        onLanguageLoaded();
+                    });
+                    break;
+            }
+        }
+
+        function onLanguageLoaded() {
+            setText();
+            setContentText();
+        }
+
+        function setText() {
+            $("#main_title").html(langJson.main_title);
+            $("#site_notice_link").html(langJson.site_notice_link);
+            $("#copy_right_text").html(langJson.copy_right_text);
+            $("#site_notice_title").html(langJson.site_notice_title);
+            $("#site_notice_text").html(langJson.site_notice_text);
+            $("#tc_title").html(langJson.tc_title);
+            $("#tc_text").html(langJson.tc_text);
+        }
+
     </script>
 
     <title>The Inner Timing Study</title>
@@ -61,12 +105,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Terms & Conditions</h5>
+                <h5 class="modal-title" id="tc_title">Terms & Conditions</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div id="tc_text" class="modal-body">
                 By clicking on “Agree and start”, you agree to take part in this study. You can withdraw from the
                 study at any time. No data will be stored that can identify you. However, you will be asked to answer
                 some general questions about yourself that will be aggregated and analysed together with the data of
@@ -74,7 +118,7 @@
                 slomo@uni-hamburg.de (ERC project SloMo, University of Hamburg, Germany).
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-simon" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary btn-simon" data-dismiss="modal">OK</button>
                 <!--<button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
         </div>
@@ -87,13 +131,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="impressumModalLabel">Site Notice</h5>
+                <h5 class="modal-title" id="site_notice_title">Site Notice</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-
+            <div id="site_notice_text" class="modal-body">
                 <b>Content responsibility in compliance with § 5 of the German Telemedia Act (TMG)</b>
                 <br>
                 <br>
@@ -158,7 +201,7 @@
                 cannot be guaranteed. Such data could possibly be accessed by third parties.
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-simon" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary btn-simon" data-dismiss="modal">OK</button>
                 <!--<button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
         </div>
@@ -168,7 +211,7 @@
 <div class="container">
 
     <header class="header clearfix">
-        <h3 class="text-muted">The Inner Timing Study</h3>
+        <h3 id="main_title" class="text-muted">The Inner Timing Study</h3>
     </header>
 
     <main role="main">
@@ -187,8 +230,13 @@
     </main>
 
     <footer class="footer">
-        &copy; 2018 ERC-Project SloMo. All rights reserved.
-        <a href="" data-toggle="modal" data-target="#impressumModal" style="float: right; color: grey">Site Notice</a>
+        <!--<img id="switch" src="/images/off3.png" style="width:60px; height:30px; float: right"/>-->
+        <img src="/images/en.png" style="width:25px; height:13px" onclick="setLanguage('en')"/>
+        <img src="/images/de.png" style="width:25px; height:13px" onclick="setLanguage('de')"/>
+        <img src="/images/fr.png" style="width:25px; height:13px" onclick="setLanguage('fr')" hidden="true"/>
+        <span id="copy_right_text">&copy; 2018 ERC-Project SloMo. All rights reserved.</span>
+        <a id="site_notice_link" href="" data-toggle="modal" data-target="#impressumModal"
+           style="float: right; color: grey">Site Notice</a>
     </footer>
 
 </div> <!-- /container -->

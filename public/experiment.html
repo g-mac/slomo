@@ -179,8 +179,6 @@
             intervals = [];
             loadImages();
 
-            $("#first_sentence").text("Your task is now to tap steadily for " + duration + " seconds.")
-
             window.oncontextmenu = function (event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -189,8 +187,8 @@
 
             $("#switch").hide();
             $("#progressBar").hide();
-
             $("#content").show();
+            setContentText();
         });
 
         var allowedToStart = false;
@@ -202,16 +200,24 @@
             allowedToStart = true;
         }
 
+        function setContentText() {
+            $("#experiment_p1").html(langJson.experiment_p1.replace("%d", duration + ""));
+            $("#experiment_p2").html(langJson.experiment_p2);
+            $("#experiment_p3").html(langJson.experiment_p3);
+            $("#start_experiment_button").html(langJson.experiment_start);
+        }
+
     </script>
 </head>
 
 <body>
 <!--<h1 class="display-4">Tapping Test</h1>-->
 <!--<br>-->
-<p class="lead" id="first_sentence"></p>
-<p class="lead"><b>Try to keep the time between each tap as
-    even as possible. Choose a pace that feels most comfortable and natural to you right now.</b></p>
-<p class="lead">When using a touchscreen display, please use your finger to tap in the circle that will appear below.
+<p class="lead" id="experiment_p1"></p>
+<p class="lead" id="experiment_p2" style="font-weight: 500">Try to keep the time between each tap as
+    even as possible. Choose a pace that feels most comfortable and natural to you right now.</p>
+<p class="lead" id="experiment_p3">When using a touchscreen display, please use your finger to tap in the circle that
+    will appear below.
     If you use a computer, you can use any key on your keyboard or use the mouse to click into the circle.
     Please click "Start" when you are ready. The experiment timer will then start running with your first tap.</p>
 
