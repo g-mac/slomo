@@ -37,7 +37,7 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use('/dev', index);
+app.use('/', index);
 
 
 // -------- ERROR HANDLING ------------------------
