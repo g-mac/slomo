@@ -130,7 +130,7 @@ function postResult() {
     $.ajax({
         type: 'POST',
         data: newResult,
-        url: 'addresult',
+        url: document.referrer + '/addresult',
         success: function (data) {
             load_feedback();
         },
