@@ -44,7 +44,7 @@ function postEmailAddress() {
     $.ajax({
         type: 'POST',
         data: emailResult,
-        url: '/postemail',
+        url: window.location.pathname + '/postemail',
         success: function (data) {
             submitEmailSuccess();
         },
@@ -70,7 +70,7 @@ function postQuestionResults() {
     $.ajax({
         type: 'POST',
         data: updateResult,
-        url: '/updateresult',
+        url: window.location.pathname + '/updateresult',
         success: function (data) {
             load_finish();
         },
@@ -125,8 +125,6 @@ function postResult() {
         'city_size': city_size
     };
 
-
-    window.alert("window.location.pathname: " + window.location.pathname);
 
     // Use AJAX to post the object addresult service
     $.ajax({
