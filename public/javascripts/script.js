@@ -126,11 +126,13 @@ function postResult() {
     };
 
 
+    window.alert("window.location.pathname: " + window.location.pathname);
+
     // Use AJAX to post the object addresult service
     $.ajax({
         type: 'POST',
         data: newResult,
-        url: document.referrer + '/addresult',
+        url: window.location.pathname + '/addresult',
         success: function (data) {
             load_feedback();
         },
