@@ -42,11 +42,29 @@
             $("#finish_submit").attr("value", langJson.finish_submit);
         }
 
+        function onFacebookClick(){
+            FB.ui({
+                method: 'share',
+                href: 'http://innertiming.slomo.uni-hamburg.de',
+            }, function(response){});
+        }
+
     </script>
 </head>
 
 <body>
 <h1 id="finish_title" class="display-4">Thank You!</h1>
+<br>
+<div
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true">
+</div>
+<br>
+<br>
+<p><a id="prequestions_start" class="btn btn-md btn-primary btn-simon" href="#" role="button" onclick="onFacebookClick()">Share on Facebook</a>
+<br>
 <br>
 <p id="finish_p1" class="lead">Thank you for participation!<br>
     We would very much appreciate if you could share this test via social media to make more people aware of it.
