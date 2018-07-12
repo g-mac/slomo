@@ -8,6 +8,7 @@
             $('#submit_success').hide()
             $('#submit_fail').hide()
             $("#content").show();
+            setContentText();
         })
 
         function onEmailSend() {
@@ -21,7 +22,7 @@
             }
         }
 
-        function submitEmailSuccess(){
+        function submitEmailSuccess() {
             $('#submit_success').show();
             $('#submit_fail').hide();
         }
@@ -31,26 +32,36 @@
             return re.test(email);
         }
 
+        function setContentText() {
+            $("#finish_title").html(langJson.finish_title);
+            $("#finish_p1").html(langJson.finish_p1);
+            $("#finish_p2").html(langJson.finish_p2);
+            $("#emailInput").attr("placeholder", langJson.finish_enter_email);
+            $("#submit_success").html(langJson.finish_submit_success);
+            $("#submit_fail").html(langJson.finish_submit_fail);
+            $("#finish_submit").attr("value", langJson.finish_submit);
+        }
+
     </script>
 </head>
 
 <body>
-<h1 class="display-4">Thank You!</h1>
+<h1 id="finish_title" class="display-4">Thank You!</h1>
 <br>
-<p class="lead">Thank you for participation!<br>
+<p id="finish_p1" class="lead">Thank you for participation!<br>
     We would very much appreciate if you could share this test via social media to make more people aware of it.
     <!--todo: Here share options for facebook, twitter google+, etc.)-->
     <br><br>
     If you are interested in the results of the study you can leave us your e-mail address here.</p>
 <form>
-    <input id="emailInput" type="email" placeholder="Enter your email">
-    <input type="button" value="submit" class="btn btn-secondary btn-sm" onclick="onEmailSend()">
+    <input id="emailInput" type="email">
+    <input id="finish_submit" type="button" value="submit" class="btn btn-secondary btn-sm" onclick="onEmailSend()">
 </form>
 <p id="submit_success" style="font-size: 0.7rem; color: grey">Thank you! You email address was submitted.</p>
 <p id="submit_fail" style="font-size: 0.7rem; color: red">You have to enter a valid email address.</p>
 <br>
 <br>
-<p class="lead">If you are interested in the general research project click here:</p>
+<p id="finish_p2" class="lead">If you are interested in the general research project click here:</p>
 <a href="https://www.slomo.uni-hamburg.de/en.html" target="_blank"><img src="images/slomo.jpg"
                                                                         style="max-width:100%; width:300px"
                                                                         title="SloMo"

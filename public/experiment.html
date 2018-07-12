@@ -2,7 +2,7 @@
 
 <head>
     <!--custom css-->
-    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
 
     <script>
         var count = 0;
@@ -21,9 +21,9 @@
 
         function loadImages() {
             imageOn = new Image();
-            imageOn.src = "/images/on3.png";
+            imageOn.src = "images/on3.png";
             imageOff = new Image();
-            imageOff.src = "/images/off3.png";
+            imageOff.src = "images/off3.png";
         }
 
         function touchStart() {
@@ -62,7 +62,7 @@
             document.getElementById("switch").src = imageOn.src;
             setTimeout(function () {
                 document.getElementById("switch").src = imageOff.src;
-            }, 100);
+            }, 50);
 
 //            if (alternate) {
 //                document.getElementById("switch").src = "/images/off3.png"
@@ -179,8 +179,6 @@
             intervals = [];
             loadImages();
 
-            $("#first_sentence").text("Your task is now to tap steadily for " + duration + " seconds.")
-
             window.oncontextmenu = function (event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -189,8 +187,8 @@
 
             $("#switch").hide();
             $("#progressBar").hide();
-
             $("#content").show();
+            setContentText();
         });
 
         var allowedToStart = false;
@@ -202,24 +200,32 @@
             allowedToStart = true;
         }
 
+        function setContentText() {
+            $("#experiment_p1").html(langJson.experiment_p1.replace("%d", duration + ""));
+            $("#experiment_p2").html(langJson.experiment_p2);
+            $("#experiment_p3").html(langJson.experiment_p3);
+            $("#start_experiment_button").html(langJson.experiment_start);
+        }
+
     </script>
 </head>
 
 <body>
 <!--<h1 class="display-4">Tapping Test</h1>-->
 <!--<br>-->
-<p class="lead" id="first_sentence"></p>
-<p class="lead"><b>Try to keep the time between each tap as
-    even as possible. Choose a pace that feels most comfortable and natural to you right now.</b></p>
-<p class="lead">When using a touchscreen display, please use your finger to tap in the circle that will appear below.
+<p class="lead" id="experiment_p1"></p>
+<p class="lead" id="experiment_p2" style="font-weight: 500">Try to keep the time between each tap as
+    even as possible. Choose a pace that feels most comfortable and natural to you right now.</p>
+<p class="lead" id="experiment_p3">When using a touchscreen display, please use your finger to tap in the circle that
+    will appear below.
     If you use a computer, you can use any key on your keyboard or use the mouse to click into the circle.
     Please click "Start" when you are ready. The experiment timer will then start running with your first tap.</p>
 
 <br>
 <!--<div align="center" style="width:250px; height:250px; background: greenyellow" >-->
-<!--<img id="switch" src="/images/off3.png" style="width:250px; height:250px; position: absolute; top: 0%">-->
-<!--<img id="switch2" src="/images/on3.png" style="width:250px; height:250px; position: absolute">-->
-<!--&lt;!&ndash;<img id="switch" src="/images/off3.png" style="width:250px;">&ndash;&gt;-->
+<!--<img id="switch" src="images/off3.png" style="width:250px; height:250px; position: absolute; top: 0%">-->
+<!--<img id="switch2" src="images/on3.png" style="width:250px; height:250px; position: absolute">-->
+<!--&lt;!&ndash;<img id="switch" src="images/off3.png" style="width:250px;">&ndash;&gt;-->
 <!--&lt;!&ndash;style="width:250px; height:250px; background: greenyellow"&ndash;&gt;-->
 <!--</div>-->
 
@@ -228,11 +234,11 @@
 </p>
 
 <!--<div style="position: relative; left: 0; top: 0;">-->
-<!--<img id="switch" src="/images/off.png" style="width:100px" onclick="TapForBPM()">-->
-<!--<img id="switch" src="/images/off3.png" style="width:250px ;" onclick="TapForBPM()">-->
-<img id="switch" src="/images/off3.png" style="width:250px;" ontouchstart="touchStart()" onmousedown="mouseDown()"
+<!--<img id="switch" src="images/off.png" style="width:100px" onclick="TapForBPM()">-->
+<!--<img id="switch" src="images/off3.png" style="width:250px ;" onclick="TapForBPM()">-->
+<img id="switch" src="images/off3.png" style="width:250px;" ontouchstart="touchStart()" onmousedown="mouseDown()"
      ontouchend="touchEnd()" onmouseup="mouseUp()">
-<!--<img id="switch" src="/images/wheel1.png" style="width:150px" onclick="TapForBPM()">-->
+<!--<img id="switch" src="images/wheel1.png" style="width:150px" onclick="TapForBPM()">-->
 
 <br>
 <br>
