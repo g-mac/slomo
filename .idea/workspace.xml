@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/google_script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,15 +42,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prequestions.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/prequestions.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,23 +60,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feedback.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/feedback.html">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-              <folding>
-                <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="264">
+              <caret line="180" column="1" lean-forward="true" selection-start-line="180" selection-start-column="1" selection-end-line="180" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
+      <file leaf-file-name="another_script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/another_script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+            <state relative-caret-position="535">
+              <caret line="170" selection-start-line="170" selection-end-line="170" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="google_script.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/google_script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -238,6 +234,8 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/main.html" />
         <option value="$PROJECT_DIR$/public/javascripts/script.js" />
+        <option value="$PROJECT_DIR$/another_script.js" />
+        <option value="$PROJECT_DIR$/google_script.js" />
       </list>
     </option>
   </component>
@@ -298,11 +296,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/javascripts" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/javascripts/bootstrap-slider" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
@@ -382,20 +380,6 @@
       <workItem from="1520265380947" duration="12059000" />
       <workItem from="1520549973268" duration="11950000" />
       <workItem from="1523482319370" duration="1056000" />
-    </task>
-    <task id="LOCAL-00063" summary="minor text changes">
-      <created>1516981137111</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1516981137112</updated>
-    </task>
-    <task id="LOCAL-00064" summary="implemented changes requested by David">
-      <created>1516981883172</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1516981883172</updated>
     </task>
     <task id="LOCAL-00065" summary="fixed logic for min_tap_time">
       <created>1516982958310</created>
@@ -726,25 +710,40 @@
       <option name="project" value="LOCAL" />
       <updated>1531330913463</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Try to implement db API. Fix path of db actions, was causing local development problems.">
+      <created>1531402583833</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1531402583833</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Fix path of db actions, was causing local development problems.">
+      <created>1531403313334</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1531403313334</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203466000" />
+    <option name="totallyTimeSpent" value="204995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6731183" visible="true" weight="0.18268467" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6731183" visible="true" weight="0.18268467" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5067514" side_tool="true" weight="0.5637255" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49642575" visible="true" weight="0.32026145" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50754565" side_tool="true" weight="0.5637255" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49642575" weight="0.32026145" />
       <window_info id="npm" order="2" sideWeight="0.3268817" side_tool="true" weight="0.17871326" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960285" weight="0.3611111" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2494043" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4932486" weight="0.5637255" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49245432" weight="0.5637255" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Salesforce" order="7" />
@@ -839,8 +838,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reinsert deleted line (hopefully fixing size on mobile devices)" />
-    <MESSAGE value="--" />
     <MESSAGE value="tets commit (undo test changes for testing dev/master deployment)" />
     <MESSAGE value="mobile_dev: changed duration" />
     <MESSAGE value="mobile_dev: trying to optimize experiment for mobile" />
@@ -864,7 +861,9 @@
     <MESSAGE value="Change db to local mongo db on uhh server." />
     <MESSAGE value="Fix path for images." />
     <MESSAGE value="Try fix mongo connection (502)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Try fix mongo connection (502)." />
+    <MESSAGE value="Try to implement db API. Fix path of db actions, was causing local development problems." />
+    <MESSAGE value="Fix path of db actions, was causing local development problems." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix path of db actions, was causing local development problems." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -872,9 +871,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/bootstrap/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/bootstrap-datepicker/bootstrap-datepicker.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1041,13 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/another_script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/prequestions.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1134,8 +1123,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+        <state relative-caret-position="264">
+          <caret line="180" column="1" lean-forward="true" selection-start-line="180" selection-start-column="1" selection-end-line="180" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/another_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>
