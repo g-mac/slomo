@@ -15,16 +15,22 @@ function importUhhData() {
     var prodSheet = ss.getSheetByName("PROD");
     if (prodSheet == null)
         prodSheet = ss.insertSheet("PROD");
+    else if (prodSheet.getLastRow() > 0)
+        prodSheet.deleteRows(1, prodSheet.getLastRow())
     getJsonData("http://innertiming.slomo.uni-hamburg.de/xpresults", prodSheet);
 
     var labSheet = ss.getSheetByName("LAB");
     if (labSheet == null)
         labSheet = ss.insertSheet("LAB");
+    else if (labSheet.getLastRow() > 0)
+        labSheet.deleteRows(1, labSheet.getLastRow())
     getJsonData("http://innertiming.slomo.uni-hamburg.de/lab/xpresults", labSheet);
 
     var devSheet = ss.getSheetByName("DEV");
     if (devSheet == null)
         devSheet = ss.insertSheet("DEV");
+    else if (devSheet.getLastRow() > 0)
+        devSheet.deleteRows(1, devSheet.getLastRow())
     getJsonData("http://innertiming.slomo.uni-hamburg.de/dev/xpresults", devSheet);
 
 }
