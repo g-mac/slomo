@@ -1,6 +1,9 @@
 <html lang="en">
 <head>
 
+    <!--<base href="/dev/">-->
+    <!--<base href="/dev/" target="_blank">-->
+
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -13,13 +16,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--jquery-->
-    <!--<script src="/javascripts/bootstrap/jquery.min.js"></script>-->
-    <!--&lt;!&ndash;<script src="/javascripts/jquery-3.2.1.slim.min.js"></script>&ndash;&gt;-->
+    <!--<script src="javascripts/bootstrap/jquery.min.js"></script>-->
+    <!--&lt;!&ndash;<script src="javascripts/jquery-3.2.1.slim.min.js"></script>&ndash;&gt;-->
 
     <!--&lt;!&ndash;bootstrap&ndash;&gt;-->
     <!--<link rel="stylesheet" href="/javascripts/bootstrap/bootstrap.min.css">-->
-    <!--<script src="/javascripts/bootstrap/bootstrap.min.js"></script>-->
-    <!--<script src="/javascripts/bootstrap/popper.min.js"></script>-->
+    <!--<script src="javascripts/bootstrap/bootstrap.min.js"></script>-->
+    <!--<script src="javascripts/bootstrap/popper.min.js"></script>-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
 
     <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
@@ -37,10 +40,10 @@
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
 
     <!--custom css-->
-    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
 
     <!--custom js-->
-    <script src="/javascripts/script.js" type="text/javascript"></script>
+    <script src="javascripts/script.js" type="text/javascript"></script>
 
     <script>
 
@@ -56,19 +59,19 @@
 //            window.alert("setLanguage: " + language);
             switch (language) {
                 case "de":
-                    $.getJSON("/javascripts/lang_de.json", function (json) {
+                    $.getJSON("javascripts/lang_de.json", function (json) {
                         langJson = json;
                         onLanguageLoaded();
                     });
                     break;
                 case "fr":
-                    $.getJSON("/javascripts/lang_fr.json", function (json) {
+                    $.getJSON("javascripts/lang_fr.json", function (json) {
                         langJson = json;
                         onLanguageLoaded();
                     });
                     break;
                 default: //en
-                    $.getJSON("/javascripts/lang_en.json", function (json) {
+                    $.getJSON("javascripts/lang_en.json", function (json) {
                         langJson = json;
                         onLanguageLoaded();
                     });
@@ -219,7 +222,7 @@
         <div class="jumbotron" id="content">
 
             <!--todo: remove or replace? 180126 currently not wanted-->
-            <!--<img id="dot2" src="/images/pulse2.gif" style="width:250px" onclick="load_welcome()">-->
+            <!--<img id="dot2" src="images/pulse2.gif" style="width:250px" onclick="load_welcome()">-->
             <!--&lt;!&ndash;<p><a class="btn btn-lg btn-success" href="javascript:void();" role="button" onclick="load_welcome()">Weiter</a></p>&ndash;&gt;-->
             <!--&lt;!&ndash;<p class="h6">click to start</p>&ndash;&gt;-->
             <!--<br>-->
@@ -230,10 +233,10 @@
     </main>
 
     <footer class="footer">
-        <!--<img id="switch" src="/images/off3.png" style="width:60px; height:30px; float: right"/>-->
-        <img src="/images/en.png" style="width:25px; height:13px" onclick="setLanguage('en')"/>
-        <img src="/images/de.png" style="width:25px; height:13px" onclick="setLanguage('de')"/>
-        <img src="/images/fr.png" style="width:25px; height:13px" onclick="setLanguage('fr')" hidden="true"/>
+        <!--<img id="switch" src="images/off3.png" style="width:60px; height:30px; float: right"/>-->
+        <img src="images/en.png" style="width:25px; height:13px" onclick="setLanguage('en')"/>
+        <img src="images/de.png" style="width:25px; height:13px" onclick="setLanguage('de')"/>
+        <img src="images/fr.png" style="width:25px; height:13px" onclick="setLanguage('fr')"/>
         <span id="copy_right_text">&copy; 2018 ERC-Project SloMo. All rights reserved.</span>
         <a id="site_notice_link" href="" data-toggle="modal" data-target="#impressumModal"
            style="float: right; color: grey">Site Notice</a>

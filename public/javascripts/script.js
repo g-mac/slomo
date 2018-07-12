@@ -44,7 +44,7 @@ function postEmailAddress() {
     $.ajax({
         type: 'POST',
         data: emailResult,
-        url: '/postemail',
+        url: window.location.pathname + '/postemail',
         success: function (data) {
             submitEmailSuccess();
         },
@@ -70,7 +70,7 @@ function postQuestionResults() {
     $.ajax({
         type: 'POST',
         data: updateResult,
-        url: '/updateresult',
+        url: window.location.pathname + '/updateresult',
         success: function (data) {
             load_finish();
         },
@@ -130,7 +130,7 @@ function postResult() {
     $.ajax({
         type: 'POST',
         data: newResult,
-        url: '/addresult',
+        url: window.location.pathname + '/addresult',
         success: function (data) {
             load_feedback();
         },
