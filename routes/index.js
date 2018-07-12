@@ -20,6 +20,17 @@ router.get('/xpresults', function (req, res, next) {
     });
 });
 
+router.get('/emails', function (req, res, next) {
+    var db = req.db;
+    var collection = db.get('emails');
+    collection.find({}, function (err, doc){
+        /* doc is the result available here */
+        res.setHeader('Content-Type', 'application/json');
+        res.send(doc);
+        // res.send(JSON.stringify({ a: 1 }, null, 3));
+    });
+});
+
 var insertedDocId = "";
 
 router.post('/postemail', function (req, res) {
