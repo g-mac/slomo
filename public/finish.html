@@ -34,19 +34,23 @@
 
         function setContentText() {
             $("#finish_title").html(langJson.finish_title);
-            $("#finish_p1").html(langJson.finish_p1);
+            $("#finish_p1_a").html(langJson.finish_p1_a);
+            $("#finish_p1_b").html(langJson.finish_p1_b);
             $("#finish_p2").html(langJson.finish_p2);
             $("#emailInput").attr("placeholder", langJson.finish_enter_email);
             $("#submit_success").html(langJson.finish_submit_success);
             $("#submit_fail").html(langJson.finish_submit_fail);
+            $("#finish_share_1").html(langJson.finish_share_1);
+            $("#finish_share_2").html(langJson.finish_share_2);
             $("#finish_submit").attr("value", langJson.finish_submit);
         }
 
-        function onFacebookClick(){
+        function onFacebookClick() {
             FB.ui({
                 method: 'share',
                 href: 'http://innertiming.slomo.uni-hamburg.de',
-            }, function(response){});
+            }, function (response) {
+            });
         }
 
     </script>
@@ -56,26 +60,28 @@
 <h1 id="finish_title" class="display-4">Thank You!</h1>
 <!--<br>-->
 <!--<div-->
-        <!--class="fb-like"-->
-        <!--data-share="true"-->
-        <!--data-width="450"-->
-        <!--data-show-faces="true">-->
+<!--class="fb-like"-->
+<!--data-share="true"-->
+<!--data-width="450"-->
+<!--data-show-faces="true">-->
 <!--</div>-->
 
 <!--https://twitter.com/intent/tweet?via=xerosanyam&text=You_are_amazing-->
 
-<!--<br>-->
 <br>
-<p><a class="btn btn-md btn-primary btn-simon" href="#" role="button" onclick="onFacebookClick()">Share on Facebook</a>
+<p id="finish_p1_a" class="lead">Thank you for participation!<br>
+    We would very much appreciate if you could share this test via social media to make more people aware of it.</p>
 <br>
-<p><a class="btn btn-md btn-primary btn-simon" href="https://twitter.com/intent/tweet?&text=http://innertiming.slomo.uni-hamburg.de" role="button">Share on Twitter</a>
+<p class="lead">
+    <a id="finish_share_1">Share via&nbsp;&nbsp;</a>
+    <a class="btn btn-md btn-primary btn-simon" href="#" role="button" onclick="onFacebookClick()">Facebook</a>
+    <!--&nbsp;&nbsp;&nbsp;&nbspOR&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <a id="finish_share_2">&nbsp;&nbsp; or &nbsp;&nbsp;</a>
+    <a class="btn btn-md btn-info btn-simon" target="_blank"
+       href="https://twitter.com/intent/tweet?&text=http://innertiming.slomo.uni-hamburg.de" role="button">Twitter</a>
+</p>
 <br>
-<br>
-<p id="finish_p1" class="lead">Thank you for participation!<br>
-    We would very much appreciate if you could share this test via social media to make more people aware of it.
-    <!--todo: Here share options for facebook, twitter google+, etc.)-->
-    <br><br>
-    If you are interested in the results of the study you can leave us your e-mail address here.</p>
+<p id="finish_p1_b" class="lead">If you are interested in the results of the study you can leave us your e-mail address here.</p>
 <form>
     <input id="emailInput" type="email">
     <input id="finish_submit" type="button" value="submit" class="btn btn-secondary btn-sm" onclick="onEmailSend()">
