@@ -89,7 +89,7 @@ function getJsonData(url, sheet) {
             data.q7]);
     }
 
-    dataRange = sheet.getRange(1, 1, rows.length, 20);
+    dataRange = sheet.getRange(1, 1, rows.length, 21);
     dataRange.setValues(rows);
 }
 
