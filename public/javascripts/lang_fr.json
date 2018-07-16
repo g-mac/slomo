@@ -76,8 +76,6 @@
     "finish_p1_a": "Merci de votre participation !<br>Nous vous serions très reconnaissants si vous pouviez partager ce test via les médias sociaux pour sensibiliser davantage de gens:",
     "finish_p1_b": "Si vous êtes intéressé par les résultats de l'étude, vous pouvez nous laisser votre adresse e-mail ici.",
     "finish_enter_email": "Entrez l'adresse e-mail",
-    "finish_share_1": "Partage via&nbsp;&nbsp;",
-    "finish_share_2": "&nbsp;&nbsp; ou &nbsp;&nbsp;",
     "finish_submit": "Envyer",
     "finish_submit_success": "Merci ! Votre adresse e-mail a été déposée.",
     "finish_submit_fail": "Vous devez entrer une adresse e-mail valide.",

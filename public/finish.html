@@ -40,8 +40,6 @@
             $("#emailInput").attr("placeholder", langJson.finish_enter_email);
             $("#submit_success").html(langJson.finish_submit_success);
             $("#submit_fail").html(langJson.finish_submit_fail);
-            $("#finish_share_1").html(langJson.finish_share_1);
-            $("#finish_share_2").html(langJson.finish_share_2);
             $("#finish_submit").attr("value", langJson.finish_submit);
         }
 
@@ -71,19 +69,18 @@
 <br>
 <p id="finish_p1_a" class="lead">Thank you for participation!<br>
     We would very much appreciate if you could share this test via social media to make more people aware of it.</p>
-<br>
 <p class="lead">
-    <a id="finish_share_1">Share via&nbsp;&nbsp;</a>
+    <!--<a id="finish_share_1">Share via</a><br>-->
     <a class="btn btn-md btn-primary btn-simon" href="#" role="button" onclick="onFacebookClick()">Facebook</a>
-    <!--&nbsp;&nbsp;&nbsp;&nbspOR&nbsp;&nbsp;&nbsp;&nbsp;-->
-    <a id="finish_share_2">&nbsp;&nbsp; or &nbsp;&nbsp;</a>
+    <!--<a id="finish_share_2">&nbsp;&nbsp; or &nbsp;&nbsp;</a>-->
+    <a>&nbsp;</a>
     <a class="btn btn-md btn-info btn-simon" target="_blank"
        href="https://twitter.com/intent/tweet?&text=http://innertiming.slomo.uni-hamburg.de" role="button">Twitter</a>
 </p>
 <br>
 <p id="finish_p1_b" class="lead">If you are interested in the results of the study you can leave us your e-mail address here.</p>
 <form>
-    <input id="emailInput" type="email">
+    <input id="emailInput" type="email"><a></a>
     <input id="finish_submit" type="button" value="submit" class="btn btn-secondary btn-sm" onclick="onEmailSend()">
 </form>
 <p id="submit_success" style="font-size: 0.7rem; color: grey">Thank you! You email address was submitted.</p>
@@ -96,7 +93,10 @@
                                                                         title="SloMo"
                                                                         alt="SloMo"></a>
 <br>
-<!--<br>-->
+<br>
+<hr>
+<br>
+<div style="overflow: auto"><img src="images/uhh_logo.png" style="height:50px; float: right;"/></div>
 <!--<p><a class="btn btn-lg btn-success btn-simon" href="#" role="button" onclick="start_over()">Start Over!</a></p>-->
 </body>
 </html>
