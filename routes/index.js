@@ -86,6 +86,7 @@ router.post('/addresult', function (req, res) {
         // Insert to the DB
         collection.insert({
             "tries": req.body.tries,
+            "no_of_entries": req.body.no_of_entries,
             "bpm": req.body.bpm,
             "cv": req.body.cv,
             "intervals": req.body.intervals,

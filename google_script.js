@@ -15,16 +15,22 @@ function importUhhData() {
     var prodSheet = ss.getSheetByName("PROD");
     if (prodSheet == null)
         prodSheet = ss.insertSheet("PROD");
+    else if (prodSheet.getLastRow() > 0)
+        prodSheet.deleteRows(1, prodSheet.getLastRow())
     getJsonData("http://innertiming.slomo.uni-hamburg.de/xpresults", prodSheet);
 
     var labSheet = ss.getSheetByName("LAB");
     if (labSheet == null)
         labSheet = ss.insertSheet("LAB");
+    else if (labSheet.getLastRow() > 0)
+        labSheet.deleteRows(1, labSheet.getLastRow())
     getJsonData("http://innertiming.slomo.uni-hamburg.de/lab/xpresults", labSheet);
 
     var devSheet = ss.getSheetByName("DEV");
     if (devSheet == null)
         devSheet = ss.insertSheet("DEV");
+    else if (devSheet.getLastRow() > 0)
+        devSheet.deleteRows(1, devSheet.getLastRow())
     getJsonData("http://innertiming.slomo.uni-hamburg.de/dev/xpresults", devSheet);
 
 }
@@ -37,6 +43,7 @@ function getJsonData(url, sheet) {
         data;
 
     rows.push(["tries",
+        "no_of_entries",
         "bpm",
         "cv",
         "intervals",
@@ -60,6 +67,7 @@ function getJsonData(url, sheet) {
     for (i = 0; i < response.length; i++) {
         data = response[i];
         rows.push([data.tries,
+            data.no_of_entries,
             data.bpm,
             data.cv,
             data.intervals,
@@ -81,7 +89,7 @@ function getJsonData(url, sheet) {
             data.q7]);
     }
 
-    dataRange = sheet.getRange(1, 1, rows.length, 20);
+    dataRange = sheet.getRange(1, 1, rows.length, 21);
     dataRange.setValues(rows);
 }
 
