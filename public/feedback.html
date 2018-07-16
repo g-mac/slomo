@@ -16,7 +16,6 @@
 
         $(document).ready(function () {
 
-
             document.getElementById("no_of_taps").innerHTML = Math.round(tap_count_total);
             document.getElementById("cv_value").innerHTML = (100 - Math.round(coefficient_of_variation * 100 * 10) / 10) + " %";
             $('#ex1').slider({
@@ -30,7 +29,7 @@
             if (tap_count_total < min_taps) {
                 pass = false;
                 $('#min_taps').css('color', 'rgb(255,0,0)');
-            }
+            } else $('#feedback_tap_no_container').hide()
             if (coefficient_of_variation > max_cv) {
                 pass = false;
                 $('#min_cv').css('color', 'rgb(255,0,0)');
@@ -44,16 +43,33 @@
 //                $('#continue_button').text("Continue");
                 $('#continue_button').text(langJson.feedback_continue_button);
                 $('#continue_button').attr('onclick', 'load_postquestions()');
+                $('#performance_message').html(langJson.feedback_performance_1 + " <b>"
+                    + calculatePerformance(coefficient_of_variation) + "</b> "
+                    + langJson.feedback_performance_2);
 
             } else {
                 $('#success_message').hide();
+                $('#performance_message').hide();
 //                $('#continue_button').html("Try again");
                 $('#continue_button').html(langJson.feedback_try_again);
                 $('#continue_button').attr('onclick', 'load_experiment()');
             }
             $("#content").show();
+
             setContentText();
         });
+
+        function calculatePerformance(cv) {
+            var no_of_worse_results = 0;
+            for (var i = 0; i < cv_others.length; i++) {
+                console.log(cv_others[i] + " ? " + cv + " = " + (cv_others[i] > cv));
+                // if (parseInt(other, 10) > parseInt(cv, 10)) {
+                if (cv_others[i] > cv) no_of_worse_results++;
+            }
+            var fraction = no_of_worse_results / cv_others.length;
+            var percentage = Math.round(fraction * 100) + "%";
+            return percentage;
+        }
 
         function onContinue() {
             if (pass) {
@@ -87,7 +103,7 @@
     <br>Please click 'Continue', we have a few more questions for you.</p>
 
 <br>
-<p>
+<p id="feedback_tap_no_container">
     <span id="feedback_tap_no">NUMBER OF TAPS:</span>
     <br>
     <span id="no_of_taps" style="color: rgba(0,59,247,0.86); ">none</span>
@@ -111,6 +127,7 @@
 <span class="slider-label">100%</span>
 <br>
 <br>
+<p class="lead" id="performance_message">You were better than 2% of all other participants!</p>
 <br>
 
 <p><a id="continue_button" class="btn btn-lg btn-success btn-simon" href="#" role="button">Continue</a></p>
