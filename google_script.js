@@ -43,6 +43,7 @@ function getJsonData(url, sheet) {
         data;
 
     rows.push(["tries",
+        "no_of_entries",
         "bpm",
         "cv",
         "intervals",
@@ -66,6 +67,7 @@ function getJsonData(url, sheet) {
     for (i = 0; i < response.length; i++) {
         data = response[i];
         rows.push([data.tries,
+            data.no_of_entries,
             data.bpm,
             data.cv,
             data.intervals,
