@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/uhh_logo.png" afterDir="false" />
+    <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="Implement new question for no_of_entries.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/feedback.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/finish.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/finish.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/lang_de.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/lang_de.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/lang_en.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/lang_en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/lang_fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/lang_fr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +27,8 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="249" column="57" lean-forward="true" selection-start-line="249" selection-start-column="57" selection-end-line="249" selection-end-column="57" />
+            <state relative-caret-position="180">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -38,45 +39,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/welcome.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="prequestions.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/prequestions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
-              <caret line="161" column="44" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
+            <state relative-caret-position="135">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="google_script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/google_script.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="465">
+              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postquestions.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/postquestions.html">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="88" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="88" />
+              <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/feedback.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5">
+              <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
               <folding>
-                <element signature="n#style#0;n#label#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -84,13 +90,11 @@
       <file leaf-file-name="finish.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/finish.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+            <state relative-caret-position="209">
+              <caret line="98" column="74" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="74" />
               <folding>
-                <element signature="e#2720#2726#1" expanded="true" />
                 <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#dev#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,8 +103,8 @@
       <file leaf-file-name="lang_de.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/lang_de.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+            <state relative-caret-position="202">
+              <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="52" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -108,8 +112,8 @@
       <file leaf-file-name="lang_en.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/lang_en.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+            <state relative-caret-position="772">
+              <caret line="52" column="57" lean-forward="true" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -117,17 +121,8 @@
       <file leaf-file-name="lang_fr.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/lang_fr.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+            <state relative-caret-position="114">
+              <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -143,11 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;option</find>
-      <find>prequestions_title</find>
-      <find>prequestions_q4</find>
-      <find>start_experiment_button</find>
-      <find>fail_message</find>
       <find>postquestions</find>
       <find>postquestions_</find>
       <find>postquestions_answer</find>
@@ -173,6 +163,11 @@
       <find>btn</find>
       <find>submit_success</find>
       <find>finish_title</find>
+      <find>prequestions_q0</find>
+      <find>min_taps</find>
+      <find>undefined</find>
+      <find>performance_message</find>
+      <find>cv_value</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -227,20 +222,20 @@
         <option value="$PROJECT_DIR$/public/javascripts/lang.de.js" />
         <option value="$PROJECT_DIR$/public/javascripts/lang.en.js" />
         <option value="$PROJECT_DIR$/public/welcome.html" />
-        <option value="$PROJECT_DIR$/public/prequestions.html" />
         <option value="$PROJECT_DIR$/public/postquestions.html" />
-        <option value="$PROJECT_DIR$/public/feedback.html" />
         <option value="$PROJECT_DIR$/public/experiment.html" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/script.js" />
         <option value="$PROJECT_DIR$/another_script.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/google_script.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/public/prequestions.html" />
         <option value="$PROJECT_DIR$/views/main.html" />
+        <option value="$PROJECT_DIR$/google_script.js" />
         <option value="$PROJECT_DIR$/public/javascripts/lang_de.json" />
-        <option value="$PROJECT_DIR$/public/javascripts/lang_fr.json" />
         <option value="$PROJECT_DIR$/public/javascripts/lang_en.json" />
+        <option value="$PROJECT_DIR$/public/javascripts/script.js" />
+        <option value="$PROJECT_DIR$/public/feedback.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/lang_fr.json" />
         <option value="$PROJECT_DIR$/public/finish.html" />
       </list>
     </option>
@@ -283,29 +278,6 @@
             <path>
               <item name="slomo" type="b2602c69:ProjectViewProjectNode" />
               <item name="slomo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slomo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slomo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slomo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slomo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slomo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slomo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="slomo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slomo" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -321,7 +293,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/simonmayrshofer/WebstormProjects/slomo/public/javascripts/lang_en.json&#10;ma&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/views/main.html&#10;fin&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/finish.html&#10;pos&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/postquestions.html&#10;pre&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/prequestions.html&#10;m&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/views/main.html&#10;ex&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/experiment.html&#10;exp&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/experiment.html&#10;fee&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/feedback.html&#10;en&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/javascripts/lang_en.json&#10;feed&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/feedback.html&#10;po&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/postquestions.html&#10;feedb&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/feedback.html&#10;exper&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/experiment.html&#10;in&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/routes/index.js&#10;css&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/stylesheets/style.css&#10;alsterterrasse&#9;null&#9;null&#10;wel&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/welcome.html&#10;post&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/postquestions.html&#10;read&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/readme.md&#10;main&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/views/main.html&#10;keymap&#9;ACTION&#9;ChangeKeymap&#10;keyma&#9;ACTION&#9;Help.KeymapReference" />
+    <property name="SearchEverywhereHistoryKey" value="finis&#9;FILE&#9;file:///Users/simonmayrshofer/WebstormProjects/slomo/public/finish.html&#10;la&#9;FILE&#9;file:///Users/simonmayrshofer/WebstormProjects/slomo/public/javascripts/lang_fr.json&#10;ma&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/views/main.html&#10;fin&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/finish.html&#10;pos&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/postquestions.html&#10;pre&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/prequestions.html&#10;m&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/views/main.html&#10;ex&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/experiment.html&#10;exp&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/experiment.html&#10;fee&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/feedback.html&#10;en&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/javascripts/lang_en.json&#10;feed&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/feedback.html&#10;po&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/postquestions.html&#10;feedb&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/feedback.html&#10;exper&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/experiment.html&#10;in&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/routes/index.js&#10;css&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/stylesheets/style.css&#10;alsterterrasse&#9;null&#9;null&#10;wel&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/welcome.html&#10;post&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/public/postquestions.html&#10;read&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/readme.md&#10;main&#9;FILE&#9;file:///Users/simonmayrshofer/NodeProjects/slomo/views/main.html&#10;keymap&#9;ACTION&#9;ChangeKeymap&#10;keyma&#9;ACTION&#9;Help.KeymapReference" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
@@ -414,28 +386,7 @@
       <workItem from="1520265380947" duration="12059000" />
       <workItem from="1520549973268" duration="11950000" />
       <workItem from="1523482319370" duration="1056000" />
-      <workItem from="1531750206772" duration="4625000" />
-    </task>
-    <task id="LOCAL-00070" summary="--">
-      <created>1516984539573</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1516984539573</updated>
-    </task>
-    <task id="LOCAL-00071" summary="--">
-      <created>1516984838300</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1516984838300</updated>
-    </task>
-    <task id="LOCAL-00072" summary="tets commit (undo test changes for testing dev/master deployment)">
-      <created>1516985592147</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1516985592148</updated>
+      <workItem from="1531750206772" duration="11312000" />
     </task>
     <task id="LOCAL-00073" summary="mobile_dev: changed duration">
       <created>1516985857598</created>
@@ -759,24 +710,45 @@
       <option name="project" value="LOCAL" />
       <updated>1531754699586</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="Change Implementation of social media sharing buttons. Add UHH logo to finish page.">
+      <created>1531757128702</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1531757128702</updated>
+    </task>
+    <task id="LOCAL-00120" summary="Implement new question for no_of_entries.">
+      <created>1531760098768</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1531760098768</updated>
+    </task>
+    <task id="LOCAL-00121" summary="Implement new question for no_of_entries.">
+      <created>1531760333467</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1531760333467</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214783000" />
+    <option name="totallyTimeSpent" value="221470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.66993463" visible="true" weight="0.24861" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.66751915" visible="true" weight="0.24861" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5059571" side_tool="true" weight="0.27230048" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49722" weight="0.5964052" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3611111" />
-      <window_info id="npm" order="2" sideWeight="0.33006537" side_tool="true" visible="true" weight="0.24861" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3611111" />
+      <window_info id="npm" order="2" sideWeight="0.33248082" side_tool="true" visible="true" weight="0.24861" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2494043" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4940429" weight="0.21732026" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -861,8 +833,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented changes as required after team meeting" />
-    <MESSAGE value="implemented remaining requested changes and optimized views further" />
     <MESSAGE value="improved email send functionality (validation and UI)" />
     <MESSAGE value="created new collection for DEV environment (need to remember to switch this every time when deploying to master)" />
     <MESSAGE value="implemented dev database" />
@@ -886,7 +856,9 @@
     <MESSAGE value="Try to implement facebook share." />
     <MESSAGE value="Continue trying to implement facebook share." />
     <MESSAGE value="Continue Implementation of social media sharing buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Continue Implementation of social media sharing buttons." />
+    <MESSAGE value="Change Implementation of social media sharing buttons. Add UHH logo to finish page." />
+    <MESSAGE value="Implement new question for no_of_entries." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement new question for no_of_entries." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1013,13 +985,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/slomo_gsheet_script.js" />
-    <entry file="file://$PROJECT_DIR$/public/feedback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/another_script.js" />
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
@@ -1028,65 +993,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/experiment.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2205">
           <caret line="147" column="33" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google_script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/postquestions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="88" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="88" />
           <folding>
-            <element signature="n#style#0;n#label#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/prequestions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
-          <caret line="161" column="44" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1105,10 +1019,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/postquestions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4691">
+          <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/prequestions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="249" column="57" lean-forward="true" selection-start-line="249" selection-start-column="57" selection-end-line="249" selection-end-column="57" />
+        <state relative-caret-position="180">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#img#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1118,36 +1081,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/lang_en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="52" column="57" lean-forward="true" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/lang_de.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+        <state relative-caret-position="202">
+          <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="52" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/lang_fr.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/lang_en.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+        <state relative-caret-position="114">
+          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/finish.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+        <state relative-caret-position="209">
+          <caret line="98" column="74" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="74" />
           <folding>
-            <element signature="e#2720#2726#1" expanded="true" />
             <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#dev#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

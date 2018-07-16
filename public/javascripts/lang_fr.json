@@ -49,6 +49,8 @@
     "feedback_too_short": "Vous devez taper tant que la minuterie est en cours, veuillez réessayer.",
     "feedback_continue_button": "Continuer",
     "feedback_try_again": "Réessayer s.v.p",
+    "feedback_performance_1": "Vous étiez mieux que",
+    "feedback_performance_2": "de tous les autres participants!",
     "postquestions_title": "Questionnaire",
     "postquestions_q1": "Est-ce que vous faites de la musique ?",
     "postquestions_q2": "Comment vous sentez-vous maintenant ?",

@@ -49,6 +49,8 @@
     "feedback_too_short": "Sie müssen tippen, solange die Zeitleiste läuft. Bitte versuchen Sie es erneut.",
     "feedback_continue_button": "Weiter",
     "feedback_try_again": "Noch einmal versuchen",
+    "feedback_performance_1": "Sie waren besser als",
+    "feedback_performance_2": "aller anderen Teilnehmer!",
     "postquestions_title": "Fragebogen",
     "postquestions_q1": "Machen Sie Musik?",
     "postquestions_q2": "Wie fühlen Sie sich gerade?",
