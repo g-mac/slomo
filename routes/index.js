@@ -5,14 +5,12 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     // res.render('index', {title: 'Express'});
     res.render('main', {title: 'EJS'});
-    //reset
-    insertedDocId = "";
 });
 
 router.get('/xpresults', function (req, res, next) {
     var db = req.db;
     var collection = db.get('xpresults');
-    collection.find({}, function (err, doc){
+    collection.find({}, function (err, doc) {
         /* doc is the result available here */
         res.setHeader('Content-Type', 'application/json');
         res.send(doc);
@@ -23,15 +21,13 @@ router.get('/xpresults', function (req, res, next) {
 router.get('/emails', function (req, res, next) {
     var db = req.db;
     var collection = db.get('emails');
-    collection.find({}, function (err, doc){
+    collection.find({}, function (err, doc) {
         /* doc is the result available here */
         res.setHeader('Content-Type', 'application/json');
         res.send(doc);
         // res.send(JSON.stringify({ a: 1 }, null, 3));
     });
 });
-
-var insertedDocId = "";
 
 router.post('/postemail', function (req, res) {
     var db = req.db;
@@ -53,6 +49,7 @@ router.post('/postemail', function (req, res) {
 router.post('/updateresult', function (req, res) {
     var db = req.db;
     var collection = db.get('xpresults');
+    var insertedDocId = req.body.db_doc_id;
     collection.update({_id: insertedDocId},
         {
             $set:
@@ -78,9 +75,12 @@ router.post('/updateresult', function (req, res) {
 });
 
 router.post('/addresult', function (req, res) {
+    // window.alert("/addresult");
+
     var db = req.db;
     var date = generateDate();
     var collection = db.get('xpresults');
+    var insertedDocId = req.body.db_doc_id;
 
     if (insertedDocId === "") {
         // Insert to the DB
@@ -109,7 +109,7 @@ router.post('/addresult', function (req, res) {
                 console.log(docInserted);
                 console.log(docInserted._id);
                 insertedDocId = docInserted._id;
-                res.send("")
+                res.send(insertedDocId);
             }
         });
     } else {
@@ -130,7 +130,7 @@ router.post('/addresult', function (req, res) {
                 } else {
                     // And forward to success page
                     // res.send([{"message":"success!"}]);
-                    res.send("")
+                    res.send(insertedDocId);
                 }
             });
     }

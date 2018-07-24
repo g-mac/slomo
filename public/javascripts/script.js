@@ -35,6 +35,8 @@ var q7 = "";
 
 var emailAddress = "";
 
+var db_doc_id = "";
+
 function postEmailAddress() {
 
     if (emailAddress === "") return;
@@ -60,6 +62,7 @@ function postEmailAddress() {
 function postQuestionResults() {
 
     var updateResult = {
+        'db_doc_id': db_doc_id,
         'q1': q1,
         'q2': q2,
         'q3': q3,
@@ -97,7 +100,7 @@ function arrayAsString(values) {
     var result = "";
     for (var i = 0; i < values.length; i++) {
         if (i !== 0)
-            result = result.concat(",");
+            result = result.concat(";");
         result = result.concat(values[i]);
     }
     return result;
@@ -112,7 +115,11 @@ function postResult() {
 
     var intervalsAsString = arrayAsString(intervals);
 
+    // console.log("intervals: " + intervals);
+    // console.log("intervalsAsString: "+intervalsAsString);
+
     var newResult = {
+        'db_doc_id': db_doc_id,
         'tries': experimentTries,
         'no_of_entries': no_of_entries,
         'bpm': bpmAvg,
@@ -136,6 +143,7 @@ function postResult() {
         // url: window.location.pathname + '/addresult',
         url: "http://" + window.location.host + window.location.pathname + 'addresult',
         success: function (data) {
+            db_doc_id = data.toString();
             load_feedback();
         },
         error: function () {
