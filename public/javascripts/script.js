@@ -100,7 +100,7 @@ function arrayAsString(values) {
     var result = "";
     for (var i = 0; i < values.length; i++) {
         if (i !== 0)
-            result = result.concat(",");
+            result = result.concat(";");
         result = result.concat(values[i]);
     }
     return result;
@@ -143,7 +143,6 @@ function postResult() {
         // url: window.location.pathname + '/addresult',
         url: "http://" + window.location.host + window.location.pathname + 'addresult',
         success: function (data) {
-            window.alert(data.toString());
             db_doc_id = data.toString();
             load_feedback();
         },
