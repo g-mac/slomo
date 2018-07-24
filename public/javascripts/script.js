@@ -1,6 +1,7 @@
 // CONFIG
 
-var duration = 15;
+var duration = 5;
+// var duration = 15;
 var min_taps = 8;
 var min_tap_time = (1000 * 0.8 * duration);
 var max_cv = 0.09875;
@@ -111,6 +112,9 @@ function postResult() {
 //            document.submit_feedback.value = "sending...";
 
     var intervalsAsString = arrayAsString(intervals);
+
+    console.log("intervals: " + intervals);
+    console.log("intervalsAsString: "+intervalsAsString);
 
     var newResult = {
         'tries': experimentTries,
