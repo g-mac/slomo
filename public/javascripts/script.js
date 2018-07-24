@@ -1,7 +1,6 @@
 // CONFIG
 
-var duration = 5;
-// var duration = 15;
+var duration = 15;
 var min_taps = 8;
 var min_tap_time = (1000 * 0.8 * duration);
 var max_cv = 0.09875;
@@ -36,6 +35,8 @@ var q7 = "";
 
 var emailAddress = "";
 
+var db_doc_id = "";
+
 function postEmailAddress() {
 
     if (emailAddress === "") return;
@@ -61,6 +62,7 @@ function postEmailAddress() {
 function postQuestionResults() {
 
     var updateResult = {
+        'db_doc_id': db_doc_id,
         'q1': q1,
         'q2': q2,
         'q3': q3,
@@ -117,6 +119,7 @@ function postResult() {
     console.log("intervalsAsString: "+intervalsAsString);
 
     var newResult = {
+        'db_doc_id': db_doc_id,
         'tries': experimentTries,
         'no_of_entries': no_of_entries,
         'bpm': bpmAvg,
@@ -140,6 +143,8 @@ function postResult() {
         // url: window.location.pathname + '/addresult',
         url: "http://" + window.location.host + window.location.pathname + 'addresult',
         success: function (data) {
+            window.alert(data.toString());
+            db_doc_id = data.toString();
             load_feedback();
         },
         error: function () {
