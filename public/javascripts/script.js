@@ -115,8 +115,8 @@ function postResult() {
 
     var intervalsAsString = arrayAsString(intervals);
 
-    console.log("intervals: " + intervals);
-    console.log("intervalsAsString: "+intervalsAsString);
+    // console.log("intervals: " + intervals);
+    // console.log("intervalsAsString: "+intervalsAsString);
 
     var newResult = {
         'db_doc_id': db_doc_id,
