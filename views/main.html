@@ -69,7 +69,7 @@
         var langJson;
 
         $(document).ready(function () {
-            // load_experiment();
+            // load_finish();
             load_welcome();
             setLanguage("en");
         });
@@ -233,9 +233,12 @@
 <div class="container">
 
     <header class="header clearfix">
-        <h3 id="main_title" class="text-muted">The Inner Timing Study</h3>
-        <!--<a id="main_title" class="h3 text-muted" style="vertical-align: baseline">The Inner Timing Study</a>-->
-        <!--<img src="images/uhh_logo.png" style="width:150px; float: right"/>-->
+        <a id="main_title" class="h3 text-muted" style="vertical-align: baseline">The Inner Timing Study</a>
+        <a style="float:right; padding-top: 20px ">
+            <img src="images/en.png" style="width:25px; height:13px" onclick="setLanguage('en')"/>
+            <img src="images/de.png" style="width:25px; height:13px" onclick="setLanguage('de')"/>
+            <img src="images/fr.png" style="width:25px; height:13px" onclick="setLanguage('fr')"/>
+        </a>
     </header>
 
     <main role="main">
@@ -253,14 +256,13 @@
 
     </main>
 
-    <footer class="footer">
-        <!--<img id="switch" src="images/off3.png" style="width:60px; height:30px; float: right"/>-->
-        <img src="images/en.png" style="width:25px; height:13px" onclick="setLanguage('en')"/>
-        <img src="images/de.png" style="width:25px; height:13px" onclick="setLanguage('de')"/>
-        <img src="images/fr.png" style="width:25px; height:13px" onclick="setLanguage('fr')"/>
-        <span id="copy_right_text">&copy; 2018 ERC-Project SloMo. All rights reserved.</span>
-        <a id="site_notice_link" href="" data-toggle="modal" data-target="#impressumModal"
-           style="float: right; color: grey">Site Notice</a>
+    <footer class="footer" >
+        <a style="float:right; padding-bottom: 20px">
+            <span id="copy_right_text" style="padding-right: 5px;">&copy; 2018 ERC-Project SloMo. All rights reserved.</span>
+            <span id="site_notice_link"  data-toggle="modal" data-target="#impressumModal"
+                  style="color: grey">Site Notice</span>
+        </a>
+        <img src="images/uhh_logo.png" style="float:left; width:150px; padding-bottom: 20px"/>
     </footer>
 
 </div> <!-- /container -->
