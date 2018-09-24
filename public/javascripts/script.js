@@ -48,7 +48,7 @@ function postEmailAddress() {
     $.ajax({
         type: 'POST',
         data: emailResult,
-        url: "http://" + window.location.host + window.location.pathname + 'postemail',
+        url: "https://" + window.location.host + window.location.pathname + 'postemail',
         success: function (data) {
             submitEmailSuccess();
         },
@@ -75,7 +75,7 @@ function postQuestionResults() {
     $.ajax({
         type: 'POST',
         data: updateResult,
-        url: "http://" + window.location.host + window.location.pathname + 'updateresult',
+        url: "https://" + window.location.host + window.location.pathname + 'updateresult',
         success: function (data) {
             load_finish();
         },
@@ -141,7 +141,7 @@ function postResult() {
         type: 'POST',
         data: newResult,
         // url: window.location.pathname + '/addresult',
-        url: "http://" + window.location.host + window.location.pathname + 'addresult',
+        url: "https://" + window.location.host + window.location.pathname + 'addresult',
         success: function (data) {
             db_doc_id = data.toString();
             load_feedback();
