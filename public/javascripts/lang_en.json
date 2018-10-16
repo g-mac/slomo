@@ -8,7 +8,7 @@
   "tc_text": "By clicking on “Agree and start”, you agree to take part in this study. You can withdraw from the study at any time. No data will be stored that can identify you. However, you will be asked to answer some general questions about yourself that will be aggregated and analysed together with the data of many other participants. In case you are unsure about the study, please contact us at slomo@uni-hamburg.de (ERC-Project SloMo, University of Hamburg, Germany).",
   "welcome_title": "How good is your <br>inner timing? Test it!",
   "welcome_text": "Thank you for your interest in this study! As part of a research project, we are investigating how well people can tap without influences such as music. Your task is to tap evenly on your device for %d seconds. Afterwards, you will get feedback about your performance. Additionally, we would like you to answer a few simple questions.",
-  "welcome_lead": "It only takes about 2-3 minutes.",
+  "welcome_lead": "It only takes about 2-3 minutes. <br><br>For other languages click one of the flags in the top right corner.",
   "welcome_tc": "Terms & Conditions",
   "welcome_start": "Agree and start",
   "prequestions_title": "Questionnaire",
