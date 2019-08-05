@@ -46,10 +46,12 @@ function postPhrase() {
         'phrase': phrase
     };
 
+    window.alert("https://" + window.location.host + window.location.pathname.replace('onboarding','') + 'postphrase')
+
     $.ajax({
         type: 'POST',
         data: phraseResult,
-        url: "https://" + window.location.host + window.location.pathname.replace('/onboarding','') + 'postphrase',
+        url: "https://" + window.location.host + window.location.pathname.replace('onboarding','') + 'postphrase',
         success: function (data) {
             submitPhraseSuccess();
         },
