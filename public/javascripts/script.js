@@ -49,7 +49,7 @@ function postPhrase() {
     $.ajax({
         type: 'POST',
         data: phraseResult,
-        url: "https://" + window.location.host + window.location.pathname + 'postphrase',
+        url: "https://" + window.location.host + window.location.pathname.replace('/onbarding','') + 'postphrase',
         success: function (data) {
             submitPhraseSuccess();
         },
