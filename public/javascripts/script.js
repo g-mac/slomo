@@ -47,8 +47,8 @@ function checkPhrase(phrase_input) {
             console.log(data);
             ismatch = false
             for (entry in data) {
-                console.log(data.entry.object);
-                console.log(data.entry.object.phrase);
+                console.log(data.get(entry).object);
+                console.log(data.get(entry).object.phrase);
                 if (entry.phrase === phrase_input) {
                     ismatch = true;
                     break
