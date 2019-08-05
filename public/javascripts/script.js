@@ -39,14 +39,25 @@ var phrase = "";
 var db_doc_id = "";
 
 function checkPhrase(phrase_input) {
-    window.alert("https://" + window.location.host + window.location.pathname + 'phrases')
+
     $.ajax({
         type: 'GET',
         url: "https://" + window.location.host + window.location.pathname + 'phrases',
         success: function (data) {
-            window.alert(data.toString());
             console.log(data);
-            console.log(data.toString());
+            ismatch = false
+            for (entry in data) {
+                if (entry.phrase === phrase_input) {
+                    ismatch = true;
+                    break
+                }
+            }
+            if (ismatch) {
+                window.alert("phrase matched succesfully");
+                load_experiment();
+            } else {
+                window.alert("coudlnt match phrase");
+            }
         },
         error: function () {
             window.alert("Connection failed, please click ok to try again...");
@@ -66,7 +77,7 @@ function postPhrase() {
     $.ajax({
         type: 'POST',
         data: phraseResult,
-        url: "https://" + window.location.host + window.location.pathname.replace('onboarding','') + 'postphrase',
+        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '') + 'postphrase',
         success: function (data) {
             submitPhraseSuccess();
         },
