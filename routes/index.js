@@ -46,6 +46,34 @@ router.post('/postemail', function (req, res) {
     });
 });
 
+router.get('/phrases', function (req, res, next) {
+    var db = req.db;
+    var collection = db.get('studyphrases');
+    collection.find({}, function (err, doc) {
+        /* doc is the result available here */
+        res.setHeader('Content-Type', 'application/json');
+        res.send(doc);
+        // res.send(JSON.stringify({ a: 1 }, null, 3));
+    });
+});
+
+router.post('/postphrase', function (req, res) {
+    var db = req.db;
+    var collection = db.get('studyphrases');
+    collection.insert({
+        "phrase": req.body.phrase
+    }, function (err, docUpdated) {
+        if (err) {
+            // If it failed, return error
+            res.send("There was a problem adding the information to the database.");
+        } else {
+            // And forward to success page
+            // res.send([{"message":"success!"}]);
+            res.send("")
+        }
+    });
+});
+
 router.post('/updateresult', function (req, res) {
     var db = req.db;
     var collection = db.get('xpresults');

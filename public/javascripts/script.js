@@ -34,8 +34,30 @@ var q6 = "";
 var q7 = "";
 
 var emailAddress = "";
+var phrase = "";
 
 var db_doc_id = "";
+
+function postPhrase() {
+
+    if (phrase === "") return;
+
+    var phraseResult = {
+        'phrase': phrase
+    };
+
+    $.ajax({
+        type: 'POST',
+        data: phraseResult,
+        url: "https://" + window.location.host + window.location.pathname + 'postphrase',
+        success: function (data) {
+            submitPhraseSuccess();
+        },
+        error: function () {
+            window.alert("Connection failed, please click ok to try again...");
+        }
+    });
+}
 
 function postEmailAddress() {
 
@@ -158,7 +180,12 @@ function postResult() {
 // $(document).ready(function () {
 // })
 
+function load_onboarding() {
+    $("#content").load("onboarding.html");
+}
+
 function load_welcome() {
+    $("#content").hide();
     $("#content").load("welcome.html");
 }
 
