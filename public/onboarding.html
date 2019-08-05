@@ -20,8 +20,12 @@
         }
 
         function submitPhraseSuccess() {
-            load_welcome()
+            goToHomePage()
             window.alert(langJson.onboarding_confirmation_1 + phrase + "\n\n" + langJson.onboarding_confirmation_2);
+        }
+
+        function goToHomePage() {
+            window.location = '/';
         }
 
         function setContentText() {

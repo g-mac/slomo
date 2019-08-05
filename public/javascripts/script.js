@@ -46,8 +46,6 @@ function postPhrase() {
         'phrase': phrase
     };
 
-    window.alert("https://" + window.location.host + window.location.pathname.replace('onboarding','') + 'postphrase')
-
     $.ajax({
         type: 'POST',
         data: phraseResult,
