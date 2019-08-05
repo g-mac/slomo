@@ -16,7 +16,7 @@
         function onContinue() {
             phrase_input = $('#welcome_phrase_input').val();
             if (phrase_input === "") return;
-            window.alert(phrase_input)
+
 
             var db = req.db;
             var collection = db.get('studyphrases');
@@ -27,6 +27,7 @@
             // });
 
             collection.find().toArray(function(err, docs) {
+                window.alert(phrase_input);
                 console.log(docs);
             });
 
