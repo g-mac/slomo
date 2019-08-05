@@ -20,8 +20,9 @@
         }
 
         function submitPhraseSuccess() {
-            window.location = window.location.pathname.replace('onboarding','');
             window.alert(langJson.onboarding_confirmation_1 + phrase + "\n\n" + langJson.onboarding_confirmation_2);
+            load_experiment()
+            // window.location = window.location.pathname.replace('onboarding','');
         }
 
         function setContentText() {

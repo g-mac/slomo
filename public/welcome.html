@@ -16,11 +16,23 @@
         function onContinue() {
             phrase_input = $('#welcome_phrase_input').val();
             if (phrase_input === "") return;
-            docs = getDocs()
-            window.alert(docs.toString())
+            window.alert(phrase_input)
+
+            var db = req.db;
+            var collection = db.get('studyphrases');
+
+            // collection.find({}, function (err, doc) {
+            //     /* doc is the result available here */
+            //     window.alert(doc.toString())
+            // });
+
+            collection.find().toArray(function(err, docs) {
+                console.log(docs);
+            });
+
             for (doc in docs) {
                 if (doc === phrase_input) {
-                    load_prequestions()
+                    load_experiment()
                 }
             }
         }
