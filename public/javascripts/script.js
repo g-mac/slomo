@@ -33,7 +33,6 @@ var q5 = "";
 var q6 = "";
 var q7 = "";
 
-
 var emailAddress = "";
 
 var db_doc_id = "";
