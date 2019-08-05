@@ -16,24 +16,23 @@
         function onContinue() {
             phrase_input = $('#welcome_phrase_input').val();
             if (phrase_input === "") return;
-
-            var collection = db.get('studyphrases');
+            checkPhrase(phrase_input)
 
             // collection.find({}, function (err, doc) {
             //     /* doc is the result available here */
             //     window.alert(doc.toString())
             // });
 
-            collection.find().toArray(function(err, docs) {
-                window.alert(phrase_input);
-                console.log(docs);
-            });
-
-            for (doc in docs) {
-                if (doc === phrase_input) {
-                    load_experiment()
-                }
-            }
+            // collection.find().toArray(function(err, docs) {
+            //     window.alert(phrase_input);
+            //     console.log(docs);
+            // });
+            //
+            // for (doc in docs) {
+            //     if (doc === phrase_input) {
+            //         load_experiment()
+            //     }
+            // }
         }
 
         function setContentText() {

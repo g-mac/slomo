@@ -38,6 +38,23 @@ var phrase = "";
 
 var db_doc_id = "";
 
+function checkPhrase(phrase_input) {
+    window.alert("https://" + window.location.host + window.location.pathname + 'phrases')
+    $.ajax({
+        type: 'GET',
+        url: "https://" + window.location.host + window.location.pathname + 'phrases',
+        success: function (data) {
+            window.alert(data.toString());
+            console.log(data);
+            console.log(data.toString());
+        },
+        error: function () {
+            window.alert("Connection failed, please click ok to try again...");
+        }
+    });
+}
+
+
 function postPhrase() {
 
     if (phrase === "") return;
