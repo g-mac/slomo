@@ -10,6 +10,7 @@
     <script>
         $(document).ready(function () {
             $("#content").show();
+            $("#welcome_help").hide();
             setContentText();
         });
 
@@ -38,6 +39,13 @@
         function setContentText() {
             $("#welcome_text").html(langJson.welcome_text.replace("%d", duration + ""));
             $("#welcome_start").html(langJson.welcome_start);
+            $("#welcome_forgot").html(langJson.welcome_forgot);
+            $("#welcome_help").html(langJson.welcome_help);
+        }
+
+        function onForgot() {
+            $("#welcome_forgot").hide();
+            $("#welcome_help").show();
         }
 
     </script>
@@ -61,6 +69,10 @@
       onclick="onContinue()">Agree
     and start</a>
 </p>
+
+<p id="welcome_forgot" onclick="onForgot()" style="text-decoration: underline">Schlüsselwort vergessen?</p>
+
+<p id="welcome_help">Sollten Sie Ihr Schlüsselwort vergessen haben, melden sie sich bitte per SMS, WhatsApp oder telefonisch bei 015770365966 (Simon Mayrshofer)</p>
 
 
 </body>

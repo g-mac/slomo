@@ -15,6 +15,8 @@
     "onboarding_confirmation_2": "Bitte merken Sie sich dieses Schlüsselwort gut, damit sie es in den folgenden Tagen der Studie immer wieder zu Anfang des Experiments eingeben können.",
     "welcome_text": "Bitte geben Sie hier Ihr Schlüsselwort ein, welches sie zu Beginn dieser Studie festgelegt haben und klicken Sie dann auf 'Weiter'.",
     "welcome_start": "Weiter",
+    "welcome_forgot": "Schlüsselwort vergessen?",
+    "welcome_help": "Sollten Sie Ihr Schlüsselwort vergessen haben, melden sie sich bitte per SMS, WhatsApp oder telefonisch bei 015770365966 (Simon Mayrshofer)",
     "prequestions_title": "Fragebogen",
     "prequestions_q0": "Haben sie schon an dieser Studie teilgenommen?",
     "prequestions_q0_o1": "Nein",

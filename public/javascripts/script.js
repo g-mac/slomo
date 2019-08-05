@@ -54,10 +54,10 @@ function checkPhrase(phrase_input) {
                 }
             }
             if (ismatch) {
-                window.alert("phrase matched succesfully");
+                phrase = phrase_input;
                 load_experiment();
             } else {
-                window.alert("coudlnt match phrase");
+                window.alert("Dieses Schlüsselwort ist unbekannt. Bitte versuchen Sie es erneut.\n\nSollten Sie Ihr Schlüsselwort vergessen haben, melden sie sich bitte per SMS/WhatsApp oder Telefon bei 015770365966");
             }
         },
         error: function () {
