@@ -14,18 +14,19 @@
         });
 
         function onContinue() {
-//            if ($('#tc_checkbox').is(":checked")) {
-            load_prequestions();
-//            } else {
-//                window.alert("Please accept the Terms & Conditions to continue");
-//            }
+            phrase_input = $('#welcome_phrase_input').val();
+            if (phrase_input === "") return;
+            docs = getDocs()
+            window.alert(docs.toString())
+            for (doc in docs) {
+                if (doc === phrase_input) {
+                    load_prequestions()
+                }
+            }
         }
 
         function setContentText() {
-            $("#welcome_title").html(langJson.welcome_title);
             $("#welcome_text").html(langJson.welcome_text.replace("%d", duration + ""));
-            $("#welcome_lead").html(langJson.welcome_lead);
-            $("#welcome_tc").html(langJson.welcome_tc);
             $("#welcome_start").html(langJson.welcome_start);
         }
 
@@ -34,21 +35,20 @@
 
 <body>
 
-<h1 id="welcome_title" class="display-4">How good is your <br>inner timing? Test it!</h1>
-<br>
+
 <p class="lead" id="welcome_text"></p>
-<p id="welcome_lead" class="lead">It only takes about 2 minutes.</p>
 
 <!--<div class="checkbox">-->
 <!--<label><input type="checkbox" id="tc_checkbox" value="test"> I have read and accept the Terms & Conditions</label>-->
 <!--</div>-->
 
 <br>
-<a id="welcome_tc" href="" data-toggle="modal" data-target="#exampleModal" style="color: #777777; font-size: 100%">Terms
-    & Conditions</a>
+<input id="welcome_phrase_input" type="text" placeholder="Schlüsselwort eingeben"><a></a>
 <br>
+
 <br>
-<p><a id="welcome_start" class="btn btn-lg btn-success btn-simon" href="#" role="button" onclick="onContinue()">Agree
+<p><a id="welcome_start" class="btn btn-lg btn-success btn-simon" href="#" role="button"
+      onclick="onContinue()">Agree
     and start</a>
 </p>
 

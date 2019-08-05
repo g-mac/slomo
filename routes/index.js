@@ -1,10 +1,21 @@
 var express = require('express');
 var router = express.Router();
 
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    // res.render('index', {title: 'Express'});
-    res.render('main', {title: 'EJS'});
+    // var db = req.db;
+    // var collection = db.get('studyphrases');
+    // collection.find({}, function (err, doc) {
+    //     /* doc is the result available here */
+    //     res.setHeader('Content-Type', 'application/json');
+    //     res.render('main', {onboarding: 'false', doc: doc.toString()});
+    // });
+    res.render('main', {onboarding: 'false'});
+});
+
+router.get('/onboarding', function (req, res, next) {
+    res.render('main', {onboarding: 'true'});
 });
 
 router.get('/xpresults', function (req, res, next) {

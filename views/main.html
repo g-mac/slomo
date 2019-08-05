@@ -6,12 +6,14 @@
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -69,8 +71,12 @@
         var langJson;
 
         $(document).ready(function () {
-            // load_finish();
-            load_onboarding();
+            
+            if ("<%= onboarding %>" === "true")
+                load_onboarding();
+            else
+                load_welcome()
+
             setLanguage("de");
         });
 
@@ -128,7 +134,8 @@
 <body>
 
 <!-- T&C Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -139,14 +146,19 @@
                 </button>
             </div>
             <div id="tc_text" class="modal-body">
-                By clicking on “Agree and start”, you agree to take part in this study. You can withdraw from the
-                study at any time. No data will be stored that can identify you. However, you will be asked to answer
-                some general questions about yourself that will be aggregated and analysed together with the data of
-                many other participants. In case you are unsure about the study, please contact us at
+                By clicking on “Agree and start”, you agree to take part in this study. You can
+                withdraw from the
+                study at any time. No data will be stored that can identify you. However, you will
+                be asked to answer
+                some general questions about yourself that will be aggregated and analysed together
+                with the data of
+                many other participants. In case you are unsure about the study, please contact us
+                at
                 slomo@uni-hamburg.de (ERC project SloMo, University of Hamburg, Germany).
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-simon" data-dismiss="modal">OK</button>
+                <button type="button" class="btn btn-secondary btn-simon" data-dismiss="modal">OK
+                </button>
                 <!--<button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
         </div>
@@ -154,7 +166,8 @@
 </div>
 
 <!-- Impressum Modal -->
-<div class="modal fade" id="impressumModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="impressumModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -165,10 +178,12 @@
                 </button>
             </div>
             <div id="site_notice_text" class="modal-body">
-                <b>Content responsibility in compliance with § 5 of the German Telemedia Act (TMG)</b>
+                <b>Content responsibility in compliance with § 5 of the German Telemedia Act
+                    (TMG)</b>
                 <br>
                 <br>
-                ERC-Project Slow Motion: Transformations of Musical Time in Perception and Performance
+                ERC-Project Slow Motion: Transformations of Musical Time in Perception and
+                Performance
                 <br>
                 Alsterterrasse 1
                 <br>
@@ -213,23 +228,30 @@
                 <br>
                 <b> Legal disclaimer</b>
                 <br>
-                The contents of these pages were prepared with utmost care. Nonetheless, we cannot assume liability for
+                The contents of these pages were prepared with utmost care. Nonetheless, we cannot
+                assume liability for
                 the timeless accuracy and completeness of the information.
                 <br>
-                Our website contains links to external websites. As the contents of these third-party websites are
-                beyond our control, we cannot accept liability for them. Responsibility for the contents of the linked
+                Our website contains links to external websites. As the contents of these
+                third-party websites are
+                beyond our control, we cannot accept liability for them. Responsibility for the
+                contents of the linked
                 pages is always held by the provider or operator of the pages.
                 <br>
                 <br>
                 <b> Data protection</b>
                 <br>
-                In general, when visiting the website of innertiming.eu, no personal data are saved. However, these data
-                can be given on a voluntary basis. No data will be passed on to third parties without your consent. We
-                point out that in regard to unsecured data transmission in the internet (e.g. via email), security
+                In general, when visiting the website of innertiming.eu, no personal data are saved.
+                However, these data
+                can be given on a voluntary basis. No data will be passed on to third parties
+                without your consent. We
+                point out that in regard to unsecured data transmission in the internet (e.g. via
+                email), security
                 cannot be guaranteed. Such data could possibly be accessed by third parties.
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-simon" data-dismiss="modal">OK</button>
+                <button type="button" class="btn btn-secondary btn-simon" data-dismiss="modal">OK
+                </button>
                 <!--<button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
         </div>
@@ -239,13 +261,14 @@
 <div class="container">
 
     <header class="header clearfix">
-        <a id="main_title" class="h3 text-muted" style="vertical-align: baseline">The Inner Timing Study</a>
-<!--        <a style="float:right; padding-top: 20px ">-->
-<!--            <img src="images/en.png" style="width:22px; height:13px" onclick="setLanguage('en')"/>-->
-<!--            <img src="images/de.png" style="width:22px; height:13px" onclick="setLanguage('de')"/>-->
-<!--            <img src="images/fr.png" style="width:22px; height:13px" onclick="setLanguage('fr')"/>-->
-<!--            <img src="images/chin.png" style="width:22px; height:13px" onclick="setLanguage('chin')"/>-->
-<!--        </a>-->
+        <a id="main_title" class="h3 text-muted" style="vertical-align: baseline">The Inner Timing
+            Study</a>
+        <!--        <a style="float:right; padding-top: 20px ">-->
+        <!--            <img src="images/en.png" style="width:22px; height:13px" onclick="setLanguage('en')"/>-->
+        <!--            <img src="images/de.png" style="width:22px; height:13px" onclick="setLanguage('de')"/>-->
+        <!--            <img src="images/fr.png" style="width:22px; height:13px" onclick="setLanguage('fr')"/>-->
+        <!--            <img src="images/chin.png" style="width:22px; height:13px" onclick="setLanguage('chin')"/>-->
+        <!--        </a>-->
     </header>
 
     <main role="main">
@@ -263,10 +286,10 @@
 
     </main>
 
-    <footer class="footer" >
+    <footer class="footer">
         <a style="float:right; padding-bottom: 20px">
             <span id="copy_right_text" style="padding-right: 5px;">&copy; 2018 ERC-Project SloMo. All rights reserved.</span>
-            <span id="site_notice_link"  data-toggle="modal" data-target="#impressumModal"
+            <span id="site_notice_link" data-toggle="modal" data-target="#impressumModal"
                   style="color: grey">Site Notice</span>
         </a>
         <img src="images/uhh_logo.png" style="float:left; width:150px; padding-bottom: 20px"/>

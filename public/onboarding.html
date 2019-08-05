@@ -24,14 +24,6 @@
             window.alert(langJson.onboarding_confirmation_1 + phrase + "\n\n" + langJson.onboarding_confirmation_2);
         }
 
-        function onContinue() {
-//            if ($('#tc_checkbox').is(":checked")) {
-            load_prequestions();
-//            } else {
-//                window.alert("Please accept the Terms & Conditions to continue");
-//            }
-        }
-
         function setContentText() {
             $("#onboarding_title").html(langJson.onboarding_title);
             $("#onboarding_text").html(langJson.onboarding_text.replace("%d", duration + ""));
@@ -54,8 +46,8 @@
 <!--</div>-->
 
 <br>
-<input id="onboarding_phrase_input" type="text"><a></a>
-<!--placeholder="Schlüsselwort eingeben"-->
+<input id="onboarding_phrase_input" type="text" placeholder="Schlüsselwort festlegen"><a></a>
+
 <br>
 <br>
 <p><a id="onboarding_next" class="btn btn-lg btn-success btn-simon" href="#" role="button"
