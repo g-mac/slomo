@@ -17,8 +17,6 @@
             phrase_input = $('#welcome_phrase_input').val();
             if (phrase_input === "") return;
 
-
-            var db = req.db;
             var collection = db.get('studyphrases');
 
             // collection.find({}, function (err, doc) {

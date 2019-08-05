@@ -59,15 +59,6 @@ function postPhrase() {
     });
 }
 
-function getDocs(){
-    var db = req.db;
-    var collection = db.get('studyphrases');
-    collection.find({}, function (err, doc) {
-        /* doc is the result available here */
-        returnDocs
-    });
-}
-
 function postEmailAddress() {
 
     if (emailAddress === "") return;
