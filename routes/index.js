@@ -93,13 +93,18 @@ router.post('/updateresult', function (req, res) {
         {
             $set:
                 {
-                    "q1": req.body.q1,
-                    "q2": req.body.q2,
-                    "q3": req.body.q3,
-                    "q4": req.body.q4,
-                    "q5": req.body.q5,
-                    "q6": req.body.q6,
-                    "q7": req.body.q7
+                    'qA_q0_answer': req.body.qA_q0_answer,
+                    'qA_q1_answer': req.body.qA_q1_answer,
+                    'qA_q2_answer': req.body.qA_q2_answer,
+                    'qB_q0_answer': req.body.qB_q0_answer,
+                    'qB_q1_answer': req.body.qB_q1_answer,
+                    'qB_q2_answer': req.body.qB_q2_answer,
+                    'qB_q3_answer': req.body.qB_q3_answer,
+                    'qB_q4_answer': req.body.qB_q4_answer,
+                    'qB_q5_answer': req.body.qB_q5_answer,
+                    'qB_q6_answer': req.body.qB_q6_answer,
+                    'qB_q7_answer': req.body.qB_q7_answer,
+                    'experimentDuration': req.body.experimentDuration
                 }
         }, function (err, docUpdated) {
             if (err) {
@@ -124,20 +129,13 @@ router.post('/addresult', function (req, res) {
     if (insertedDocId === "") {
         // Insert to the DB
         collection.insert({
+            "userID": req.body.userID,
+            "date": date,
             "tries": req.body.tries,
-            "no_of_entries": req.body.no_of_entries,
             "bpm": req.body.bpm,
             "cv": req.body.cv,
             "intervals": req.body.intervals,
-            "date": date,
-            "lat": req.body.lat,
-            "long": req.body.long,
-            "accuracy": req.body.accuracy,
             "userAgent": req.body.userAgent,
-            "date_of_birth": req.body.date_of_birth,
-            "gender": req.body.gender,
-            "heritage": req.body.heritage,
-            "city_size": req.body.city_size
         }, function (err, docInserted) {
             if (err) {
                 // If it failed, return error
