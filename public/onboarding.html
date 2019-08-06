@@ -17,7 +17,7 @@
         function onPhraseSend() {
             phrase = $('#onboarding_phrase_input').val();
             if (phrase === "") return;
-            postPhrase();
+            isPhraseDuplicate();
         }
 
         function submitPhraseSuccess() {
@@ -32,6 +32,10 @@
             $("#onboarding_tc").html(langJson.onboarding_tc);
             $("#onboarding_next").html(langJson.onboarding_next);
             $("#onboarding_phrase_input").html.placeholder(langJson.onboarding_phrase);
+        }
+
+        function onAlreadyChosen() {
+            window.location = window.location.pathname.replace('onboarding', '');
         }
 
     </script>
@@ -55,6 +59,8 @@
 <p><a id="onboarding_next" class="btn btn-lg btn-success btn-simon" href="#" role="button"
       onclick="onPhraseSend()">Weiter</a>
 </p>
+<br>
+<p id="onboarding_already_chosen" onclick="onAlreadyChosen()" style="text-decoration: underline">Haben Sie bereits ein Schlüsselwort gewählt?</p>
 <br>
 <a id="onboarding_tc" href="" data-toggle="modal" data-target="#exampleModal"
    style="color: #777777; font-size: 100%">Terms

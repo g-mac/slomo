@@ -89,6 +89,31 @@ function checkPhrase(phrase_input) {
     });
 }
 
+function isPhraseDuplicate() {
+    $.ajax({
+        type: 'GET',
+        url: "https://" + window.location.host + window.location.pathname + 'phrases',
+        success: function (data) {
+            console.log(data);
+            ismatch = false;
+            for (entry in data) {
+                console.log(data[entry].phrase);
+                if (data[entry].phrase === phrase) {
+
+                    break
+                }
+            }
+            if (ismatch) {
+                window.alert("Dieses Schlüsselwort ist bereits vergeben. Bitte wählen Sie ein anderes Schlüsselwort.\n\nSollten Sie bereits ein Schlüsselwort ein Schlüsselwort gewählt haben, klicken Sie bitte auf 'Haben Sie bereits ein Schlüsselwort gewählt?'");
+            } else {
+                postPhrase();
+            }
+        },
+        error: function () {
+            window.alert("Connection failed, please click ok to try again...");
+        }
+    });
+}
 
 function postPhrase() {
 
