@@ -47,12 +47,12 @@ var phrase = "";
 var db_doc_id = "";
 
 function setStartTime() {
-    var date = new Date;
+    var date = new Date();
     experimentStart = date.getTime();
 }
 
 function setEndTime() {
-    var date = new Date;
+    var date = new Date();
     experimentEnd = date.getTime();
     experimentDuration = (experimentEnd - experimentStart);
     console.log("experimentDuration:" + experimentDuration)
