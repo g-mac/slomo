@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7218e3f7-865e-4148-a646-747341b4f631" name="Default" comment="Continue implementation of phrase logic.">
-      <change beforePath="$PROJECT_DIR$/public/onboarding.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/onboarding.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/welcome.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="345">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -89,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/onboarding.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="990">
@@ -322,8 +322,8 @@
         <option value="$PROJECT_DIR$/public/feedback.html" />
         <option value="$PROJECT_DIR$/public/experiment.html" />
         <option value="$PROJECT_DIR$/public/javascripts/script.js" />
-        <option value="$PROJECT_DIR$/public/welcome.html" />
         <option value="$PROJECT_DIR$/public/onboarding.html" />
+        <option value="$PROJECT_DIR$/public/welcome.html" />
       </list>
     </option>
   </component>
@@ -470,27 +470,6 @@
       <workItem from="1556797830595" duration="552000" />
       <workItem from="1562155903242" duration="2647000" />
       <workItem from="1564932981967" duration="8190000" />
-    </task>
-    <task id="LOCAL-00086" summary="implemented changes as required after team meeting">
-      <created>1517243004227</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1517243004228</updated>
-    </task>
-    <task id="LOCAL-00087" summary="implemented remaining requested changes and optimized views further">
-      <created>1517254597892</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1517254597892</updated>
-    </task>
-    <task id="LOCAL-00088" summary="improved email send functionality (validation and UI)">
-      <created>1517256175672</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1517256175672</updated>
     </task>
     <task id="LOCAL-00089" summary="created new collection for DEV environment (need to remember to switch this every time when deploying to master)">
       <created>1517318852631</created>
@@ -814,11 +793,32 @@
       <option name="project" value="LOCAL" />
       <updated>1565105537916</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="Continue implementation of phrase logic.">
+      <created>1565106536942</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1565106536942</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Continue implementation of phrase logic.">
+      <created>1565106586850</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1565106586850</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Continue implementation of phrase logic.">
+      <created>1565106960494</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1565106960494</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203532000" />
+    <option name="totallyTimeSpent" value="205274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -1251,19 +1251,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/onboarding.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -1271,6 +1258,19 @@
           <folding>
             <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

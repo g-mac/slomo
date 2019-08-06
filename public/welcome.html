@@ -16,25 +16,11 @@
         });
 
         function onContinue() {
+            document.getElementById('welcome_phrase_input').type = 'password';
             phrase_input = $('#welcome_phrase_input').val();
             if (phrase_input === "") return;
             checkPhrase(phrase_input)
-
-            // collection.find({}, function (err, doc) {
-            //     /* doc is the result available here */
-            //     window.alert(doc.toString())
-            // });
-
-            // collection.find().toArray(function(err, docs) {
-            //     window.alert(phrase_input);
-            //     console.log(docs);
-            // });
-            //
-            // for (doc in docs) {
-            //     if (doc === phrase_input) {
-            //         load_experiment()
-            //     }
-            // }
+            // document.getElementById('welcome_phrase_input').type = 'text';
         }
 
         function setContentText() {
@@ -74,19 +60,23 @@
 
 <br>
 <p><a id="welcome_start" class="btn btn-lg btn-success btn-simon" href="#" role="button"
-      onclick="onContinue()">Agree
-    and start</a>
+      onclick="onContinue()"></a>
 </p>
 <br>
 
-<p id="welcome_forgot" onclick="onForgot()" style="text-decoration: underline">Schlüsselwort vergessen?</p>
+<p id="welcome_forgot" onclick="onForgot()" style="text-decoration: underline">Schlüsselwort
+    vergessen?</p>
 
-<p id="welcome_help" style="color: rgba(146,4,0,0.86)">Sollten Sie Ihr Schlüsselwort vergessen haben, melden sie sich bitte per SMS, WhatsApp oder telefonisch bei 015770365966 (Simon Mayrshofer)</p>
+<p id="welcome_help" style="color: rgba(146,4,0,0.86)">Sollten Sie Ihr Schlüsselwort vergessen
+    haben, melden sie sich bitte per SMS, WhatsApp oder telefonisch bei +4915770365966 (Simon
+    Mayrshofer)</p>
 
 <br>
 
 <p style="color: rgba(131,128,132,0.86)">oder</p>
-<p id="welcome_no_phrase" onclick="onNoPhrase()" style="text-decoration: underline; color: rgba(131,128,132,0.86)">Haben Sie noch kein Schlüsselwort gewählt?</p>
+<p id="welcome_no_phrase" onclick="onNoPhrase()"
+   style="text-decoration: underline; color: rgba(131,128,132,0.86)">Haben Sie noch kein
+    Schlüsselwort gewählt?</p>
 
 
 </body>
