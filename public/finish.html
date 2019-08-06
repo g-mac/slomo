@@ -4,99 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script>
+
         $(document).ready(function () {
-            $('#submit_success').hide()
-            $('#submit_fail').hide()
             $("#content").show();
             setContentText();
         })
 
-        function onEmailSend() {
-            emailAddress = $('#emailInput').val();
-            if (emailAddress === "") return;
-            if (validateEmail(emailAddress)) {
-                postEmailAddress();
-            } else {
-                $('#submit_fail').show();
-                $('#submit_success').hide();
-            }
-        }
-
-        function submitEmailSuccess() {
-            $('#submit_success').show();
-            $('#submit_fail').hide();
-        }
-
-        function validateEmail(email) {
-            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(email);
-        }
-
         function setContentText() {
             $("#finish_title").html(langJson.finish_title);
             $("#finish_p1_a").html(langJson.finish_p1_a);
-            $("#finish_p1_b").html(langJson.finish_p1_b);
-            $("#finish_p2").html(langJson.finish_p2);
-            $("#emailInput").attr("placeholder", langJson.finish_enter_email);
-            $("#submit_success").html(langJson.finish_submit_success);
-            $("#submit_fail").html(langJson.finish_submit_fail);
-            $("#finish_submit").attr("value", langJson.finish_submit);
         }
-
-        function onFacebookClick() {
-            FB.ui({
-                method: 'share',
-                href: 'https://innertiming.slomo.uni-hamburg.de',
-            }, function (response) {
-            });
-        }
-
     </script>
 </head>
 
 <body>
-<h1 id="finish_title" class="display-4">Thank You!</h1>
-<!--<br>-->
-<!--<div-->
-<!--class="fb-like"-->
-<!--data-share="true"-->
-<!--data-width="450"-->
-<!--data-show-faces="true">-->
-<!--</div>-->
-
-<!--https://twitter.com/intent/tweet?via=xerosanyam&text=You_are_amazing-->
-
+<h1 id="finish_title" class="display-4"></h1>
 <br>
-<p id="finish_p1_a" class="lead">Thank you for participation!<br>
-    We would very much appreciate if you could share this test via social media to make more people aware of it.</p>
-<p class="lead">
-    <!--<a id="finish_share_1">Share via</a><br>-->
-    <a class="btn btn-md btn-primary btn-simon" href="#" role="button" onclick="onFacebookClick()">Facebook</a>
-    <!--<a id="finish_share_2">&nbsp;&nbsp; or &nbsp;&nbsp;</a>-->
-    <a>&nbsp;</a>
-    <a class="btn btn-md btn-info btn-simon" target="_blank"
-       href="https://twitter.com/intent/tweet?&text=http://innertiming.slomo.uni-hamburg.de" role="button">Twitter</a>
-</p>
+<p id="finish_p1_a" class="lead"></p>
 <br>
-<p id="finish_p1_b" class="lead">If you are interested in the results of the study you can leave us your e-mail address here.</p>
-<form>
-    <input id="emailInput" type="email"><a></a>
-    <input id="finish_submit" type="button" value="submit" class="btn btn-secondary btn-sm" onclick="onEmailSend()">
-</form>
-<p id="submit_success" style="font-size: 0.7rem; color: grey">Thank you! You email address was submitted.</p>
-<p id="submit_fail" style="font-size: 0.7rem; color: red">You have to enter a valid email address.</p>
-<br>
-<br>
-<p id="finish_p2" class="lead">If you are interested in the general research project click here:</p>
-<a href="https://www.slomo.uni-hamburg.de/en.html" target="_blank"><img src="images/slomo.jpg"
-                                                                        style="max-width:100%; width:300px"
-                                                                        title="SloMo"
-                                                                        alt="SloMo"></a>
-<br>
-<br>
-<!--<hr>-->
-<!--<br>-->
-<!--<div style="overflow: auto"><img src="images/uhh_logo_bw.png" style="height:60px; float: right;"/></div>-->
-<!--<p><a class="btn btn-lg btn-success btn-simon" href="#" role="button" onclick="start_over()">Start Over!</a></p>-->
 </body>
 </html>

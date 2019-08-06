@@ -28,22 +28,34 @@ var gender = "";
 var heritage = "";
 var city_size = "";
 
-var q1 = "";
-var q2 = "";
-var q3 = "";
-var q4 = "";
-var q5 = "";
-var q6 = "";
-var q7 = "";
-
 var postA_q0_answer = "";
 var postA_q1_answer = "";
 var postA_q2_answer = "";
+
+var postB_q0_answer = "";
+var postB_q1_answer = "";
+var postB_q2_answer = "";
+var postB_q3_answer = "";
+var postB_q4_answer = "";
+var postB_q5_answer = "";
+var postB_q6_answer = "";
+var postB_q7_answer = "";
 
 var emailAddress = "";
 var phrase = "";
 
 var db_doc_id = "";
+
+function setStartTime() {
+    var date = new Date;
+    experimentStart = date.getTime();
+}
+
+function setEndTime() {
+    var date = new Date;
+    experimentEnd = date.getTime();
+    experimentDuration = experimentEnd - experimentStart;
+}
 
 function checkPhrase(phrase_input) {
 
@@ -117,17 +129,59 @@ function postEmailAddress() {
 
 }
 
-function postQuestionResults() {
+function postQuestionResultsA() {
+
+    setEndTime();
 
     var updateResult = {
         'db_doc_id': db_doc_id,
-        'q1': q1,
-        'q2': q2,
-        'q3': q3,
-        'q4': q4,
-        'q5': q5,
-        'q6': q6,
-        'q7': q7
+        'qA_q0_answer': postA_q0_answer,
+        'qA_q1_answer': postA_q1_answer,
+        'qA_q2_answer': postA_q2_answer,
+        'qB_q0_answer': postB_q0_answer,
+        'qB_q1_answer': postB_q1_answer,
+        'qB_q2_answer': postB_q2_answer,
+        'qB_q3_answer': postB_q3_answer,
+        'qB_q4_answer': postB_q4_answer,
+        'qB_q5_answer': postB_q5_answer,
+        'qB_q6_answer': postB_q6_answer,
+        'qB_q7_answer': postB_q7_answer,
+        'experimentDuration': experimentDuration
+    };
+
+    $.ajax({
+        type: 'POST',
+        data: updateResult,
+        url: "https://" + window.location.host + window.location.pathname + 'updateresult',
+        success: function (data) {
+            load_postquestionsB();
+        },
+        error: function () {
+            window.alert("Connection failed, please click ok to try again...");
+            postQuestionResultsA();
+            //handle
+        }
+    });
+}
+
+function postQuestionResultsB() {
+
+    setEndTime();
+
+    var updateResult = {
+        'db_doc_id': db_doc_id,
+        'qA_q0_answer': postA_q0_answer,
+        'qA_q1_answer': postA_q1_answer,
+        'qA_q2_answer': postA_q2_answer,
+        'qB_q0_answer': postB_q0_answer,
+        'qB_q1_answer': postB_q1_answer,
+        'qB_q2_answer': postB_q2_answer,
+        'qB_q3_answer': postB_q3_answer,
+        'qB_q4_answer': postB_q4_answer,
+        'qB_q5_answer': postB_q5_answer,
+        'qB_q6_answer': postB_q6_answer,
+        'qB_q7_answer': postB_q7_answer,
+        'experimentDuration': experimentDuration
     };
 
     $.ajax({
@@ -139,11 +193,10 @@ function postQuestionResults() {
         },
         error: function () {
             window.alert("Connection failed, please click ok to try again...");
-            postQuestionResults();
+            postQuestionResultsB();
             //handle
         }
     });
-
 }
 
 function getLocation() {
@@ -179,18 +232,10 @@ function postResult() {
     var newResult = {
         'db_doc_id': db_doc_id,
         'tries': experimentTries,
-        'no_of_entries': no_of_entries,
         'bpm': bpmAvg,
         'cv': coefficient_of_variation,
         'intervals': intervalsAsString,
-        'userAgent': navigator.userAgent,
-        'lat': lat,
-        'long': long,
-        'accuracy': accuracy,
-        'date_of_birth': date_of_birth,
-        'gender': gender,
-        'heritage': heritage,
-        'city_size': city_size
+        'userAgent': navigator.userAgent
     };
 
 

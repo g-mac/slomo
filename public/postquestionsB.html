@@ -25,390 +25,438 @@
 
         function onContinue() {
 
-            q1 = $('input[name="q1Options"]:checked').val();
-            q2 = $('input[name="q2Options"]:checked').val();
-            q3 = $('input[name="q3Options"]:checked').val();
-            q4 = $('input[name="q4Options"]:checked').val();
-            q5 = $('input[name="q5Options"]:checked').val();
-            q6 = $('input[name="q6Options"]:checked').val();
-            q7 = $('input[name="q7Options"]:checked').val();
-//            q1 = $('#q1').val();
-//            q2 = $('#q2').val();
-//            q3 = $('#q3').val();
-//            q4 = $('#q4').val();
-//            q5 = $('#q5').val();
-//            q6 = $('#q6').val();
-//            q7 = $('#q7').val();
+            postB_q0_answer = $('input[name="q0Options"]:checked').val();
+            postB_q1_answer = $('input[name="q1Options"]:checked').val();
+            postB_q2_answer = $('input[name="q2Options"]:checked').val();
+            postB_q3_answer = $('input[name="q3Options"]:checked').val();
+            postB_q4_answer = $('input[name="q4Options"]:checked').val();
+            postB_q5_answer = $('input[name="q5Options"]:checked').val();
+            postB_q6_answer = $('input[name="q6Options"]:checked').val();
+            postB_q7_answer = $('input[name="q7Options"]:checked').val();
 
-            if (q1 == null ||
-                q2 == null ||
-                q3 == null ||
-                q4 == null ||
-                q5 == null ||
-                q6 == null ||
-                q7 == null) {
+            if (postB_q0_answer == null ||
+                postB_q1_answer == null ||
+                postB_q2_answer == null ||
+                postB_q3_answer == null ||
+                postB_q4_answer == null ||
+                postB_q5_answer == null ||
+                postB_q6_answer == null ||
+                postB_q7_answer == null) {
                 window.alert("Please answer all the questions above to continue");
             } else {
                 $("#content").hide();
-                postQuestionResults();
+                postQuestionResultsB();
             }
         }
 
         function setContentText() {
-            $("#postquestions_title").html(langJson.postquestions_title);
-            $("#postquestions_q1").html(langJson.postquestions_q1);
-            $("#postquestions_q2").html(langJson.postquestions_q2);
-            $("#postquestions_q3").html(langJson.postquestions_q3);
-            $("#postquestions_q4").html(langJson.postquestions_q4);
-            $("#postquestions_q5").html(langJson.postquestions_q5);
-            $("#postquestions_q6").html(langJson.postquestions_q6);
-            $("#postquestions_q7").html(langJson.postquestions_q7);
-            $("#postquestions_p1").html(langJson.postquestions_p1);
-            $("#postquestions_continue_button").html(langJson.postquestions_continue_button);
-            $(".answer_never").html(langJson.answer_never);
-            $(".answer_almost_never").html(langJson.answer_almost_never);
-            $(".answer_sometimes").html(langJson.answer_sometimes);
-            $(".answer_fairly_often").html(langJson.answer_fairly_often);
-            $(".answer_very_often").html(langJson.answer_very_often);
-            $(".answer_professional").html(langJson.answer_professional);
-            $(".answer_none").html(langJson.answer_none);
-            $(".answer_10h").html(langJson.answer_10h);
-            $(".answer_20h").html(langJson.answer_20h);
-            $(".answer_30h").html(langJson.answer_30h);
-            $(".answer_40h").html(langJson.answer_40h);
-            $(".answer_50h").html(langJson.answer_50h);
-            $(".answer_50h_more").html(langJson.answer_50h_more);
-            $(".answer_very_excited").html(langJson.answer_very_excited);
-            $(".answer_rather_excited").html(langJson.answer_rather_excited);
-            $(".answer_neutral").html(langJson.answer_neutral);
-            $(".answer_rather_calm").html(langJson.answer_rather_calm);
-            $(".answer_very_calm").html(langJson.answer_very_calm);
-//            $(".answer_never:eq(0)").html(langJson.answer_never);
-//            $(".answer_never").html(langJson.answer_never);
+            $("#postquestionsB_title").html(langJson.postquestionsB_title);
+            $("#postquestionsB_q0").html(langJson.postquestionsB_q0);
+            $("#postquestionsB_q1").html(langJson.postquestionsB_q1);
+            $("#postquestionsB_q2").html(langJson.postquestionsB_q2);
+            $("#postquestionsB_q3").html(langJson.postquestionsB_q3);
+            $("#postquestionsB_q4").html(langJson.postquestionsB_q4);
+            $("#postquestionsB_q5").html(langJson.postquestionsB_q5);
+            $("#postquestionsB_q6").html(langJson.postquestionsB_q6);
+            $("#postquestionsB_q7").html(langJson.postquestionsB_q7);
+            $("#postquestionsB_continue_button").html(langJson.postquestionsB_continue_button);
         }
     </script>
 </head>
 
 <body>
-<h1 id="postquestions_title" class="display-4">Questionnaire</h1>
+<p id="postquestionsB_title" class="lead"></p>
 <!--<br>-->
 <!--<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,-->
 <!--tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
 
 <br>
 
-<!--q1-->
-<label id="postquestions_q1" for="q1" style="font-weight: 500">Do you make music?</label>
+<!--q0-->
+<label id="postquestionsB_q0" for="q0" style="font-weight: 500"></label>
 <br>
+
+<div id="q0" class="form-check form-check" align="center" style="text-align: center">
+    <div style="display: inline-block;text-align: left">
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio1" value="1">
+            <label class="form-check-label answer_never" for="q0Radio1">0 (uberhaupt nicht)</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio2" value="2">
+            <label class="form-check-label answer_almost_never" for="q0Radio2">1</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio3" value="3">
+            <label class="form-check-label answer_sometimes" for="q0Radio3">2</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio4" value="4">
+            <label class="form-check-label answer_fairly_often" for="q0Radio4">3</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio5" value="5">
+            <label class="form-check-label answer_very_often" for="q0Radio5">4</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio6" value="6">
+            <label class="form-check-label answer_professional" for="q0Radio6">5</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio7" value="7">
+            <label class="form-check-label answer_professional" for="q0Radio7">6</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio8" value="8">
+            <label class="form-check-label answer_professional" for="q0Radio8">7</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q0Options" id="q0Radio9" value="9">
+            <label class="form-check-label answer_professional" for="q0Radio9">8 (sehr)</label>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+
+<!--q1-->
+<label id="postquestionsB_q1" for="q1" style="font-weight: 500"></label>
+<br>
+
 <div id="q1" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q1Options" id="q1Radio1" value="1">
-            <label class="form-check-label answer_never" for="q1Radio1">never</label>
+            <label class="form-check-label answer_never" for="q1Radio1">0 (uberhaupt nicht)</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q1Options" id="q1Radio2" value="2">
-            <label class="form-check-label answer_almost_never" for="q1Radio2">almost never</label>
+            <label class="form-check-label answer_almost_never" for="q1Radio2">1</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q1Options" id="q1Radio3" value="3">
-            <label class="form-check-label answer_sometimes" for="q1Radio3">sometimes</label>
+            <label class="form-check-label answer_sometimes" for="q1Radio3">2</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q1Options" id="q1Radio4" value="4">
-            <label class="form-check-label answer_fairly_often" for="q1Radio4">fairly often</label>
+            <label class="form-check-label answer_fairly_often" for="q1Radio4">3</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q1Options" id="q1Radio5" value="5">
-            <label class="form-check-label answer_very_often" for="q1Radio5">very often</label>
+            <label class="form-check-label answer_very_often" for="q1Radio5">4</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q1Options" id="q1Radio6" value="6">
-            <label class="form-check-label answer_professional" for="q1Radio6">I am a
-                professional</label>
+            <label class="form-check-label answer_professional" for="q1Radio6">5</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q1Options" id="q1Radio7" value="7">
+            <label class="form-check-label answer_professional" for="q1Radio7">6</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q1Options" id="q1Radio8" value="8">
+            <label class="form-check-label answer_professional" for="q1Radio8">7</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q1Options" id="q1Radio9" value="9">
+            <label class="form-check-label answer_professional" for="q1Radio9">8 (sehr)</label>
         </div>
     </div>
 </div>
-<!--<div class="form-group">-->
-<!--<label for="q1">Do you make music?</label>-->
-<!--<br>-->
-<!--<select class="form-control" id="q1">-->
-<!--<option></option>-->
-<!--<option>never</option>-->
-<!--<option>almost never</option>-->
-<!--<option>sometimes</option>-->
-<!--<option>fairly often</option>-->
-<!--<option>very often</option>-->
-<!--<option>I am a professional</option>-->
-<!--</select>-->
-<!--</div>-->
+
 <br><br>
-<!--<label for="q1">Do you make music?</label>-->
-<!--<br>-->
-<!--<input id="q1" type="text" data-slider-ticks="[1, 2, 3, 4, 5, 6]" data-slider-ticks-snap-bounds="1"-->
-<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often", "I am a<br>professional"]'/>-->
+
 
 <!--q2-->
-<label id="postquestions_q2" for="q2" style="font-weight: 500">How do you feel right now?</label>
+<label id="postquestionsB_q2" for="q2" style="font-weight: 500"></label>
 <br>
+
 <div id="q2" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q2Options" id="q2Radio1" value="1">
-            <label class="form-check-label answer_very_calm" for="q2Radio1">very calm</label>
+            <label class="form-check-label answer_never" for="q2Radio1">0 (uberhaupt nicht)</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q2Options" id="q2Radio2" value="2">
-            <label class="form-check-label answer_rather_calm" for="q2Radio2">rather calm</label>
+            <label class="form-check-label answer_almost_never" for="q2Radio2">1</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q2Options" id="q2Radio3" value="3">
-            <label class="form-check-label answer_neutral" for="q2Radio3">neutral</label>
+            <label class="form-check-label answer_sometimes" for="q2Radio3">2</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q2Options" id="q2Radio4" value="4">
-            <label class="form-check-label answer_rather_excited" for="q2Radio4">rather
-                excited</label>
+            <label class="form-check-label answer_fairly_often" for="q2Radio4">3</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q2Options" id="q2Radio5" value="5">
-            <label class="form-check-label answer_very_excited" for="q2Radio5">very excited</label>
+            <label class="form-check-label answer_very_often" for="q2Radio5">4</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q2Options" id="q2Radio6" value="6">
+            <label class="form-check-label answer_professional" for="q2Radio6">5</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q2Options" id="q2Radio7" value="7">
+            <label class="form-check-label answer_professional" for="q2Radio7">6</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q2Options" id="q2Radio8" value="8">
+            <label class="form-check-label answer_professional" for="q2Radio8">7</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q2Options" id="q2Radio9" value="9">
+            <label class="form-check-label answer_professional" for="q2Radio9">8 (sehr)</label>
         </div>
     </div>
 </div>
+
 <br><br>
-<!--&lt;!&ndash;q2&ndash;&gt;-->
-<!--<label for="q2">How do you feel right now?</label>-->
-<!--<br>-->
-<!--<input id="q2" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
-<!--data-slider-ticks-labels='["very<br>calm", "rather<br>calm", "neutral<br><br>", "rather<br>excited", "very<br>excited"]'/>-->
-<!--<br><br>-->
+
 
 <!--q3-->
-<label id="postquestions_q3" for="q3" style="font-weight: 500">How many hours do you spend studying/working in a
-    typical week?</label>
+<label id="postquestionsB_q3" for="q3" style="font-weight: 500"></label>
 <br>
+
 <div id="q3" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q3Options" id="q3Radio1" value="1">
-            <label class="form-check-label answer_none" for="q3Radio1">none</label>
+            <label class="form-check-label answer_never" for="q3Radio1">0 (uberhaupt nicht)</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q3Options" id="q3Radio2" value="2">
-            <label class="form-check-label answer_10h" for="q3Radio2">up to 10 hours</label>
+            <label class="form-check-label answer_almost_never" for="q3Radio2">1</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q3Options" id="q3Radio3" value="3">
-            <label class="form-check-label answer_20h" for="q3Radio3">up to 20 hours</label>
+            <label class="form-check-label answer_sometimes" for="q3Radio3">2</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q3Options" id="q3Radio4" value="4">
-            <label class="form-check-label answer_30h" for="q3Radio4">up to 30 hours</label>
+            <label class="form-check-label answer_fairly_often" for="q3Radio4">3</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q3Options" id="q3Radio5" value="5">
-            <label class="form-check-label answer_40h" for="q3Radio5">up to 40 hours</label>
+            <label class="form-check-label answer_very_often" for="q3Radio5">4</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q3Options" id="q3Radio6" value="6">
-            <label class="form-check-label answer_50h" for="q3Radio6">up to 50 hours</label>
+            <label class="form-check-label answer_professional" for="q3Radio6">5</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q3Options" id="q3Radio7" value="7">
-            <label class="form-check-label answer_50h_more" for="q3Radio7">more than 50 hours</label>
+            <label class="form-check-label answer_professional" for="q3Radio7">6</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q3Options" id="q3Radio8" value="8">
+            <label class="form-check-label answer_professional" for="q3Radio8">7</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q3Options" id="q3Radio9" value="9">
+            <label class="form-check-label answer_professional" for="q3Radio9">8 (sehr)</label>
         </div>
     </div>
 </div>
-<!--<div class="form-group">-->
-<!--<label for="q3">How many hours do you spend studying/working in a typical week?</label>-->
-<!--<br>-->
-<!--<select class="form-control" id="q3">-->
-<!--<option></option>-->
-<!--<option>none</option>-->
-<!--<option>up to 10 hours</option>-->
-<!--<option>up to 20 hours</option>-->
-<!--<option>up to 30 hours</option>-->
-<!--<option>up to 40 hours</option>-->
-<!--<option>up to 50 hours</option>-->
-<!--<option>more than 50 hours</option>-->
-<!--</select>-->
-<!--</div>-->
 
-<br>
-<p id="postquestions_p1" class="lead">The following questions are about your feelings and thoughts during the last
-    month. You will be asked to
-    indicate how often you felt or thought a certain way. They may explain your inner timing.</p>
-<br>
+<br><br>
 
 
 <!--q4-->
-<label id="postquestions_q4" for="q4" style="font-weight: 500"></label>
-<!--<label id="postquestions_q4" for="q4" style="font-weight: 500">In the last month, how often have you felt that you were-->
-<!--unable to control the important things in-->
-<!--your-->
-<!--life?</label>-->
+<label id="postquestionsB_q4" for="q4" style="font-weight: 500"></label>
 <br>
+
 <div id="q4" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q4Options" id="q4Radio1" value="1">
-            <label class="form-check-label answer_never" for="q4Radio1"></label>
+            <label class="form-check-label answer_never" for="q4Radio1">0 (uberhaupt nicht)</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q4Options" id="q4Radio2" value="2">
-            <label class="form-check-label answer_almost_never" for="q4Radio2">almost never</label>
+            <label class="form-check-label answer_almost_never" for="q4Radio2">1</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q4Options" id="q4Radio3" value="3">
-            <label class="form-check-label answer_sometimes" for="q4Radio3">sometimes</label>
+            <label class="form-check-label answer_sometimes" for="q4Radio3">2</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q4Options" id="q4Radio4" value="4">
-            <label class="form-check-label answer_fairly_often" for="q4Radio4">fairly often</label>
+            <label class="form-check-label answer_fairly_often" for="q4Radio4">3</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q4Options" id="q4Radio5" value="5">
-            <label class="form-check-label answer_very_often" for="q4Radio5">very often</label>
+            <label class="form-check-label answer_very_often" for="q4Radio5">4</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q4Options" id="q4Radio6" value="6">
+            <label class="form-check-label answer_professional" for="q4Radio6">5</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q4Options" id="q4Radio7" value="7">
+            <label class="form-check-label answer_professional" for="q4Radio7">6</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q4Options" id="q4Radio8" value="8">
+            <label class="form-check-label answer_professional" for="q4Radio8">7</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q4Options" id="q4Radio9" value="9">
+            <label class="form-check-label answer_professional" for="q4Radio9">8 (sehr)</label>
         </div>
     </div>
 </div>
-<!--<label for="q4">In the last month, how often have you felt that you were unable to control the important things in your-->
-<!--life?</label>-->
-<!--<br>-->
-<!--<input id="q4" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
-<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>-->
+
 <br><br>
 
+
 <!--q5-->
-<label id="postquestions_q5" for="q5" style="font-weight: 500">In the last month, how often have you felt confident
-    about your ability to handle your personal
-    problems?</label>
+<label id="postquestionsB_q5" for="q5" style="font-weight: 500"></label>
 <br>
+
 <div id="q5" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q5Options" id="q5Radio1" value="1">
-            <label class="form-check-label answer_never" for="q5Radio1">never</label>
+            <label class="form-check-label answer_never" for="q5Radio1">0 (uberhaupt nicht)</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q5Options" id="q5Radio2" value="2">
-            <label class="form-check-label answer_almost_never" for="q5Radio2">almost never</label>
+            <label class="form-check-label answer_almost_never" for="q5Radio2">1</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q5Options" id="q5Radio3" value="3">
-            <label class="form-check-label answer_sometimes" for="q5Radio3">sometimes</label>
+            <label class="form-check-label answer_sometimes" for="q5Radio3">2</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q5Options" id="q5Radio4" value="4">
-            <label class="form-check-label answer_fairly_often" for="q5Radio4">fairly often</label>
+            <label class="form-check-label answer_fairly_often" for="q5Radio4">3</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q5Options" id="q5Radio5" value="5">
-            <label class="form-check-label answer_very_often" for="q5Radio5">very often</label>
+            <label class="form-check-label answer_very_often" for="q5Radio5">4</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q5Options" id="q5Radio6" value="6">
+            <label class="form-check-label answer_professional" for="q5Radio6">5</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q5Options" id="q5Radio7" value="7">
+            <label class="form-check-label answer_professional" for="q5Radio7">6</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q5Options" id="q5Radio8" value="8">
+            <label class="form-check-label answer_professional" for="q5Radio8">7</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q5Options" id="q5Radio9" value="9">
+            <label class="form-check-label answer_professional" for="q5Radio9">8 (sehr)</label>
         </div>
     </div>
 </div>
-<!--<label for="q5">In the last month, how often have you felt confident about your ability to handle your personal-->
-<!--problems?</label>-->
-<!--<br>-->
-<!--<input id="q5" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
-<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>-->
+
 <br><br>
 
+
 <!--q6-->
-<label id="postquestions_q6" for="q6" style="font-weight: 500">In the last month, how often have you felt that things
-    were going your way?</label>
+<label id="postquestionsB_q6" for="q6" style="font-weight: 500"></label>
 <br>
+
 <div id="q6" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q6Options" id="q6Radio1" value="1">
-            <label class="form-check-label answer_never" for="q6Radio1">never</label>
+            <label class="form-check-label answer_never" for="q6Radio1">0 (uberhaupt nicht)</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q6Options" id="q6Radio2" value="2">
-            <label class="form-check-label answer_almost_never" for="q6Radio2">almost never</label>
+            <label class="form-check-label answer_almost_never" for="q6Radio2">1</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q6Options" id="q6Radio3" value="3">
-            <label class="form-check-label answer_sometimes" for="q6Radio3">sometimes</label>
+            <label class="form-check-label answer_sometimes" for="q6Radio3">2</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q6Options" id="q6Radio4" value="4">
-            <label class="form-check-label answer_fairly_often" for="q6Radio4">fairly often</label>
+            <label class="form-check-label answer_fairly_often" for="q6Radio4">3</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q6Options" id="q6Radio5" value="5">
-            <label class="form-check-label answer_very_often" for="q6Radio5">very often</label>
+            <label class="form-check-label answer_very_often" for="q6Radio5">4</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q6Options" id="q6Radio6" value="6">
+            <label class="form-check-label answer_professional" for="q6Radio6">5</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q6Options" id="q6Radio7" value="7">
+            <label class="form-check-label answer_professional" for="q6Radio7">6</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q6Options" id="q6Radio8" value="8">
+            <label class="form-check-label answer_professional" for="q6Radio8">7</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q6Options" id="q6Radio9" value="9">
+            <label class="form-check-label answer_professional" for="q6Radio9">8 (sehr)</label>
         </div>
     </div>
 </div>
-<!--<label for="q6">In the last month, how often have you felt that things were going your way?</label>-->
-<!--<br>-->
-<!--<input id="q6" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
-<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>-->
+
 <br><br>
 
+
 <!--q7-->
-<label id="postquestions_q7" for="q7" style="font-weight: 500">In the last month, how often have you felt difficulties
-    were piling up so high that you could not
-    overcome them?</label>
+<label id="postquestionsB_q7" for="q7" style="font-weight: 500"></label>
 <br>
+
 <div id="q7" class="form-check form-check" align="center" style="text-align: center">
     <div style="display: inline-block;text-align: left">
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q7Options" id="q7Radio1" value="1">
-            <label class="form-check-label answer_never" for="q7Radio1">never</label>
+            <label class="form-check-label answer_never" for="q7Radio1">0 (uberhaupt nicht)</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q7Options" id="q7Radio2" value="2">
-            <label class="form-check-label answer_almost_never" for="q7Radio2">almost never</label>
+            <label class="form-check-label answer_almost_never" for="q7Radio2">1</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q7Options" id="q7Radio3" value="3">
-            <label class="form-check-label answer_sometimes" for="q7Radio3">sometimes</label>
+            <label class="form-check-label answer_sometimes" for="q7Radio3">2</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q7Options" id="q7Radio4" value="4">
-            <label class="form-check-label answer_fairly_often" for="q7Radio4">fairly often</label>
+            <label class="form-check-label answer_fairly_often" for="q7Radio4">3</label>
         </div>
         <div style="margin-top: 0.5rem">
             <input class="form-check-input" type="radio" name="q7Options" id="q7Radio5" value="5">
-            <label class="form-check-label answer_very_often" for="q7Radio5">very often</label>
+            <label class="form-check-label answer_very_often" for="q7Radio5">4</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q7Options" id="q7Radio6" value="6">
+            <label class="form-check-label answer_professional" for="q7Radio6">5</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q7Options" id="q7Radio7" value="7">
+            <label class="form-check-label answer_professional" for="q7Radio7">6</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q7Options" id="q7Radio8" value="8">
+            <label class="form-check-label answer_professional" for="q7Radio8">7</label>
+        </div>
+        <div style="margin-top: 0.5rem">
+            <input class="form-check-input" type="radio" name="q7Options" id="q7Radio9" value="9">
+            <label class="form-check-label answer_professional" for="q7Radio9">8 (sehr)</label>
         </div>
     </div>
 </div>
-<!--<label for="q7">In the last month, how often have you felt difficulties were piling up so high that you could not-->
-<!--overcome them?</label>-->
-<!--<br>-->
-<!--<input id="q7" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
-<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>-->
+
 <br><br>
 
-<!--&lt;!&ndash;q4&ndash;&gt;-->
-<!--<label for="q4">n the last month, how often have you felt that you were unable to control the important things in your life?</label>-->
-<!--<input id="q4" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
-<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>-->
-<!--<br><br>-->
-
-<!--<div class="form-group">-->
-<!--<label for="comment">What is this questions goint to be?</label>-->
-<!--<textarea class="form-control" rows="5" id="comment"></textarea>-->
-<!--</div>-->
-<!--<br>-->
-
-<!--<label for="ex13">Could this be even another question?</label>-->
-<!--<input id="ex13" type="text" data-slider-ticks="[1, 2, 3, 4, 5]" data-slider-ticks-snap-bounds="1"-->
-<!--data-slider-ticks-labels='["never<br><br>", "almost<br>never", "some-<br>times", "fairly<br>often", "very<br>often"]'/>-->
-<!--<br><br>-->
-
-<!--<label for="ex14">Could this be even another question?</label>-->
-<!--<input id="ex14" type="text" />-->
-<!--<br><br>-->
-
 <br>
-<p><a id="postquestions_continue_button" class="btn btn-lg btn-success btn-simon" href="#" role="button"
+<p><a id="postquestionsB_continue_button" class="btn btn-lg btn-success btn-simon" href="#" role="button"
       onclick="onContinue()">Finish</a>
     <!--text-overflow: ellipsis;-->
 </p>
