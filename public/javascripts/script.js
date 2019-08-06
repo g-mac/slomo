@@ -36,6 +36,10 @@ var q5 = "";
 var q6 = "";
 var q7 = "";
 
+var postA_q0_answer = "";
+var postA_q1_answer = "";
+var postA_q2_answer = "";
+
 var emailAddress = "";
 var phrase = "";
 
@@ -236,9 +240,14 @@ function load_prequestions() {
     $("#content").load("prequestions.html");
 }
 
-function load_postquestions() {
+function load_postquestionsA() {
     $("#content").hide();
-    $("#content").load("postquestions.html");
+    $("#content").load("postquestionsA.html");
+}
+
+function load_postquestionsB() {
+    $("#content").hide();
+    $("#content").load("postquestionsB.html");
 }
 
 function load_finish() {

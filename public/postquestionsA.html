@@ -1,0 +1,162 @@
+<html lang="en">
+
+<head>
+    <!--bootstrap-slider-->
+    <link href="javascripts/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet"/>
+    <script type="text/javascript"
+            src="javascripts/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <!--bootstrap helpers-->
+    <link href="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <script type="text/javascript"
+            src="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.js"></script>
+    <!--custom css-->
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#content").show();
+            setContentText();
+        });
+
+        function onContinue() {
+            postA_q0_answer = $('#postA_q0').val();
+            postA_q1_answer = $('#postA_q1').val();
+            postA_q2_answer = $('#postA_q2').val();
+
+            if (postA_q0_answer === ""
+                || postA_q1_answer === ""
+                || postA_q2_answer === "") {
+                window.alert(langJson.prequestions_warning);
+            } else {
+                load_postquestionsB();
+            }
+        }
+
+        function setContentText() {
+            $("#postquestionsA_title").html(langJson.postquestionsA_title);
+            $("#postquestionsA_q0").html(langJson.postquestionsA_q0);
+            $("#postquestionsA_q0_o1").html(langJson.postquestionsA_q0_o1);
+            $("#postquestionsA_q0_o2").html(langJson.postquestionsA_q0_o2);
+            $("#postquestionsA_q0_o3").html(langJson.postquestionsA_q0_o3);
+            $("#postquestionsA_q0_o4").html(langJson.postquestionsA_q0_o4);
+            $("#postquestionsA_q0_o5").html(langJson.postquestionsA_q0_o5);
+            $("#postquestionsA_q0_o6").html(langJson.postquestionsA_q0_o6);
+            $("#postquestionsA_q0_o7").html(langJson.postquestionsA_q0_o7);
+            $("#postquestionsA_q0_o8").html(langJson.postquestionsA_q0_o8);
+            $("#postquestionsA_q0_o9").html(langJson.postquestionsA_q0_o9);
+            $("#postquestionsA_q0_o10").html(langJson.postquestionsA_q0_o10);
+            $("#postquestionsA_q0_o11").html(langJson.postquestionsA_q0_o11);
+            $("#postquestionsA_q0_o12").html(langJson.postquestionsA_q0_o12);
+            $("#postquestionsA_q0_o13").html(langJson.postquestionsA_q0_o13);
+            $("#postquestionsA_q0_o14").html(langJson.postquestionsA_q0_o14);
+            $("#postquestionsA_q1").html(langJson.postquestionsA_q1);
+            $("#postquestionsA_q1_o1").html(langJson.postquestionsA_q1_o1);
+            $("#postquestionsA_q1_o2").html(langJson.postquestionsA_q1_o2);
+            $("#postquestionsA_q1_o3").html(langJson.postquestionsA_q1_o3);
+            $("#postquestionsA_q1_o4").html(langJson.postquestionsA_q1_o4);
+            $("#postquestionsA_q1_o5").html(langJson.postquestionsA_q1_o5);
+            $("#postquestionsA_q1_o6").html(langJson.postquestionsA_q1_o6);
+            $("#postquestionsA_q1_o7").html(langJson.postquestionsA_q1_o7);
+            $("#postquestionsA_q1_o8").html(langJson.postquestionsA_q1_o8);
+            $("#postquestionsA_q1_o9").html(langJson.postquestionsA_q1_o9);
+            $("#postquestionsA_q1_o10").html(langJson.postquestionsA_q1_o10);
+            $("#postquestionsA_q1_o11").html(langJson.postquestionsA_q1_o11);
+            $("#postquestionsA_q1_o12").html(langJson.postquestionsA_q1_o12);
+            $("#postquestionsA_q1_o13").html(langJson.postquestionsA_q1_o13);
+            $("#postquestionsA_q1_o14").html(langJson.postquestionsA_q1_o14);
+            $("#postquestionsA_q2").html(langJson.postquestionsA_q2);
+            $("#postquestionsA_q2_o1").html(langJson.postquestionsA_q2_o1);
+            $("#postquestionsA_q2_o2").html(langJson.postquestionsA_q2_o2);
+            $("#postquestionsA_q2_o3").html(langJson.postquestionsA_q2_o3);
+            $("#postquestionsA_q2_o4").html(langJson.postquestionsA_q2_o4);
+            $("#postquestionsA_q2_o5").html(langJson.postquestionsA_q2_o5);
+            $("#postquestionsA_q2_o6").html(langJson.postquestionsA_q2_o6);
+            $("#postquestionsA_q2_o7").html(langJson.postquestionsA_q2_o7);
+            $("#postquestionsA_continue_button").html(langJson.postquestionsA_continue_button);
+        }
+    </script>
+</head>
+
+<body>
+<p id="postquestionsA_title" class="lead">Questionnaire</p>
+<!--<br>-->
+<!--<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,-->
+<!--tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
+
+<br>
+
+<div align="left">
+
+    <!--q0-->
+    <div class="form-group">
+        <label id="postquestionsA_q0" for="postA_q0"></label>
+        <select class="form-control" id="postA_q0">
+            <option></option>
+            <option id="postquestionsA_q0_o1"></option>
+            <option id="postquestionsA_q0_o2"></option>
+            <option id="postquestionsA_q0_o3"></option>
+            <option id="postquestionsA_q0_o4"></option>
+            <option id="postquestionsA_q0_o5"></option>
+            <option id="postquestionsA_q0_o6"></option>
+            <option id="postquestionsA_q0_o7"></option>
+            <option id="postquestionsA_q0_o8"></option>
+            <option id="postquestionsA_q0_o9"></option>
+            <option id="postquestionsA_q0_o10"></option>
+            <option id="postquestionsA_q0_o11"></option>
+            <option id="postquestionsA_q0_o12"></option>
+            <option id="postquestionsA_q0_o13"></option>
+            <option id="postquestionsA_q0_o14"></option>
+        </select>
+    </div>
+
+    <!--q1-->
+    <div class="form-group">
+        <label id="postquestionsA_q1" for="postA_q1"></label>
+        <select class="form-control" id="postA_q1">
+            <option></option>
+            <option id="postquestionsA_q1_o1"></option>
+            <option id="postquestionsA_q1_o2"></option>
+            <option id="postquestionsA_q1_o3"></option>
+            <option id="postquestionsA_q1_o4"></option>
+            <option id="postquestionsA_q1_o5"></option>
+            <option id="postquestionsA_q1_o6"></option>
+            <option id="postquestionsA_q1_o7"></option>
+            <option id="postquestionsA_q1_o8"></option>
+            <option id="postquestionsA_q1_o9"></option>
+            <option id="postquestionsA_q1_o10"></option>
+            <option id="postquestionsA_q1_o11"></option>
+            <option id="postquestionsA_q1_o12"></option>
+            <option id="postquestionsA_q1_o13"></option>
+            <option id="postquestionsA_q1_o14"></option>
+        </select>
+    </div>
+
+    <!--q2-->
+    <div class="form-group">
+        <label id="postquestionsA_q2" for="postA_q2"></label>
+        <select class="form-control" id="postA_q2">
+            <option></option>
+            <option id="postquestionsA_q2_o1"></option>
+            <option id="postquestionsA_q2_o2"></option>
+            <option id="postquestionsA_q2_o3"></option>
+            <option id="postquestionsA_q2_o4"></option>
+            <option id="postquestionsA_q2_o5"></option>
+            <option id="postquestionsA_q2_o6"></option>
+            <option id="postquestionsA_q2_o7"></option>
+        </select>
+    </div>
+
+</div>
+
+<br>
+<p><a id="postquestionsA_continue_button" class="btn btn-lg btn-success btn-simon" href="#"
+      role="button"
+      onclick="onContinue()">Finish</a>
+    <!--text-overflow: ellipsis;-->
+</p>
+<!--<p><a class="btn btn-lg btn-success" href="javascript:void();" role="button" onclick="load_finish()">Send</a></p>-->
+
+</body>
+</html>

@@ -39,7 +39,7 @@
             } else pass = false;
 
             if (pass) {
-                $('#sad').css('width', '10%');
+                $('#happy').css('width', '10%');
                 $('#fail_message').hide();
 //                $('#continue_button').text("Continue");
                 $('#continue_button').text(langJson.feedback_continue_button);
@@ -49,7 +49,7 @@
                     + langJson.feedback_performance_2);
 
             } else {
-                $('#happy').css('width', '10%');
+                $('#sad').css('width', '10%');
                 $('#success_message').hide();
                 $('#performance_message').hide();
 //                $('#continue_button').html("Try again");
@@ -75,7 +75,7 @@
 
         function onContinue() {
             if (pass) {
-                load_postquestions();
+                load_postquestionsA();
             } else {
                 load_experiment();
             }
@@ -121,12 +121,12 @@
 <p id="too_short" style="color: rgb(255,0,0);>">You need to tap as long as the timer is running, please try again.</p>
 <br>
 <span class="slider-label">< 75%</span>
-<image id="sad" src="images/sad.png" style="width:5%"/>
+<img id="sad" src="images/sad.png" style="width:5%"/>
 <input style="width:60%" id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text"
        data-slider-min="75"
        data-slider-max="100" data-slider-step="1"
        data-slider-rangeHighlights='[{ "start": 90, "end": 90.5}]'/>
-<image id="happy" src="images/happy.png" style="width:5%"/>
+<img id="happy" src="images/happy.png" style="width:5%"/>
 <span class="slider-label">100%</span>
 <br>
 <br>
