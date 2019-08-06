@@ -99,7 +99,7 @@ function isPhraseDuplicate() {
             for (entry in data) {
                 console.log(data[entry].phrase);
                 if (data[entry].phrase === phrase) {
-
+                    ismatch = true;
                     break
                 }
             }
