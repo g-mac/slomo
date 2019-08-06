@@ -43,7 +43,7 @@
                 $('#fail_message').hide();
 //                $('#continue_button').text("Continue");
                 $('#continue_button').text(langJson.feedback_continue_button);
-                $('#continue_button').attr('onclick', 'load_postquestions()');
+                $('#continue_button').attr('onclick', 'load_postquestionsA()');
                 $('#performance_message').html(langJson.feedback_performance_1 + " <b>"
                     + calculatePerformance(coefficient_of_variation) + "</b> "
                     + langJson.feedback_performance_2);
@@ -73,13 +73,13 @@
             return percentage;
         }
 
-        function onContinue() {
-            if (pass) {
-                load_postquestionsA();
-            } else {
-                load_experiment();
-            }
-        }
+        // function onContinue() {
+        //     if (pass) {
+        //         load_postquestionsA();
+        //     } else {
+        //         load_experiment();
+        //     }
+        // }
 
         function setContentText() {
             $("#feedback_title").html(langJson.feedback_title);
