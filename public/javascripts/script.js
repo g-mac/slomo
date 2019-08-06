@@ -54,7 +54,8 @@ function setStartTime() {
 function setEndTime() {
     var date = new Date;
     experimentEnd = date.getTime();
-    experimentDuration = experimentEnd - experimentStart;
+    experimentDuration = (experimentEnd - experimentStart);
+    console.log("experimentDuration:" + experimentDuration)
 }
 
 function checkPhrase(phrase_input) {
