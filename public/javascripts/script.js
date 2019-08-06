@@ -118,7 +118,7 @@ function postEmailAddress() {
     $.ajax({
         type: 'POST',
         data: emailResult,
-        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '')  + 'postemail',
+        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '') + 'postemail',
         success: function (data) {
             submitEmailSuccess();
         },
@@ -152,7 +152,7 @@ function postQuestionResultsA() {
     $.ajax({
         type: 'POST',
         data: updateResult,
-        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '')  + 'updateresult',
+        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '') + 'updateresult',
         success: function (data) {
             load_postquestionsB();
         },
@@ -187,7 +187,7 @@ function postQuestionResultsB() {
     $.ajax({
         type: 'POST',
         data: updateResult,
-        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '')  + 'updateresult',
+        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '') + 'updateresult',
         success: function (data) {
             load_finish();
         },
@@ -231,6 +231,7 @@ function postResult() {
 
     var newResult = {
         'db_doc_id': db_doc_id,
+        'userID': phrase,
         'tries': experimentTries,
         'bpm': bpmAvg,
         'cv': coefficient_of_variation,
@@ -244,7 +245,7 @@ function postResult() {
         type: 'POST',
         data: newResult,
         // url: window.location.pathname + '/addresult',
-        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '')  + 'addresult',
+        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '') + 'addresult',
         success: function (data) {
             db_doc_id = data.toString();
             load_feedback();
