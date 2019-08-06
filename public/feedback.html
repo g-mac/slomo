@@ -39,6 +39,7 @@
             } else pass = false;
 
             if (pass) {
+                $('#sad').css('width', '10%');
                 $('#fail_message').hide();
 //                $('#continue_button').text("Continue");
                 $('#continue_button').text(langJson.feedback_continue_button);
@@ -48,6 +49,7 @@
                     + langJson.feedback_performance_2);
 
             } else {
+                $('#happy').css('width', '10%');
                 $('#success_message').hide();
                 $('#performance_message').hide();
 //                $('#continue_button').html("Try again");
@@ -94,22 +96,23 @@
 </head>
 
 <body>
-<h1 id="feedback_title" class="display-4">Results</h1>
+<h1 id="feedback_title" class="display-4" hidden="true">Results</h1>
 <br>
 <p class="lead" id="fail_message">Sorry, but your taps were either not even enough or too few.
     <br>Remember, try to pace taps evenly at your most comfortable rate for as long as indicated by the timer.
     <br>Please try again!</p>
+
 <p class="lead" id="success_message">Very good! Your taps were even!
     <br>Please click 'Continue', we have a few more questions for you.</p>
 
 <br>
-<p id="feedback_tap_no_container">
+<p id="feedback_tap_no_container" hidden="true">
     <span id="feedback_tap_no">NUMBER OF TAPS:</span>
     <br>
     <span id="no_of_taps" style="color: rgba(0,59,247,0.86); ">none</span>
     <span id="min_taps" style="color: rgba(111,111,111,0.86); ">(min. 8 taps required)</span>
 </p>
-<p>
+<p hidden="true">
     <span id="feedback_evenness">EVENNESS OF TAPS:</span>
     <br>
     <span id="cv_value" style="color: rgba(0,59,247,0.86); ">none</span>
@@ -123,11 +126,11 @@
        data-slider-min="75"
        data-slider-max="100" data-slider-step="1"
        data-slider-rangeHighlights='[{ "start": 90, "end": 90.5}]'/>
-<image src="images/happy.png" style="width:5%"/>
+<image id="happy" src="images/happy.png" style="width:5%"/>
 <span class="slider-label">100%</span>
 <br>
 <br>
-<p class="lead" id="performance_message">You were better than 2% of all other participants!</p>
+<p class="lead" id="performance_message" hidden="true">You were better than 2% of all other participants!</p>
 <br>
 
 <p><a id="continue_button" class="btn btn-lg btn-success btn-simon" href="#" role="button">Continue</a></p>

@@ -71,11 +71,12 @@
         var langJson;
 
         $(document).ready(function () {
-            
-            if ("<%= onboarding %>" === "true")
-                load_onboarding();
-            else
-                load_welcome()
+
+            load_feedback();
+            // if ("<%= onboarding %>" === "true")
+            //     load_onboarding();
+            // else
+            //     load_welcome()
 
             setLanguage("de");
         });

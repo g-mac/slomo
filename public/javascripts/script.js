@@ -1,6 +1,6 @@
 // CONFIG
 
-var duration = 15;
+var duration = 25;
 var min_taps = 8;
 var min_tap_time = (1000 * 0.8 * duration);
 var max_cv = 0.09875;
@@ -18,6 +18,9 @@ var coefficient_of_variation = 0;
 var total_tap_time = 0;
 var intervals = [];
 var experimentTries = 0;
+var experimentStart = 0;
+var experimentEnd = 0;
+var experimentDuration = -1;
 
 var no_of_entries = "";
 var date_of_birth = "";
