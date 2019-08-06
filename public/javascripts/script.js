@@ -49,12 +49,15 @@ var db_doc_id = "";
 function setStartTime() {
     var date = new Date();
     experimentStart = date.getTime();
+    console.log("experimentStart: " + experimentStart);
 }
 
 function setEndTime() {
     var date = new Date();
     experimentEnd = date.getTime();
     experimentDuration = (experimentEnd - experimentStart);
+    console.log("experimentStart: " + experimentStart);
+    console.log("experimentEnd: " + experimentEnd);
     console.log("experimentDuration:" + experimentDuration)
 }
 
