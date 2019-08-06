@@ -92,7 +92,7 @@ function checkPhrase(phrase_input) {
 function isPhraseDuplicate() {
     $.ajax({
         type: 'GET',
-        url: "https://" + window.location.host + window.location.pathname + 'phrases',
+        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '') + 'phrases',
         success: function (data) {
             console.log(data);
             ismatch = false;
