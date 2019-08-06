@@ -18,7 +18,7 @@ var coefficient_of_variation = 0;
 var total_tap_time = 0;
 var intervals = [];
 var experimentTries = 0;
-var experimentStart = 0;
+experimentStart = 0;
 var experimentEnd = 0;
 var experimentDuration = -1;
 
