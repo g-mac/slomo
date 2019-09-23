@@ -39,17 +39,19 @@
             } else pass = false;
 
             if (pass) {
-                $('#happy').css('width', '10%');
+                // $('#happy').css('width', '10%');
+                $('#happy').show();
                 $('#fail_message').hide();
 //                $('#continue_button').text("Continue");
                 $('#continue_button').text(langJson.feedback_continue_button);
-                $('#continue_button').attr('onclick', 'load_postquestionsA()');
-                $('#performance_message').html(langJson.feedback_performance_1 + " <b>"
-                    + calculatePerformance(coefficient_of_variation) + "</b> "
-                    + langJson.feedback_performance_2);
+                $('#continue_button').attr('onclick', 'load_postquestionsA0()');
+                // $('#performance_message').html(langJson.feedback_performance_1 + " <b>"
+                //     + calculatePerformance(coefficient_of_variation) + "</b> "
+                //     + langJson.feedback_performance_2);
 
             } else {
-                $('#sad').css('width', '10%');
+                // $('#sad').css('width', '10%');
+                $('#sad').show();
                 $('#success_message').hide();
                 $('#performance_message').hide();
 //                $('#continue_button').html("Try again");
@@ -120,14 +122,14 @@
 </p>
 <p id="too_short" style="color: rgb(255,0,0);>">You need to tap as long as the timer is running, please try again.</p>
 <br>
-<span class="slider-label">< 75%</span>
-<img id="sad" src="images/sad.png" style="width:5%"/>
-<input style="width:60%" id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text"
-       data-slider-min="75"
-       data-slider-max="100" data-slider-step="1"
-       data-slider-rangeHighlights='[{ "start": 90, "end": 90.5}]'/>
-<img id="happy" src="images/happy.png" style="width:5%"/>
-<span class="slider-label">100%</span>
+<!--<span class="slider-label">< 75%</span>-->
+<img id="sad" src="images/sad.png" style="width:10%; display:none"/>
+<!--<input style="width:60%" id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text"-->
+<!--       data-slider-min="75"-->
+<!--       data-slider-max="100" data-slider-step="1"-->
+<!--       data-slider-rangeHighlights='[{ "start": 90, "end": 90.5}]'/>-->
+<img id="happy" src="images/happy.png" style="width:10%; display:none"/>
+<!--<span class="slider-label">100%</span>-->
 <br>
 <br>
 <p class="lead" id="performance_message" hidden="true">You were better than 2% of all other participants!</p>

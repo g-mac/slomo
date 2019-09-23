@@ -93,17 +93,20 @@ router.post('/updateresult', function (req, res) {
         {
             $set:
                 {
-                    'qA_q0_answer': req.body.qA_q0_answer,
-                    'qA_q1_answer': req.body.qA_q1_answer,
-                    'qA_q2_answer': req.body.qA_q2_answer,
-                    'qB_q0_answer': req.body.qB_q0_answer,
-                    'qB_q1_answer': req.body.qB_q1_answer,
-                    'qB_q2_answer': req.body.qB_q2_answer,
-                    'qB_q3_answer': req.body.qB_q3_answer,
-                    'qB_q4_answer': req.body.qB_q4_answer,
-                    'qB_q5_answer': req.body.qB_q5_answer,
-                    'qB_q6_answer': req.body.qB_q6_answer,
-                    'qB_q7_answer': req.body.qB_q7_answer,
+                    'p1_q0_answer': req.body.qA0_q0_answer,
+                    'p1_q1_answer': req.body.qA0_q1_answer,
+                    'p1_q2_answer': req.body.qA0_q2_answer,
+                    'p2_q0_answer': req.body.qB_q0_answer,
+                    'p2_q1_answer': req.body.qB_q1_answer,
+                    'p2_q2_answer': req.body.qB_q2_answer,
+                    'p2_q3_answer': req.body.qB_q3_answer,
+                    'p2_q4_answer': req.body.qB_q4_answer,
+                    'p2_q5_answer': req.body.qB_q5_answer,
+                    'p2_q6_answer': req.body.qB_q6_answer,
+                    'p3_q0_answer': req.body.qA_q0_answer,
+                    'p3_q1_answer': req.body.qA_q1_answer,
+                    'p3_q2_answer': req.body.qA_q2_answer,
+                    'p3_q3_answer': req.body.qA_q3_answer,
                     'experimentDuration': req.body.experimentDuration
                 }
         }, function (err, docUpdated) {

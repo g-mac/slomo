@@ -24,6 +24,7 @@
             postA_q0_answer = $('#postA_q0').val();
             postA_q1_answer = $('#postA_q1').val();
             postA_q2_answer = $('#postA_q2').val();
+            postA_q3_answer = $('input[name="q3Options"]:checked').val();
 
             if (postA_q0_answer === ""
                 || postA_q1_answer === ""
@@ -75,6 +76,7 @@
             $("#postquestionsA_q2_o5").html(langJson.postquestionsA_q2_o5);
             $("#postquestionsA_q2_o6").html(langJson.postquestionsA_q2_o6);
             $("#postquestionsA_q2_o7").html(langJson.postquestionsA_q2_o7);
+            $("#postquestionsA_q3").html(langJson.postquestionsA_q3);
             $("#postquestionsA_continue_button").html(langJson.postquestionsA_continue_button);
         }
     </script>
@@ -149,12 +151,60 @@
         </select>
     </div>
 
+
+    <!--q2-->
+    <label id="postquestionsA_q3" for="q3" style="font-weight: 500"></label>
+    <br>
+
+    <div id="q3" class="form-check form-check" align="center" style="text-align: center">
+        <div style="display: inline-block;text-align: left">
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio1" value="0">
+                <label class="form-check-label answer_never" for="q3Radio1">Zeit verflog</label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio2" value="1">
+                <label class="form-check-label answer_almost_never" for="q3Radio2"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio3" value="2">
+                <label class="form-check-label answer_sometimes" for="q3Radio3"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio4" value="3">
+                <label class="form-check-label answer_fairly_often" for="q3Radio4"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio5" value="4">
+                <label class="form-check-label answer_very_often" for="q3Radio5">Normal</label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio6" value="5">
+                <label class="form-check-label answer_professional" for="q3Radio6"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio7" value="6">
+                <label class="form-check-label answer_professional" for="q3Radio7"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio8" value="7">
+                <label class="form-check-label answer_professional" for="q3Radio8"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q3Options" id="q3Radio9" value="8">
+                <label class="form-check-label answer_professional" for="q3Radio9">Zeit zog sich</label>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
 </div>
 
 <br>
 <p><a id="postquestionsA_continue_button" class="btn btn-lg btn-success btn-simon" href="#"
       role="button"
-      onclick="onContinue()">Finish</a>
+      onclick="onContinue()">Weiter</a>
     <!--text-overflow: ellipsis;-->
 </p>
 <!--<p><a class="btn btn-lg btn-success" href="javascript:void();" role="button" onclick="load_finish()">Send</a></p>-->

@@ -1,0 +1,194 @@
+<html lang="en">
+
+<head>
+    <!--bootstrap-slider-->
+    <link href="javascripts/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet"/>
+    <script type="text/javascript"
+            src="javascripts/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <!--bootstrap helpers-->
+    <link href="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <script type="text/javascript"
+            src="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.js"></script>
+    <!--custom css-->
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#content").show();
+            setContentText();
+        });
+
+        function onContinue() {
+            postA0_q0_answer = $('#postA0_q0').val();
+            postA0_q1_answer = $('input[name="q1Options"]:checked').val();
+            postA0_q2_answer = $('input[name="q2Options"]:checked').val();
+
+            if (postA0_q0_answer === ""
+                || postA0_q1_answer === null
+                || postA0_q2_answer === null) {
+                window.alert(langJson.prequestions_warning);
+            } else {
+                $("#content").hide();
+                postQuestionResultsA0()
+            }
+        }
+
+        function setContentText() {
+            // $("#postquestionsA0_title").html(langJson.postquestionsA0_title);
+            $("#postquestionsA0_q0").html(langJson.postquestionsA0_q0);
+            $("#postquestionsA0_q0_o1").html(langJson.postquestionsA0_q0_o1);
+            $("#postquestionsA0_q0_o2").html(langJson.postquestionsA0_q0_o2);
+            $("#postquestionsA0_q0_o3").html(langJson.postquestionsA0_q0_o3);
+            $("#postquestionsA0_q0_o4").html(langJson.postquestionsA0_q0_o4);
+            $("#postquestionsA0_q0_o5").html(langJson.postquestionsA0_q0_o5);
+            $("#postquestionsA0_q0_o6").html(langJson.postquestionsA0_q0_o6);
+            $("#postquestionsA0_q0_o7").html(langJson.postquestionsA0_q0_o7);
+            $("#postquestionsA0_q0_o8").html(langJson.postquestionsA0_q0_o8);
+            $("#postquestionsA0_q0_o9").html(langJson.postquestionsA0_q0_o9);
+            $("#postquestionsA0_q0_o10").html(langJson.postquestionsA0_q0_o10);
+            $("#postquestionsA0_q0_o11").html(langJson.postquestionsA0_q0_o11);
+            $("#postquestionsA0_q0_o12").html(langJson.postquestionsA0_q0_o12);
+            $("#postquestionsA0_q0_o13").html(langJson.postquestionsA0_q0_o13);
+            $("#postquestionsA0_q1").html(langJson.postquestionsA0_q1);
+            $("#postquestionsA0_q2").html(langJson.postquestionsA0_q2);
+        }
+    </script>
+</head>
+
+<body>
+<!--<p id="postquestionsA0_title" class="lead">Questionnaire</p>-->
+
+<!--<br>-->
+<!--<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,-->
+<!--tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
+
+<br>
+
+<div align="left">
+
+    <!--q0-->
+    <div class="form-group">
+        <label id="postquestionsA0_q0" for="postA0_q0"></label>
+        <select class="form-control" id="postA0_q0">
+            <option></option>
+            <option id="postquestionsA0_q0_o1"></option>
+            <option id="postquestionsA0_q0_o2"></option>
+            <option id="postquestionsA0_q0_o3"></option>
+            <option id="postquestionsA0_q0_o4"></option>
+            <option id="postquestionsA0_q0_o5"></option>
+            <option id="postquestionsA0_q0_o6"></option>
+            <option id="postquestionsA0_q0_o7"></option>
+            <option id="postquestionsA0_q0_o8"></option>
+            <option id="postquestionsA0_q0_o9"></option>
+            <option id="postquestionsA0_q0_o10"></option>
+            <option id="postquestionsA0_q0_o11"></option>
+            <option id="postquestionsA0_q0_o12"></option>
+            <option id="postquestionsA0_q0_o13"></option>
+            <option id="postquestionsA0_q0_o14"></option>
+        </select>
+    </div>
+
+    <!--q1-->
+    <label id="postquestionsA0_q1" for="q1" style="font-weight: 500"></label>
+    <br>
+
+    <div id="q1" class="form-check form-check" align="center" style="text-align: center">
+        <div style="display: inline-block;text-align: left">
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio1" value="0">
+                <label class="form-check-label answer_never" for="q1Radio1">(gering)</label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio2" value="1">
+                <label class="form-check-label answer_almost_never" for="q1Radio2"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio3" value="2">
+                <label class="form-check-label answer_sometimes" for="q1Radio3"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio4" value="3">
+                <label class="form-check-label answer_fairly_often" for="q1Radio4"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio5" value="4">
+                <label class="form-check-label answer_very_often" for="q1Radio5"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio6" value="5">
+                <label class="form-check-label answer_professional" for="q1Radio6"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio7" value="6">
+                <label class="form-check-label answer_professional" for="q1Radio7"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio8" value="7">
+                <label class="form-check-label answer_professional" for="q1Radio8"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q1Options" id="q1Radio9" value="8">
+                <label class="form-check-label answer_professional" for="q1Radio9">(sehr)</label>
+            </div>
+        </div>
+    </div>
+
+    <!--q2-->
+    <label id="postquestionsA0_q2" for="q2" style="font-weight: 500"></label>
+    <br>
+
+    <div id="q2" class="form-check form-check" align="center" style="text-align: center">
+        <div style="display: inline-block;text-align: left">
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio1" value="0">
+                <label class="form-check-label answer_never" for="q2Radio1">(überhaupt nicht)</label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio2" value="1">
+                <label class="form-check-label answer_almost_never" for="q2Radio2"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio3" value="2">
+                <label class="form-check-label answer_sometimes" for="q2Radio3"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio4" value="3">
+                <label class="form-check-label answer_fairly_often" for="q2Radio4"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio5" value="4">
+                <label class="form-check-label answer_very_often" for="q2Radio5"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio6" value="5">
+                <label class="form-check-label answer_professional" for="q2Radio6"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio7" value="6">
+                <label class="form-check-label answer_professional" for="q2Radio7"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio8" value="7">
+                <label class="form-check-label answer_professional" for="q2Radio8"> </label>
+            </div>
+            <div style="margin-top: 0.5rem">
+                <input class="form-check-input" type="radio" name="q2Options" id="q2Radio9" value="8">
+                <label class="form-check-label answer_professional" for="q2Radio9">(sehr)</label>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+<p><a id="postquestionsA0_continue_button" class="btn btn-lg btn-success btn-simon" href="#"
+      role="button"
+      onclick="onContinue()">Continue</a>
+    <!--text-overflow: ellipsis;-->
+</p>
+<!--<p><a class="btn btn-lg btn-success" href="javascript:void();" role="button" onclick="load_finish()">Send</a></p>-->
+
+</body>
+</html>
