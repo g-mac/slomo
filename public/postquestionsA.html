@@ -26,9 +26,9 @@
             postA_q2_answer = $('#postA_q2').val();
             postA_q3_answer = $('input[name="q3Options"]:checked').val();
 
-            if (postA_q0_answer === ""
-                || postA_q1_answer === ""
-                || postA_q2_answer === "") {
+            if (postA_q0_answer === "[Bitte wählen]"
+                || postA_q1_answer === "[Bitte wählen]"
+                || postA_q2_answer === "[Bitte wählen]") {
                 window.alert(langJson.prequestions_warning);
             } else {
                 $("#content").hide();
@@ -96,7 +96,7 @@
     <div class="form-group">
         <label id="postquestionsA_q0" for="postA_q0"></label>
         <select class="form-control" id="postA_q0">
-            <option></option>
+            <option>[Bitte wählen]</option>
             <option id="postquestionsA_q0_o1"></option>
             <option id="postquestionsA_q0_o2"></option>
             <option id="postquestionsA_q0_o3"></option>
@@ -118,7 +118,7 @@
     <div class="form-group">
         <label id="postquestionsA_q1" for="postA_q1"></label>
         <select class="form-control" id="postA_q1">
-            <option></option>
+            <option>[Bitte wählen]</option>
             <option id="postquestionsA_q1_o1"></option>
             <option id="postquestionsA_q1_o2"></option>
             <option id="postquestionsA_q1_o3"></option>
@@ -140,7 +140,7 @@
     <div class="form-group">
         <label id="postquestionsA_q2" for="postA_q2"></label>
         <select class="form-control" id="postA_q2">
-            <option></option>
+            <option>[Bitte wählen]</option>
             <option id="postquestionsA_q2_o1"></option>
             <option id="postquestionsA_q2_o2"></option>
             <option id="postquestionsA_q2_o3"></option>
@@ -154,10 +154,11 @@
     <br>
 
     <!--q3-->
-    <label id="postquestionsA_q3" for="q3" style="font-weight: 500"></label>
+
     <br>
 
     <div id="q3" align="center" style="text-align: center">
+        <label id="postquestionsA_q3" for="q3" style="font-weight: 500"></label>
         <div style="display: inline-block;text-align: left">
             <input type="radio" name="q3Options" id="q3Radio1" value="0" style="margin-right: 0.7rem">
             <input type="radio" name="q3Options" id="q3Radio2" value="1" style="margin-right: 0.7rem">
@@ -166,7 +167,7 @@
             <input type="radio" name="q3Options" id="q3Radio5" value="4" style="margin-right: 0.7rem">
             <input type="radio" name="q3Options" id="q3Radio6" value="5" style="margin-right: 0.7rem">
             <input type="radio" name="q3Options" id="q3Radio7" value="6" style="margin-right: 0.7rem">
-            <div style="text-align:left;">zeit verflog<span style="float:right;">zeit zog sich</span> </div>
+            <div style="text-align:left;">Zeit verflog<span style="float:right;">Zeit zog sich</span> </div>
         </div>
     </div>
 

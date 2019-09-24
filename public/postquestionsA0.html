@@ -25,7 +25,7 @@
             postA0_q1_answer = $('input[name="q1Options"]:checked').val();
             postA0_q2_answer = $('input[name="q2Options"]:checked').val();
 
-            if (postA0_q0_answer === ""
+            if (postA0_q0_answer === "[Bitte wählen]"
                 || postA0_q1_answer === null
                 || postA0_q2_answer === null) {
                 window.alert(langJson.prequestions_warning);
@@ -72,7 +72,7 @@
     <div class="form-group">
         <label id="postquestionsA0_q0" for="postA0_q0"></label>
         <select class="form-control" id="postA0_q0">
-            <option></option>
+            <option>[Bitte wählen]</option>
             <option id="postquestionsA0_q0_o1"></option>
             <option id="postquestionsA0_q0_o2"></option>
             <option id="postquestionsA0_q0_o3"></option>
@@ -86,7 +86,6 @@
             <option id="postquestionsA0_q0_o11"></option>
             <option id="postquestionsA0_q0_o12"></option>
             <option id="postquestionsA0_q0_o13"></option>
-            <option id="postquestionsA0_q0_o14"></option>
         </select>
     </div>
 
