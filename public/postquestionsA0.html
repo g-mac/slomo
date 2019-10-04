@@ -17,10 +17,26 @@
 
         $(document).ready(function () {
             $("#content").show();
+            $("#postA0_q0_input_view").hide();
             setContentText();
         });
 
+        function onSelectq0() {
+            postA0_q0_answer = $('#postA0_q0').id;
+            if (postA0_q0_answer === "postquestionsA0_q0_o13") {
+                $("#postA0_q0_input_view").show();
+            }
+        }
+
         function onContinue() {
+            postA0_q0_answer = $('#postA0_q0').id;
+            if (postA0_q0_answer === "postquestionsA0_q0_o13") {
+                postA0_q0_answer = $("#postA0_q0_input").val();
+            }
+            window.alert(postA0_q0_answer)
+        }
+
+        function onContinue1() {
             postA0_q0_answer = $('#postA0_q0').val();
             postA0_q1_answer = $('input[name="q1Options"]:checked').val();
             postA0_q2_answer = $('input[name="q2Options"]:checked').val();
@@ -71,7 +87,7 @@
     <!--q0-->
     <div class="form-group">
         <label id="postquestionsA0_q0" for="postA0_q0"></label>
-        <select class="form-control" id="postA0_q0">
+        <select class="form-control" id="postA0_q0" onchange="onSelectq0()">
             <option>[Bitte wählen]</option>
             <option id="postquestionsA0_q0_o1"></option>
             <option id="postquestionsA0_q0_o2"></option>
@@ -92,6 +108,10 @@
 </div>
 <br>
 
+<div id="postA0_q0_input_view">
+    <input id="postA0_q0_input" type="text">
+    <br>
+</div>
 
 
 <!--q1-->
@@ -107,7 +127,7 @@
         <input type="radio" name="q1Options" id="q1Radio5" value="4" style="margin-right: 0.7rem">
         <input type="radio" name="q1Options" id="q1Radio6" value="5" style="margin-right: 0.7rem">
         <input type="radio" name="q1Options" id="q1Radio7" value="6" style="margin-right: 0.7rem">
-        <div style="text-align:left;">gering<span style="float:right;">sehr</span> </div>
+        <div style="text-align:left;">gering<span style="float:right;">sehr</span></div>
     </div>
 </div>
 
@@ -128,7 +148,7 @@
         <input type="radio" name="q2Options" id="q2Radio5" value="4" style="margin-right: 0.7rem">
         <input type="radio" name="q2Options" id="q2Radio6" value="5" style="margin-right: 0.7rem">
         <input type="radio" name="q2Options" id="q2Radio7" value="6" style="margin-right: 0.7rem">
-        <div style="text-align:left;">gar nicht<span style="float:right;">sehr</span> </div>
+        <div style="text-align:left;">gar nicht<span style="float:right;">sehr</span></div>
     </div>
 </div>
 

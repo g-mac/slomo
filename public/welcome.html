@@ -39,6 +39,7 @@
 
         function setContentText() {
             $("#welcome_title").html(langJson.welcome_title);
+            $("#welcome_subtitle").html(langJson.welcome_subtitle);
             $("#welcome_text").html(langJson.welcome_text.replace("%d", duration + ""));
             $("#welcome_start").html(langJson.welcome_start);
             $("#welcome_forgot").html(langJson.welcome_forgot);
@@ -60,7 +61,8 @@
 <body>
 
 
-<h1 id="welcome_title" class="display-4">How good is your <br>inner timing? Test it!</h1>
+<h1 id="welcome_title" class="display-4">Wilkommen</h1>
+<h2 id="welcome_subtitle" class="display-4">zurück!</h2>
 <br>
 <p class="lead" id="welcome_text"></p>
 
