@@ -22,10 +22,9 @@
         });
 
         function onSelectq0() {
-            postA0_q0_selected = $('#postA0_q0').selectedIndex;
-            window.alert("" + postA0_q0_selected);
-            console.log(postA0_q0_selected);
-            if (postA0_q0_selected == 14) {
+            window.alert("" + $('#postA0_q0').selectedIndex);
+            console.log($('#postA0_q0').selectedIndex);
+            if ($('#postA0_q0').selectedIndex == 14) {
                 $("#postA0_q0_input_view").show();
             }
         }
