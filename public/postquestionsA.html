@@ -48,7 +48,7 @@
             postA_q0_answer = $('#postA_q0').val();
             postA_q1_answer = $('#postA_q1').val();
             postA_q2_answer = $('#postA_q2').val();
-            postA_q3_answer = $('input[name="q3Options"]:checked').val();
+            postA_32_answer = $('#postA_q3').val();
 
             var selectedIndexQ0 = document.getElementById("postA_q0").selectedIndex;
             if (selectedIndexQ0 == 13) {
@@ -63,7 +63,8 @@
                 || postA_q1_answer === "[Bitte wählen]"
                 || postA_q0_answer.trim() === ""
                 || postA_q1_answer.trim() === ""
-                || postA_q2_answer === "[Bitte wählen]") {
+                || postA_q2_answer === "[Bitte wählen]"
+                || postA_q3_answer === "[Bitte wählen]") {
                 window.alert(langJson.prequestions_warning);
             } else {
                 $("#content").hide();
@@ -202,32 +203,16 @@
         </select>
     </div>
 
-    <br>
+    <br><br>
 
     <!--q3-->
-
-    <br>
-
-    <div id="q3" align="center" style="text-align: center">
-        <label id="postquestionsA_q3" for="q3" style="font-weight: 500"></label>
-        <div style="display: inline-block;text-align: left">
-            <input type="radio" name="q3Options" id="q3Radio1" value="0"
-                   style="margin-right: 0.7rem">
-            <input type="radio" name="q3Options" id="q3Radio2" value="1"
-                   style="margin-right: 0.7rem">
-            <input type="radio" name="q3Options" id="q3Radio3" value="2"
-                   style="margin-right: 0.7rem">
-            <input type="radio" name="q3Options" id="q3Radio4" value="3"
-                   style="margin-right: 0.7rem">
-            <input type="radio" name="q3Options" id="q3Radio5" value="4"
-                   style="margin-right: 0.7rem">
-            <input type="radio" name="q3Options" id="q3Radio6" value="5"
-                   style="margin-right: 0.7rem">
-            <input type="radio" name="q3Options" id="q3Radio7" value="6"
-                   style="margin-right: 0.7rem">
-            <div style="text-align:left;">Zeit verflog<span
-                    style="float:right;">Zeit zog sich</span></div>
-        </div>
+    <div class="form-group">
+        <label id="postquestionsA_q3" for="postA_q3"></label>
+        <select class="form-control" id="postA_q3">
+            <option>[Bitte wählen]</option>
+            <option id="postquestionsA_q3_o1">Ja</option>
+            <option id="postquestionsA_q3_o2">Nein</option>
+        </select>
     </div>
 
     <br><br>

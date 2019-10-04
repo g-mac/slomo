@@ -1,0 +1,203 @@
+<html lang="en">
+
+<head>
+    <!--bootstrap-slider-->
+    <link href="javascripts/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet"/>
+    <script type="text/javascript"
+            src="javascripts/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <!--bootstrap helpers-->
+    <link href="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <script type="text/javascript"
+            src="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.js"></script>
+    <!--custom css-->
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#content").show();
+            if(answer)
+            setContentText();
+        });
+
+        function onContinue() {
+            postB0_q0_answer = $('#postB0_q0').val();
+            postB0_q1_answer = $('input[name="q1Options"]:checked').val();
+            postB0_q2_answer = $('input[name="q2Options"]:checked').val();
+            postB0_q3_answer = $('input[name="q3Options"]:checked').val();
+            postB0_q4_answer = $('#postquestionsB0_q4_input').val();
+            postB0_q5_answer = $('input[name="q5Options"]:checked').val();
+
+
+            if (postB0_q0_answer === "[Bitte wählen]"
+                || postB0_q1_answer === null
+                || postB0_q2_answer === null
+                || postB0_q3_answer === null
+                || postB0_q5_answer === null) {
+                window.alert(langJson.prequestions_warning);
+            } else {
+                $("#content").hide();
+                postQuestionResultsB0()
+            }
+        }
+
+        function setContentText() {
+            // $("#postquestionsB0_title").html(langJson.postquestionsB0_title);
+            $("#postquestionsB0_q0").html(langJson.postquestionsB0_q0);
+            $("#postquestionsB0_q0_o1").html(langJson.postquestionsB0_q0_o1);
+            $("#postquestionsB0_q0_o2").html(langJson.postquestionsB0_q0_o2);
+            $("#postquestionsB0_q0_o3").html(langJson.postquestionsB0_q0_o3);
+            $("#postquestionsB0_q0_o4").html(langJson.postquestionsB0_q0_o4);
+            $("#postquestionsB0_q0_o5").html(langJson.postquestionsB0_q0_o5);
+            $("#postquestionsB0_q0_o6").html(langJson.postquestionsB0_q0_o6);
+            $("#postquestionsB0_q0_o7").html(langJson.postquestionsB0_q0_o7);
+            $("#postquestionsB0_q1").html(langJson.postquestionsB0_q1);
+            $("#postquestionsB0_q2").html(langJson.postquestionsB0_q2);
+            $("#postquestionsB0_q3").html(langJson.postquestionsB0_q3);
+            $("#postquestionsB0_q4").html(langJson.postquestionsB0_q4);
+            $("#postquestionsB0_q5").html(langJson.postquestionsB0_q5);
+        }
+    </script>
+</head>
+
+<body>
+<!--<p id="postquestionsB0_title" class="lead">Questionnaire</p>-->
+
+<!--<br>-->
+<!--<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo,-->
+<!--tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
+
+<br>
+
+<div align="left">
+
+    <!--q0-->
+    <div class="form-group">
+        <label id="postquestionsB0_q0" for="postB0_q0"></label>
+        <select class="form-control" id="postB0_q0" onchange="onSelectq0()">
+            <option>[Bitte wählen]</option>
+            <option id="postquestionsB0_q0_o1"></option>
+            <option id="postquestionsB0_q0_o2"></option>
+            <option id="postquestionsB0_q0_o3"></option>
+            <option id="postquestionsB0_q0_o4"></option>
+            <option id="postquestionsB0_q0_o5"></option>
+            <option id="postquestionsB0_q0_o6"></option>
+            <option id="postquestionsB0_q0_o7"></option>
+        </select>
+    </div>
+
+</div>
+
+<br>
+
+<!--q1-->
+<label id="postquestionsB0_q1" for="q1" style="font-weight: 500"></label>
+<br>
+
+<div id="q1" align="center" style="text-align: center">
+    <div style="display: inline-block;text-align: left">
+        <input type="radio" name="q1Options" id="q1Radio1" value="0" style="margin-right: 0.7rem">
+        <input type="radio" name="q1Options" id="q1Radio2" value="1" style="margin-right: 0.7rem">
+        <input type="radio" name="q1Options" id="q1Radio3" value="2" style="margin-right: 0.7rem">
+        <input type="radio" name="q1Options" id="q1Radio4" value="3" style="margin-right: 0.7rem">
+        <input type="radio" name="q1Options" id="q1Radio5" value="4" style="margin-right: 0.7rem">
+        <input type="radio" name="q1Options" id="q1Radio6" value="5" style="margin-right: 0.7rem">
+        <input type="radio" name="q1Options" id="q1Radio7" value="6" style="margin-right: 0.7rem">
+        <div style="text-align:left;">gar nicht<span style="float:right;">sehr</span></div>
+    </div>
+</div>
+
+
+<br>
+<br>
+
+<!--q2-->
+<label id="postquestionsB0_q2" for="q2" style="font-weight: 500"></label>
+<br>
+
+<div id="q2" align="center" style="text-align: center">
+    <div style="display: inline-block;text-align: left">
+        <input type="radio" name="q2Options" id="q2Radio1" value="0" style="margin-right: 0.7rem">
+        <input type="radio" name="q2Options" id="q2Radio2" value="1" style="margin-right: 0.7rem">
+        <input type="radio" name="q2Options" id="q2Radio3" value="2" style="margin-right: 0.7rem">
+        <input type="radio" name="q2Options" id="q2Radio4" value="3" style="margin-right: 0.7rem">
+        <input type="radio" name="q2Options" id="q2Radio5" value="4" style="margin-right: 0.7rem">
+        <input type="radio" name="q2Options" id="q2Radio6" value="5" style="margin-right: 0.7rem">
+        <input type="radio" name="q2Options" id="q2Radio7" value="6" style="margin-right: 0.7rem">
+        <div style="text-align:left;">gar nicht<span style="float:right;">sehr</span></div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!--q3-->
+<label id="postquestionsB0_q3" for="q3" style="font-weight: 500"></label>
+<br>
+
+<div id="q3" align="center" style="text-align: center">
+    <div style="display: inline-block;text-align: left">
+        <input type="radio" name="q3Options" id="q3Radio1" value="0" style="margin-right: 0.7rem">
+        <input type="radio" name="q3Options" id="q3Radio2" value="1" style="margin-right: 0.7rem">
+        <input type="radio" name="q3Options" id="q3Radio3" value="2" style="margin-right: 0.7rem">
+        <input type="radio" name="q3Options" id="q3Radio4" value="3" style="margin-right: 0.7rem">
+        <input type="radio" name="q3Options" id="q3Radio5" value="4" style="margin-right: 0.7rem">
+        <input type="radio" name="q3Options" id="q3Radio6" value="5" style="margin-right: 0.7rem">
+        <input type="radio" name="q3Options" id="q3Radio7" value="6" style="margin-right: 0.7rem">
+        <div style="text-align:left;">langsam<span style="float:right;">schnell</span></div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!--q4-->
+<div id="q4">
+    <label id="postquestionsB0_q4" for="postquestionsB0_q4_input"></label>
+    <input id="postquestionsB0_q4_input" type="text">
+    <br>
+    <br>
+</div>
+
+
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+<!--q5-->
+
+<br>
+
+<div id="q5" align="center" style="text-align: center">
+    <label id="postquestionsB0_q5" for="q5" style="font-weight: 500"></label>
+    <div style="display: inline-block;text-align: left">
+        <input type="radio" name="q5Options" id="q5Radio1" value="0"
+               style="margin-right: 0.7rem">
+        <input type="radio" name="q5Options" id="q5Radio2" value="1"
+               style="margin-right: 0.7rem">
+        <input type="radio" name="q5Options" id="q5Radio3" value="2"
+               style="margin-right: 0.7rem">
+        <input type="radio" name="q5Options" id="q5Radio4" value="3"
+               style="margin-right: 0.7rem">
+        <input type="radio" name="q5Options" id="q5Radio5" value="4"
+               style="margin-right: 0.7rem">
+        <input type="radio" name="q5Options" id="q5Radio6" value="5"
+               style="margin-right: 0.7rem">
+        <input type="radio" name="q5Options" id="q5Radio7" value="6"
+               style="margin-right: 0.7rem">
+        <div style="text-align:left;">verflog<span
+                style="float:right;">zog sich</span></div>
+    </div>
+</div>
+
+<br>
+<br>
+<p><a id="postquestionsB0_continue_button" class="btn btn-lg btn-success btn-simon" href="#"
+      role="button"
+      onclick="onContinue()">Weiter</a>
+    <!--text-overflow: ellipsis;-->
+</p>
+<!--<p><a class="btn btn-lg btn-success" href="javascript:void();" role="button" onclick="load_finish()">Send</a></p>-->
+
+</body>
+</html>
