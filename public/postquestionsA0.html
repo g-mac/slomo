@@ -22,11 +22,10 @@
         });
 
         function onSelectq0() {
-            window.alert("onselect!");
-            postA0_q0_id = $('#postA0_q0').id;
-            window.alert(""+postA0_q0_answer);
-            console.log(postA0_q0_answer);
-            if (postA0_q0_id === "postquestionsA0_q0_o13") {
+            postA0_q0_selected = $('#postA0_q0').selectedIndex;
+            window.alert("" + postA0_q0_selected);
+            console.log(postA0_q0_selected);
+            if (postA0_q0_selected == 14) {
                 $("#postA0_q0_input_view").show();
             }
         }
