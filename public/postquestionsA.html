@@ -17,8 +17,32 @@
 
         $(document).ready(function () {
             $("#content").show();
+            $("#post0_q0_input_view").hide();
+            $("#post0_q1_input_view").hide();
             setContentText();
         });
+
+        function onSelectq0() {
+            var selectedIndex = document.getElementById("postA_q0").selectedIndex;
+            console.log(selectedIndex)
+            if (selectedIndex == 14) {
+                console.log("show input")
+                $("#postA_q0_input_view").show();
+            } else {
+                $("#postA_q0_input_view").hide();
+            }
+        }
+
+        function onSelectq1() {
+            var selectedIndex = document.getElementById("postA_q1").selectedIndex;
+            console.log(selectedIndex)
+            if (selectedIndex == 14) {
+                console.log("show input")
+                $("#postA_q1_input_view").show();
+            } else {
+                $("#postA_q1_input_view").hide();
+            }
+        }
 
         function onContinue() {
             postA_q0_answer = $('#postA_q0').val();
@@ -26,8 +50,19 @@
             postA_q2_answer = $('#postA_q2').val();
             postA_q3_answer = $('input[name="q3Options"]:checked').val();
 
+            var selectedIndexQ0 = document.getElementById("postA_q0").selectedIndex;
+            if (selectedIndexQ0 == 13) {
+                postA_q0_answer = $("#postA_q0_input").val();
+            }
+            var selectedIndexQ1 = document.getElementById("postA_q1").selectedIndex;
+            if (selectedIndexQ1 == 13) {
+                postA_q1_answer = $("#postA_q1_input").val();
+            }
+
             if (postA_q0_answer === "[Bitte wählen]"
                 || postA_q1_answer === "[Bitte wählen]"
+                || postA_q0_answer.trim() === ""
+                || postA_q1_answer.trim() === ""
                 || postA_q2_answer === "[Bitte wählen]") {
                 window.alert(langJson.prequestions_warning);
             } else {
@@ -114,6 +149,13 @@
         </select>
     </div>
 
+    <div id="postA_q0_input_view" align="left">
+        <label id="postquestionsA_q0_input" for="postA_q0_input"></label>
+        <input id="postA_q0_input" type="text">
+        <br>
+        <br>
+    </div>
+
     <!--q1-->
     <div class="form-group">
         <label id="postquestionsA_q1" for="postA_q1"></label>
@@ -134,6 +176,13 @@
             <option id="postquestionsA_q1_o13"></option>
             <option id="postquestionsA_q1_o14"></option>
         </select>
+    </div>
+
+    <div id="postA_q1_input_view" align="left">
+        <label id="postquestionsA_q1_input" for="postA_q1_input"></label>
+        <input id="postA_q1_input" type="text">
+        <br>
+        <br>
     </div>
 
     <!--q2-->
