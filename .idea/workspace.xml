@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/postquestionsA0.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="34" selection-end-column="16" />
+            <state relative-caret-position="495">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="n#style#0;n#label#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -474,21 +474,7 @@
       <workItem from="1568722137835" duration="565000" />
       <workItem from="1569274309421" duration="8729000" />
       <workItem from="1569363710534" duration="645000" />
-      <workItem from="1570199561022" duration="2413000" />
-    </task>
-    <task id="LOCAL-00116" summary="Continue implementation of phrase logic.">
-      <created>1565028917069</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1565028917069</updated>
-    </task>
-    <task id="LOCAL-00117" summary="Continue implementation of phrase logic.">
-      <created>1565029194832</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1565029194832</updated>
+      <workItem from="1570199561022" duration="2924000" />
     </task>
     <task id="LOCAL-00118" summary="Continue implementation of phrase logic.">
       <created>1565078407100</created>
@@ -819,11 +805,25 @@
       <option name="project" value="LOCAL" />
       <updated>1570202401592</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="Start implementation of new features.">
+      <created>1570202566535</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1570202566535</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Start implementation of new features.">
+      <created>1570202672875</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1570202672875</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219240000" />
+    <option name="totallyTimeSpent" value="219751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1084" y="-1417" width="1706" height="1417" extended-state="0" />
@@ -1272,8 +1272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/postquestionsA0.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="34" selection-end-column="16" />
+        <state relative-caret-position="495">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="n#style#0;n#label#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

@@ -22,23 +22,20 @@
         });
 
         function onSelectq0() {
-
-
-            var selectedIndex =document.getElementById("postA0_q0").selectedIndex;
-            var selectedIndex2 = $("postA0_q0").selectedIndex;
-            console.log(selectedIndex);
-            console.log(selectedIndex2);
-
-            // window.alert("" + $('#postA0_q0').selectedIndex);
-            // console.log($('#postA0_q0').selectedIndex);
-            // if ($('#postA0_q0').selectedIndex == 14) {
-            //     $("#postA0_q0_input_view").show();
-            // }
+            var selectedIndex = document.getElementById("postA0_q0").selectedIndex;
+            console.log(selectedIndex)
+            if (selectedIndex == 13) {
+                console.log("show input")
+                $("#postA0_q0_input_view").show();
+            } else {
+                $("#postA0_q0_input_view").hide();
+            }
         }
 
         function onContinue() {
-            postA0_q0_id = $('#postA0_q0').id;
-            if (postA0_q0_id === "postquestionsA0_q0_o13") {
+            postA0_q0_answer = $('#postA0_q0').val();
+            var selectedIndex = document.getElementById("postA0_q0").selectedIndex;
+            if (selectedIndex == 13) {
                 postA0_q0_answer = $("#postA0_q0_input").val();
             }
             window.alert(postA0_q0_answer)
