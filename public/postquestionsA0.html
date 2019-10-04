@@ -22,11 +22,17 @@
         });
 
         function onSelectq0() {
-            window.alert("" + $('#postA0_q0').selectedIndex);
-            console.log($('#postA0_q0').selectedIndex);
-            if ($('#postA0_q0').selectedIndex == 14) {
-                $("#postA0_q0_input_view").show();
-            }
+
+            var x = document.getElementById("postA0_q0").selectedIndex;
+            var y = document.getElementById("postA0_q0").options;
+            alert("Index: " + y[x].index + " is " + y[x].text);
+
+            //
+            // window.alert("" + $('#postA0_q0').selectedIndex);
+            // console.log($('#postA0_q0').selectedIndex);
+            // if ($('#postA0_q0').selectedIndex == 14) {
+            //     $("#postA0_q0_input_view").show();
+            // }
         }
 
         function onContinue() {
