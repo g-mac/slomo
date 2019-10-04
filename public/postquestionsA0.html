@@ -22,15 +22,16 @@
         });
 
         function onSelectq0() {
-            postA0_q0_answer = $('#postA0_q0').id;
-            if (postA0_q0_answer === "postquestionsA0_q0_o13") {
+            postA0_q0_id = $('#postA0_q0').id;
+            console.log(postA0_q0_answer);
+            if (postA0_q0_id === "postquestionsA0_q0_o13") {
                 $("#postA0_q0_input_view").show();
             }
         }
 
         function onContinue() {
-            postA0_q0_answer = $('#postA0_q0').id;
-            if (postA0_q0_answer === "postquestionsA0_q0_o13") {
+            postA0_q0_id = $('#postA0_q0').id;
+            if (postA0_q0_id === "postquestionsA0_q0_o13") {
                 postA0_q0_answer = $("#postA0_q0_input").val();
             }
             window.alert(postA0_q0_answer)
