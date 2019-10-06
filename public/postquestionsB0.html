@@ -17,14 +17,15 @@
 
         $(document).ready(function () {
             $("#content").show();
+                console.log("? postA_q3_answer === \"Nein\"");
             if (postA_q3_answer === "Nein") {
-                console.log("postA_q3_answer === \"Nein\"");
+                console.log("yes");
                 $("#q1").hide();
                 document.getElementById("q1").hide();
                 $("#q2").hide();
                 $("#q3").hide();
                 $("#q4").hide();
-            }
+            } else console.log("no");
             setContentText();
         });
 
