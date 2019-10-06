@@ -37,6 +37,13 @@ var postA_q1_answer = "";
 var postA_q2_answer = "";
 var postA_q3_answer = "";
 
+var postB0_q0_answer = "";
+var postB0_q1_answer = "";
+var postB0_q2_answer = "";
+var postB0_q3_answer = "";
+var postB0_q4_answer = "";
+var postB0_q5_answer = "";
+
 var postB_q0_answer = "";
 var postB_q1_answer = "";
 var postB_q2_answer = "";
@@ -182,6 +189,12 @@ function postQuestionResultsA0() {
         'qA_q1_answer': postA_q1_answer,
         'qA_q2_answer': postA_q2_answer,
         'qA_q3_answer': postA_q3_answer,
+        'qB0_q0_answer': postB0_q0_answer,
+        'qB0_q1_answer': postB0_q1_answer,
+        'qB0_q2_answer': postB0_q2_answer,
+        'qB0_q3_answer': postB0_q3_answer,
+        'qB0_q4_answer': postB0_q4_answer,
+        'qB0_q5_answer': postB0_q5_answer,
         'experimentDuration': experimentDuration
     };
 
@@ -220,6 +233,56 @@ function postQuestionResultsA() {
         'qA_q1_answer': postA_q1_answer,
         'qA_q2_answer': postA_q2_answer,
         'qA_q3_answer': postA_q3_answer,
+        'qB0_q0_answer': postB0_q0_answer,
+        'qB0_q1_answer': postB0_q1_answer,
+        'qB0_q2_answer': postB0_q2_answer,
+        'qB0_q3_answer': postB0_q3_answer,
+        'qB0_q4_answer': postB0_q4_answer,
+        'qB0_q5_answer': postB0_q5_answer,
+        'experimentDuration': experimentDuration
+    };
+
+    $.ajax({
+        type: 'POST',
+        data: updateResult,
+        url: "https://" + window.location.host + window.location.pathname.replace('onboarding', '') + 'updateresult',
+        success: function (data) {
+            load_postquestionsB0();
+        },
+        error: function () {
+            window.alert("Connection failed, please click ok to try again...");
+            postQuestionResultsA();
+            //handle
+        }
+    });
+}
+
+function postQuestionResultsB0() {
+
+    setEndTime();
+
+    var updateResult = {
+        'db_doc_id': db_doc_id,
+        'qA0_q0_answer': postA0_q0_answer,
+        'qA0_q1_answer': postA0_q1_answer,
+        'qA0_q2_answer': postA0_q2_answer,
+        'qB_q0_answer': postB_q0_answer,
+        'qB_q1_answer': postB_q1_answer,
+        'qB_q2_answer': postB_q2_answer,
+        'qB_q3_answer': postB_q3_answer,
+        'qB_q4_answer': postB_q4_answer,
+        'qB_q5_answer': postB_q5_answer,
+        'qB_q6_answer': postB_q6_answer,
+        'qA_q0_answer': postA_q0_answer,
+        'qA_q1_answer': postA_q1_answer,
+        'qA_q2_answer': postA_q2_answer,
+        'qA_q3_answer': postA_q3_answer,
+        'qB0_q0_answer': postB0_q0_answer,
+        'qB0_q1_answer': postB0_q1_answer,
+        'qB0_q2_answer': postB0_q2_answer,
+        'qB0_q3_answer': postB0_q3_answer,
+        'qB0_q4_answer': postB0_q4_answer,
+        'qB0_q5_answer': postB0_q5_answer,
         'experimentDuration': experimentDuration
     };
 
@@ -232,7 +295,7 @@ function postQuestionResultsA() {
         },
         error: function () {
             window.alert("Connection failed, please click ok to try again...");
-            postQuestionResultsA();
+            postQuestionResultsB();
             //handle
         }
     });
@@ -258,6 +321,12 @@ function postQuestionResultsB() {
         'qA_q1_answer': postA_q1_answer,
         'qA_q2_answer': postA_q2_answer,
         'qA_q3_answer': postA_q3_answer,
+        'qB0_q0_answer': postB0_q0_answer,
+        'qB0_q1_answer': postB0_q1_answer,
+        'qB0_q2_answer': postB0_q2_answer,
+        'qB0_q3_answer': postB0_q3_answer,
+        'qB0_q4_answer': postB0_q4_answer,
+        'qB0_q5_answer': postB0_q5_answer,
         'experimentDuration': experimentDuration
     };
 
@@ -371,6 +440,11 @@ function load_postquestionsA0() {
 function load_postquestionsA() {
     $("#content").hide();
     $("#content").load("postquestionsA.html");
+}
+
+function load_postquestionsB0() {
+    $("#content").hide();
+    $("#content").load("postquestionsB0.html");
 }
 
 function load_postquestionsB() {

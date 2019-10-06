@@ -17,7 +17,12 @@
 
         $(document).ready(function () {
             $("#content").show();
-            if(answer)
+            if (postA_q3_answer === "Nein") {
+                $("#q1").hide();
+                $("#q2").hide();
+                $("#q3").hide();
+                $("#q4").hide();
+            }
             setContentText();
         });
 

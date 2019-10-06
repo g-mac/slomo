@@ -107,6 +107,12 @@ router.post('/updateresult', function (req, res) {
                     'p3_q1_answer': req.body.qA_q1_answer,
                     'p3_q2_answer': req.body.qA_q2_answer,
                     'p3_q3_answer': req.body.qA_q3_answer,
+                    'p4_q1_answer': req.body.qB0_q0_answer,
+                    'p4_q2_answer': req.body.qB0_q1_answer,
+                    'p4_q3_answer': req.body.qB0_q2_answer,
+                    'p4_q4_answer': req.body.qB0_q3_answer,
+                    'p4_q5_answer': req.body.qB0_q4_answer,
+                    'p4_q6_answer': req.body.qB0_q5_answer,
                     'experimentDuration': req.body.experimentDuration
                 }
         }, function (err, docUpdated) {
