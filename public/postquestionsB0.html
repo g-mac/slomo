@@ -18,7 +18,9 @@
         $(document).ready(function () {
             $("#content").show();
             if (postA_q3_answer === "Nein") {
+                console.log("postA_q3_answer === \"Nein\"");
                 $("#q1").hide();
+                document.getElementById("q1").hide();
                 $("#q2").hide();
                 $("#q3").hide();
                 $("#q4").hide();
