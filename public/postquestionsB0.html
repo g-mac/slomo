@@ -17,17 +17,17 @@
 
         $(document).ready(function () {
             $("#content").show();
-            console.log("? postA_q3_answer === Nein");
-            console.log(postA_q3_answer);
+            setContentText();
             if (postA_q3_answer === "Nein") {
-                console.log("yes");
-                $("#q1").hide();
+                // if (true) {
+                console.log("postA_q3_answer === Nein");
+                $("#q0_abc").hide();
                 document.getElementById("q1").hide();
+                $("#q1").hide();
                 $("#q2").hide();
                 $("#q3").hide();
                 $("#q4").hide();
-            } else console.log("no");
-            setContentText();
+            }
         });
 
         function onContinue() {
@@ -79,9 +79,8 @@
 
 <br>
 
-<div align="left">
-
-    <!--q0-->
+<!--q0-->
+<div id="q0" align="left">
     <div class="form-group">
         <label id="postquestionsB0_q0" for="postB0_q0"></label>
         <select class="form-control" id="postB0_q0" onchange="onSelectq0()">
@@ -95,7 +94,6 @@
             <option id="postquestionsB0_q0_o7"></option>
         </select>
     </div>
-
 </div>
 
 <br>
