@@ -72,12 +72,12 @@
 
         $(document).ready(function () {
 
-            load_postquestionsB0()
+            // load_postquestionsB0();
 
-            // if ("<%= onboarding %>" === "true")
-            //     load_onboarding();
-            // else
-            //     load_welcome()
+            if ("<%= onboarding %>" === "true")
+                load_onboarding();
+            else
+                load_welcome()
 
             setLanguage("de");
         });
