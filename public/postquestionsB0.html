@@ -22,7 +22,7 @@
                 // if (postA_q3_answer === "Nein") {
                 // if (true) {
                 console.log("postA_q3_answer === Nein");
-                $("#somediv").hide();
+                $("#q0").hide();
                 $("#q1").hide();
                 // $("#q1").style.visibility = 'hidden';
                 // document.getElementById("q1").hide();
@@ -84,31 +84,29 @@
 
 <br>
 
-<div id="somediv">
-    <!--q0-->
-    <div id="q0" align="left">
-        <div class="form-group">
-            <label id="postquestionsB0_q0" for="postB0_q0"></label>
-            <select class="form-control" id="postB0_q0" onchange="onSelectq0()">
-                <option>[Bitte wählen]</option>
-                <option id="postquestionsB0_q0_o1"></option>
-                <option id="postquestionsB0_q0_o2"></option>
-                <option id="postquestionsB0_q0_o3"></option>
-                <option id="postquestionsB0_q0_o4"></option>
-                <option id="postquestionsB0_q0_o5"></option>
-                <option id="postquestionsB0_q0_o6"></option>
-                <option id="postquestionsB0_q0_o7"></option>
-            </select>
-        </div>
+<!--q0-->
+<div id="q0" align="left">
+    <div class="form-group">
+        <label id="postquestionsB0_q0" for="postB0_q0"></label>
+        <select class="form-control" id="postB0_q0" onchange="onSelectq0()">
+            <option>[Bitte wählen]</option>
+            <option id="postquestionsB0_q0_o1"></option>
+            <option id="postquestionsB0_q0_o2"></option>
+            <option id="postquestionsB0_q0_o3"></option>
+            <option id="postquestionsB0_q0_o4"></option>
+            <option id="postquestionsB0_q0_o5"></option>
+            <option id="postquestionsB0_q0_o6"></option>
+            <option id="postquestionsB0_q0_o7"></option>
+        </select>
     </div>
 </div>
 <br>
 
 <!--q1-->
-<label id="postquestionsB0_q1" for="q1" style="font-weight: 500"></label>
-<br>
 
 <div id="q1" align="center" style="text-align: center">
+    <label id="postquestionsB0_q1" for="q1" style="font-weight: 500"></label>
+    <br>
     <div style="display: inline-block;text-align: left">
         <input type="radio" name="q1Options" id="q1Radio1" value="0" style="margin-right: 0.7rem">
         <input type="radio" name="q1Options" id="q1Radio2" value="1" style="margin-right: 0.7rem">
