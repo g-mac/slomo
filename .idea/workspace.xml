@@ -95,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/postquestionsB0.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+            <state relative-caret-position="163">
+              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#label#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -214,8 +214,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+            <state relative-caret-position="810">
+              <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#header#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -244,11 +244,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>uberhaupt</find>
-      <find>'qA0</find>
-      <find>'qA_</find>
-      <find>welcome_no_phrase</find>
-      <find>&gt;0 (uberhaupt nicht)</find>
       <find>&quot;&gt; &lt;/label&gt;</find>
       <find>q3Options</find>
       <find>class=&quot;form-check form-check&quot;</find>
@@ -268,12 +263,17 @@
       <find>A0</find>
       <find>onsA</find>
       <find>q3</find>
-      <find>q2</find>
       <find>Haben Sie wa</find>
-      <find>show</find>
       <find>q0_abc</find>
       <find>hide</find>
       <find>postA_q0_input_view</find>
+      <find>q2</find>
+      <find>&quot;</find>
+      <find>q2&quot;</find>
+      <find>id=&quot;q2&quot;</find>
+      <find>show</find>
+      <find>&quot;#q0&quot;</find>
+      <find>&quot;q0&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>_q2</replace>
@@ -350,8 +350,8 @@
         <option value="$PROJECT_DIR$/public/javascripts/script.js" />
         <option value="$PROJECT_DIR$/public/javascripts/lang_de.json" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/main.html" />
         <option value="$PROJECT_DIR$/public/postquestionsA.html" />
+        <option value="$PROJECT_DIR$/views/main.html" />
         <option value="$PROJECT_DIR$/public/postquestionsB0.html" />
       </list>
     </option>
@@ -508,21 +508,7 @@
       <workItem from="1568722137835" duration="565000" />
       <workItem from="1569274309421" duration="8729000" />
       <workItem from="1569363710534" duration="645000" />
-      <workItem from="1570199561022" duration="9843000" />
-    </task>
-    <task id="LOCAL-00132" summary="Continue implementation of phrase logic.">
-      <created>1565105293747</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1565105293747</updated>
-    </task>
-    <task id="LOCAL-00133" summary="Continue implementation of phrase logic.">
-      <created>1565105411843</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1565105411843</updated>
+      <workItem from="1570199561022" duration="10552000" />
     </task>
     <task id="LOCAL-00134" summary="Continue implementation of phrase logic.">
       <created>1565105537916</created>
@@ -853,11 +839,25 @@
       <option name="project" value="LOCAL" />
       <updated>1570372295851</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="Continue implementation of new features.">
+      <created>1570372702193</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1570372702193</updated>
+    </task>
+    <task id="LOCAL-00182" summary="Continue implementation of new features.">
+      <created>1570373291101</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1570373291101</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226670000" />
+    <option name="totallyTimeSpent" value="227379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -1305,17 +1305,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/postquestionsA.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2265">
-          <caret line="151" column="17" lean-forward="true" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+        <state relative-caret-position="810">
+          <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#a#0;n#header#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1323,10 +1316,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/postquestionsA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2265">
+          <caret line="151" column="17" lean-forward="true" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/postquestionsB0.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+        <state relative-caret-position="163">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#label#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
