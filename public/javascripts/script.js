@@ -91,7 +91,7 @@ function checkPhrase(phrase_input) {
                 phrase = phrase_input;
                 load_experiment();
             } else {
-                window.alert("Dieses Schlüsselwort ist unbekannt. Bitte versuchen Sie es erneut.\n\nSollten Sie Ihr Schlüsselwort vergessen haben, melden sie sich bitte per SMS/WhatsApp oder Telefon bei 015770365966");
+                window.alert("Dieses Schlüsselwort ist unbekannt. Bitte versuchen Sie es erneut.\n\nSollten Sie Ihr Schlüsselwort vergessen haben, melden sie sich bitte per SMS/WhatsApp oder Telefon bei +491634280701 (David Hammerschmidt)");
             }
         },
         error: function () {
