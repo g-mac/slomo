@@ -7,7 +7,7 @@
   "tc_title": "Teilnahmebedingungen",
   "tc_text": "Durch Klicken auf „Zustimmen und starten“ stimmen Sie zu, an dieser Studie teilzunehmen. Sie können die Studie jederzeit abbrechen. Es werden keine Daten gespeichert, die Sie als Person identifizieren können. Ihnen werden jedoch einige generelle Fragen über Ihre Person gestellt, die gespeichert werden und zusammen mit Daten anderer Versuchsteilnehmer analysiert werden. Falls Sie nicht sicher  über die Studie sind, kontaktieren Sie uns bitte über slomo@uni-hamburg.de (ERC-Projekt SloMo, Universität Hamburg, Deutschland).",
   "onboarding_title": "Wilkommen!",
-  "onboarding_text": "Vielen Dank für die Teilnahme an dieser Studie.<br><br>Bitte wählen Sie nun ein anonymes Schlüsselwort, welches Sie künftig jeweils zu Anfang eines einzelnen Experiments angeben werden.<br>Wählen sie daher ein Wort, an das sie sich leicht erinnern können, welches jedoch weder ihren Namen enthält und auch nicht ein Passwort ist, welches sie sonst benutzen.",
+  "onboarding_text": "Vielen Dank für die Teilnahme an dieser Studie.<br><br>Bitte wählen Sie nun ein anonymes Schlüsselwort, welches Sie künftig jeweils zu Anfang eines einzelnen Experiments angeben werden.<br><br><br>Das Schlüsselwort sollte sich aus den letzten drei Buchstaben ihres Nachnamens, dem Tag an dem Sie geboren sind (2 Ziffern) und den ersten Buchstaben ihres Geburtsorts zusammensetzen. <br>Beispiel: Max Mustermann, geboren am 09.02.1986 aus Berlin; das anonyme Schlüsselwort: ann09b",
   "onboarding_tc": "Teilnahmebedingungen",
   "onboarding_next": "Weiter",
   "onboarding_phrase": "Schlüsselwort eingeben",
