@@ -42,7 +42,7 @@
                 postB_q4_answer == null ||
                 postB_q5_answer == null ||
                 postB_q6_answer == null) {
-                window.alert("Please answer all the questions above to continue");
+                window.alert(langJson.prequestions_warning);
             } else {
                 $("#content").hide();
                 postQuestionResultsB();
