@@ -38,17 +38,17 @@
             postB0_q5_answer = $('input[name="q5Options"]:checked').val();
 
             if (postA_q3_answer === "Nein") {
-                if (postB0_q5_answer === null) {
+                if (postB0_q5_answer == null) {
                     window.alert(langJson.prequestions_warning);
                 } else {
                     $("#content").hide();
                     postQuestionResultsB0()
                 }
             } else if (postB0_q0_answer === "[Bitte wählen]"
-                || postB0_q1_answer === null
-                || postB0_q2_answer === null
-                || postB0_q3_answer === null
-                || postB0_q5_answer === null) {
+                || postB0_q1_answer == null
+                || postB0_q2_answer == null
+                || postB0_q3_answer == null
+                || postB0_q5_answer == null) {
                 window.alert(langJson.prequestions_warning);
             } else {
                 $("#content").hide();
@@ -183,8 +183,8 @@
         <input type="radio" name="q5Options" id="q5Radio5" value="4" style="margin-right: 0.7rem">
         <input type="radio" name="q5Options" id="q5Radio6" value="5" style="margin-right: 0.7rem">
         <input type="radio" name="q5Options" id="q5Radio7" value="6">
-        <div style="text-align:left;">verflog<span
-                style="float:right;">zog sich</span></div>
+        <div style="text-align:left;">zog sich<span
+                style="float:right;">verflog</span></div>
     </div>
 </div>
 

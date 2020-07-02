@@ -44,8 +44,8 @@
 
             if (postA0_q0_answer === "[Bitte wählen]"
                 || postA0_q0_answer.trim() === ""
-                || postA0_q1_answer === null
-                || postA0_q2_answer === null) {
+                || postA0_q1_answer == null
+                || postA0_q2_answer == null) {
                 window.alert(langJson.prequestions_warning);
             } else {
                 $("#content").hide();
