@@ -8,9 +8,8 @@ var bodyParser = require('body-parser');
 // New Code
 var mongo = require('mongodb');
 var monk = require('monk');
-// var db = monk('mongodb://slomo_mlab_user:alsterterasse1@ds127065.mlab.com:27065/slomo_mlab_db'); //production
-// var db = monk('mongodb://slomo_mlab_user:alsterterasse1@ds119268.mlab.com:19268/slomo_mlab_db_dev'); //dev
-var db = monk('mongodb://slomo_mlab_user:alsterterasse1@127.0.0.1:27017/slomo_mlab_db_dev'); //dev
+var db = monk('mongodb://slomo_mlab_user:alsterterasse1@127.0.0.1:27017/slomo_mlab_db_prestudy_dev'); //dev
+// var db = monk('mongodb://slomo_mlab_user:alsterterasse1@127.0.0.1:27017/slomo_mlab_db_prestudy'); //production
 
 var index = require('./routes/index');
 

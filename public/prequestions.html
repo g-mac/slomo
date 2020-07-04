@@ -14,20 +14,22 @@
     <link href="stylesheets/style.css" rel="stylesheet">
 
     <!--bootstrap-datepicker-->
-    <script type="text/javascript" src="javascripts/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript"
+            src="javascripts/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <link href="javascripts/bootstrap-datepicker/bootstrap-datepicker3.css" rel="stylesheet"/>
 
     <!--bootstrap helpers-->
     <link href="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.css" rel="stylesheet">
-    <script type="text/javascript" src="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.js"></script>
+    <script type="text/javascript"
+            src="javascripts/bootstrap-formhelpers/bootstrap-formhelpers.min.js"></script>
 
     <script>
 
         $(document).ready(function () {
 
-            getLocation();
+            // getLocation();
 
-            var $select = $("#dob");
+            var $select = $("#pq0");
             for (i = 2018; i >= 1917; i--) {
                 $select.append($('<option></option>').val(i).html(i))
             }
@@ -48,17 +50,25 @@
 
         function onContinue() {
 
-            no_of_entries = $('#no_of_entries').val();
-            date_of_birth = $('#dob').val();
-            gender = $('#gender').val();
-            heritage = $('#heritage').val();
-            city_size = $('#size').val();
+            pq0 = $('#pq0').val();
+            pq1 = $('#pq1').val();
+            pq2 = $('#pq2').val();
+            pq3 = $('#pq3').val();
+            pq4 = $('#pq4').val();
+            pq5 = $('#pq5').val();
+            pq6 = $('#pq6').val();
+            pq7 = $('#pq7').val();
+            pq8 = $('#pq8').val();
 
-            if (date_of_birth == ""
-                || no_of_entries == ""
-                || gender == ""
-                || heritage == ""
-                || city_size == "") {
+            if (pq0 === ""
+                || pq1 === ""
+                || pq2 === ""
+                || pq3 === ""
+                || pq4 === ""
+                || pq5 === ""
+                || pq6 === ""
+                || pq7 === ""
+                || pq8 === "") {
                 window.alert(langJson.prequestions_warning);
             } else {
                 load_experiment();
@@ -69,41 +79,51 @@
 
         function onDob() {
             if (dobPreselected) return;
-            $("#dob").val('1980');
+            $("#pq0").val('1980');
             dobPreselected = true;
         }
 
-        var heritagePreselected = false;
+        var pq2Preselected = false;
 
         function onHeritage() {
-            if (heritagePreselected) return;
-            $("#heritage").val('DE');
-            heritagePreselected = true;
+            if (pq2Preselected) return;
+            $("#pq2").val('DE');
+            pq2Preselected = true;
         }
 
         function setContentText() {
-            $("#prequestions_title").html(langJson.prequestions_title);
+            // $("#prequestions_title").html(langJson.prequestions_title);
             $("#prequestions_q0").html(langJson.prequestions_q0);
-            $("#prequestions_q0_o1").html(langJson.prequestions_q0_o1);
-            $("#prequestions_q0_o2").html(langJson.prequestions_q0_o2);
-            $("#prequestions_q0_o3").html(langJson.prequestions_q0_o3);
-            $("#prequestions_q0_o4").html(langJson.prequestions_q0_o4);
             $("#prequestions_q1").html(langJson.prequestions_q1);
+            $("#prequestions_q1_o1").html(langJson.prequestions_q1_o1);
+            $("#prequestions_q1_o2").html(langJson.prequestions_q1_o2);
+            $("#prequestions_q1_o3").html(langJson.prequestions_q1_o3);
             $("#prequestions_q2").html(langJson.prequestions_q2);
-            $("#prequestions_q2_o1").html(langJson.prequestions_q2_o1);
-            $("#prequestions_q2_o2").html(langJson.prequestions_q2_o2);
-            $("#prequestions_q2_o3").html(langJson.prequestions_q2_o3);
             $("#prequestions_q3").html(langJson.prequestions_q3);
+            $("#prequestions_q3_o1").html(langJson.prequestions_q3_o1);
+            $("#prequestions_q3_o2").html(langJson.prequestions_q3_o2);
             $("#prequestions_q4").html(langJson.prequestions_q4);
             $("#prequestions_q4_o1").html(langJson.prequestions_q4_o1);
             $("#prequestions_q4_o2").html(langJson.prequestions_q4_o2);
             $("#prequestions_q4_o3").html(langJson.prequestions_q4_o3);
             $("#prequestions_q4_o4").html(langJson.prequestions_q4_o4);
             $("#prequestions_q4_o5").html(langJson.prequestions_q4_o5);
-            $("#prequestions_q4_o6").html(langJson.prequestions_q4_o6);
-            $("#prequestions_q4_o7").html(langJson.prequestions_q4_o7);
-            $("#prequestions_q4_o8").html(langJson.prequestions_q4_o8);
-            $("#prequestions_q4_o9").html(langJson.prequestions_q4_o9);
+            $("#prequestions_q5").html(langJson.prequestions_q5);
+            $("#prequestions_q5_o1").html(langJson.prequestions_q5_o1);
+            $("#prequestions_q5_o2").html(langJson.prequestions_q5_o2);
+            $("#prequestions_q5_o3").html(langJson.prequestions_q5_o3);
+            $("#prequestions_q5_o4").html(langJson.prequestions_q5_o4);
+            $("#prequestions_q5_o5").html(langJson.prequestions_q5_o5);
+            $("#prequestions_q5_o6").html(langJson.prequestions_q5_o6);
+            $("#prequestions_q6").html(langJson.prequestions_q6);
+            $("#prequestions_q6_o1").html(langJson.prequestions_q6_o1);
+            $("#prequestions_q6_o2").html(langJson.prequestions_q6_o2);
+            $("#prequestions_q7").html(langJson.prequestions_q7);
+            $("#prequestions_q7_o1").html(langJson.prequestions_q7_o1);
+            $("#prequestions_q7_o2").html(langJson.prequestions_q7_o2);
+            $("#prequestions_q8").html(langJson.prequestions_q8);
+            $("#prequestions_q8_o1").html(langJson.prequestions_q8_o1);
+            $("#prequestions_q8_o2").html(langJson.prequestions_q8_o2);
             $("#prequestions_start").html(langJson.prequestions_start);
         }
 
@@ -112,73 +132,111 @@
 
 <body>
 
-<h1 id="prequestions_title" class="display-4">Questionnaire</h1>
+<!--<h1 id="prequestions_title" class="display-4">Questionnaire</h1>-->
 
-<br>
-<br>
+<!--<br>-->
+<!--<br>-->
 
 <div align="left">
 
-    <!--partake in study before?-->
+    <!--pq0-->
     <div class="form-group">
-        <label id="prequestions_q0" for="no_of_entries">Did you partake in this study before?</label>
-        <select class="form-control" id="no_of_entries">
-            <option></option>
-            <option id="prequestions_q0_o1">Never</option>
-            <option id="prequestions_q0_o2">Once</option>
-            <option id="prequestions_q0_o3">Twice</option>
-            <option id="prequestions_q0_o4">More than twice</option>
-        </select>
-    </div>
-
-    <!--date of birth-->
-    <div class="form-group">
-        <label id="prequestions_q1" for="dob">Which year were you born?</label>
-        <select class="form-control" id="dob" onmousedown="onDob()">
+        <label id="prequestions_q0" for="pq0"></label>
+        <select class="form-control" id="pq0" onmousedown="onDob()">
             <option></option>
         </select>
     </div>
-    <!--<label for="dob">What is you date of birth?</label>-->
-    <!--<input class="form-control" type="text" name="birthdate" id="dob"/>-->
-    <!--<br>-->
 
-    <!--gender-->
+    <!--pq1-->
     <div class="form-group">
-        <label id="prequestions_q2" for="gender">What is your gender?</label>
-        <select class="form-control" id="gender">
+        <label id="prequestions_q1" for="pq1"></label>
+        <select class="form-control" id="pq1">
             <option></option>
-            <option id="prequestions_q2_o1">male</option>
-            <option id="prequestions_q2_o2">female</option>
-            <option id="prequestions_q2_o3">other</option>
+            <option id="prequestions_q1_o1"></option>
+            <option id="prequestions_q1_o2"></option>
+            <option id="prequestions_q1_o3"></option>
         </select>
     </div>
 
-    <!--heritage-->
-    <label id="prequestions_q3" for="heritage">In which country have you spent most of your life?</label>
-    <form><select id="heritage" class="form-control bfh-countries" onmousedown="onHeritage()"></select></form>
-    <!--<select class="form-control bfh-countries"></select>-->
+    <!--pq2-->
+    <label id="prequestions_q2" for="pq2"></label>
+    <form><select id="pq2" class="form-control bfh-countries" onmousedown="onHeritage()"></select>
+    </form>
 
-    <!--city size-->
+    <!--pq3-->
     <div class="form-group">
-        <label id="prequestions_q4" for="size">How large is the population of the area you currently live in?</label>
-        <select class="form-control" id="size">
+        <label id="prequestions_q3" for="pq3"></label>
+        <select class="form-control" id="pq3">
             <option></option>
-            <option id="prequestions_q4_o1">More than 10 million people</option>
-            <option id="prequestions_q4_o2">3 to 10 million people</option>
-            <option id="prequestions_q4_o3">1 to 3 million people</option>
-            <option id="prequestions_q4_o4">300,000 to 1 million people</option>
-            <option id="prequestions_q4_o5">100,000 to 300,000 people</option>
-            <option id="prequestions_q4_o6">20,000 to 100,000 people</option>
-            <option id="prequestions_q4_o7">1,000 to 20,000 people</option>
-            <option id="prequestions_q4_o8">100 to 1,000 people</option>
-            <option id="prequestions_q4_o9">Less than 100 people</option>
+            <option id="prequestions_q3_o1"></option>
+            <option id="prequestions_q3_o2"></option>
         </select>
     </div>
-    <br>
+
+    <!--pq4-->
+    <div class="form-group">
+        <label id="prequestions_q4" for="pq4"></label>
+        <select class="form-control" id="pq4">
+            <option></option>
+            <option id="prequestions_q4_o1"></option>
+            <option id="prequestions_q4_o2"></option>
+            <option id="prequestions_q4_o3"></option>
+            <option id="prequestions_q4_o4"></option>
+            <option id="prequestions_q4_o5"></option>
+        </select>
+    </div>
+
+    <!--pq5-->
+    <div class="form-group">
+        <label id="prequestions_q5" for="pq5"></label>
+        <select class="form-control" id="pq5">
+            <option></option>
+            <option id="prequestions_q5_o1"></option>
+            <option id="prequestions_q5_o2"></option>
+            <option id="prequestions_q5_o3"></option>
+            <option id="prequestions_q5_o4"></option>
+            <option id="prequestions_q5_o5"></option>
+            <option id="prequestions_q5_o6"></option>
+        </select>
+    </div>
+
+    <!--pq6-->
+    <div class="form-group">
+        <label id="prequestions_q6" for="pq6"></label>
+        <select class="form-control" id="pq6">
+            <option></option>
+            <option id="prequestions_q6_o1"></option>
+            <option id="prequestions_q6_o2"></option>
+        </select>
+    </div>
+
+    <!--pq7-->
+    <div class="form-group">
+        <label id="prequestions_q7" for="pq7"></label>
+        <select class="form-control" id="pq7">
+            <option></option>
+            <option id="prequestions_q7_o1"></option>
+            <option id="prequestions_q7_o2"></option>
+        </select>
+    </div>
+
+    <!--pq8-->
+    <div class="form-group">
+        <label id="prequestions_q8" for="pq8"></label>
+        <select class="form-control" id="pq8">
+            <option></option>
+            <option id="prequestions_q8_o1"></option>
+            <option id="prequestions_q8_o2"></option>
+        </select>
+    </div>
 
 </div>
 
-<p><a id="prequestions_start" class="btn btn-lg btn-success btn-simon" href="#" role="button" onclick="onContinue()">Start</a>
+<br>
+<br>
+
+<p><a id="prequestions_start" class="btn btn-lg btn-success btn-simon" href="#" role="button"
+      onclick="onContinue()">Start</a>
 </p>
 </body>
 </html>

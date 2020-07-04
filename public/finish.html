@@ -15,7 +15,8 @@
             emailAddress = $('#emailInput').val();
             if (emailAddress === "") return;
             if (validateEmail(emailAddress)) {
-                postEmailAddress();
+                // postEmailAddress();
+                postResult();
             } else {
                 $('#submit_fail').show();
                 $('#submit_success').hide();
@@ -68,23 +69,29 @@
 
 <br>
 <p id="finish_p1_a" class="lead">Thank you for participation!<br>
-    We would very much appreciate if you could share this test via social media to make more people aware of it.</p>
+    We would very much appreciate if you could share this test via social media to make more people
+    aware of it.</p>
 <p class="lead">
     <!--<a id="finish_share_1">Share via</a><br>-->
     <a class="btn btn-md btn-primary btn-simon" href="#" role="button" onclick="onFacebookClick()">Facebook</a>
     <!--<a id="finish_share_2">&nbsp;&nbsp; or &nbsp;&nbsp;</a>-->
     <a>&nbsp;</a>
     <a class="btn btn-md btn-info btn-simon" target="_blank"
-       href="https://twitter.com/intent/tweet?&text=http://innertiming.slomo.uni-hamburg.de" role="button">Twitter</a>
+       href="https://twitter.com/intent/tweet?&text=http://innertiming.slomo.uni-hamburg.de"
+       role="button">Twitter</a>
 </p>
 <br>
-<p id="finish_p1_b" class="lead">If you are interested in the results of the study you can leave us your e-mail address here.</p>
+<p id="finish_p1_b" class="lead">If you are interested in the results of the study you can leave us
+    your e-mail address here.</p>
 <form>
     <input id="emailInput" type="email"><a></a>
-    <input id="finish_submit" type="button" value="submit" class="btn btn-secondary btn-sm" onclick="onEmailSend()">
+    <input id="finish_submit" type="button" value="submit" class="btn btn-secondary btn-sm"
+           onclick="onEmailSend()">
 </form>
-<p id="submit_success" style="font-size: 0.7rem; color: grey">Thank you! You email address was submitted.</p>
-<p id="submit_fail" style="font-size: 0.7rem; color: red">You have to enter a valid email address.</p>
+<p id="submit_success" style="font-size: 0.7rem; color: grey">Thank you! You email address was
+    submitted.</p>
+<p id="submit_fail" style="font-size: 0.7rem; color: red">You have to enter a valid email
+    address.</p>
 <br>
 <br>
 <p id="finish_p2" class="lead">If you are interested in the general research project click here:</p>

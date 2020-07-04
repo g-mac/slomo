@@ -12,18 +12,27 @@ var lat = 0;
 var long = 0;
 var accuracy = 0;
 
-var bpmAvg = 0;
-var tap_count_total = 0;
 var coefficient_of_variation = 0;
-var total_tap_time = 0;
-var intervals = [];
+var coefficient_of_variation2 = 0;
+var bpmAvg = 0;
+var bpmAvg2 = 0;
 var experimentTries = 0;
+var experimentTries2 = 0;
+var intervals = [];
+var intervals2 = [];
 
-var no_of_entries = "";
-var date_of_birth = "";
-var gender = "";
-var heritage = "";
-var city_size = "";
+var tap_count_total = 0;
+var total_tap_time = 0;
+
+var pq0 = "";
+var pq1 = "";
+var pq2 = "";
+var pq3 = "";
+var pq4 = "";
+var pq5 = "";
+var pq6 = "";
+var pq7 = "";
+var pq8 = "";
 
 var q1 = "";
 var q2 = "";
@@ -114,27 +123,33 @@ function postResult() {
 //            document.submit_feedback.value = "sending...";
 
     var intervalsAsString = arrayAsString(intervals);
+    var intervalsAsString2 = arrayAsString(intervals2);
 
     // console.log("intervals: " + intervals);
     // console.log("intervalsAsString: "+intervalsAsString);
 
     var newResult = {
         'db_doc_id': db_doc_id,
+        'email': emailAddress,
         'tries': experimentTries,
-        'no_of_entries': no_of_entries,
-        'bpm': bpmAvg,
+        'tries2': experimentTries2,
         'cv': coefficient_of_variation,
+        'cv2': coefficient_of_variation2,
+        'bpm': bpmAvg,
+        'bpm2': bpmAvg2,
         'intervals': intervalsAsString,
+        'intervals2': intervalsAsString2,
         'userAgent': navigator.userAgent,
-        'lat': lat,
-        'long': long,
-        'accuracy': accuracy,
-        'date_of_birth': date_of_birth,
-        'gender': gender,
-        'heritage': heritage,
-        'city_size': city_size
+        'pq0': pq0,
+        'pq1': pq1,
+        'pq2': pq2,
+        'pq3': pq3,
+        'pq4': pq4,
+        'pq5': pq5,
+        'pq6': pq6,
+        'pq7': pq7,
+        'pq8': pq8
     };
-
 
     // Use AJAX to post the object addresult service
     $.ajax({
@@ -144,7 +159,9 @@ function postResult() {
         url: "https://" + window.location.host + window.location.pathname + 'addresult',
         success: function (data) {
             db_doc_id = data.toString();
-            load_feedback();
+            window.alert("Submission successful!");
+            submitEmailSuccess()
+            // load_feedback();
         },
         error: function () {
             window.alert("Connection failed, please click ok to try again...");

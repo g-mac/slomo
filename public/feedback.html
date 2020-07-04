@@ -5,7 +5,8 @@
 
     <!--bootstrap-slider-->
     <link href="javascripts/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="javascripts/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <script type="text/javascript"
+            src="javascripts/bootstrap-slider/bootstrap-slider.min.js"></script>
 
     <!--custom css-->
     <link href="stylesheets/style.css" rel="stylesheet">
@@ -16,65 +17,78 @@
 
         $(document).ready(function () {
 
+            //todo remove, only for testing
+            // tap_count_total = 12;
+            // total_tap_time = 15000;
+
             document.getElementById("no_of_taps").innerHTML = Math.round(tap_count_total);
-            document.getElementById("cv_value").innerHTML = (100 - Math.round(coefficient_of_variation * 100 * 10) / 10) + " %";
-            $('#ex1').slider({
-                value: (100 - (coefficient_of_variation * 100)),
-                formatter: function (value) {
-                    return 'Current value: ' + value;
-                }
-            });
+            // document.getElementById("cv_value").innerHTML = (100 - Math.round(coefficient_of_variation * 100 * 10) / 10) + " %";
+            // $('#ex1').slider({
+            //     value: (100 - (coefficient_of_variation * 100)),
+            //     formatter: function (value) {
+            //         return 'Current value: ' + value;
+            //     }
+            // });
 
             pass = true;
+
             if (tap_count_total < min_taps) {
                 pass = false;
                 $('#min_taps').css('color', 'rgb(255,0,0)');
             } else $('#feedback_tap_no_container').hide()
-            if (coefficient_of_variation > max_cv) {
-                pass = false;
-                $('#min_cv').css('color', 'rgb(255,0,0)');
-            }
+            // if (coefficient_of_variation > max_cv) {
+            //     pass = false;
+            //     $('#min_cv').css('color', 'rgb(255,0,0)');
+            // }
             if (total_tap_time > min_tap_time) {
                 $('#too_short').hide();
             } else pass = false;
 
             if (pass) {
-                $('#fail_message').hide();
-//                $('#continue_button').text("Continue");
-                $('#continue_button').text(langJson.feedback_continue_button);
-                $('#continue_button').attr('onclick', 'load_postquestions()');
-                $('#performance_message').html(langJson.feedback_performance_1 + " <b>"
-                    + calculatePerformance(coefficient_of_variation) + "</b> "
-                    + langJson.feedback_performance_2);
-
+                if (bpmAvg2 !== 0) {
+                    load_finish();
+                    return;
+                } else {
+                    $('#fail_message').hide();
+                    $('#continue_button').text(langJson.feedback_continue_button);
+                }
             } else {
+                // $('#performance_message').hide();
                 $('#success_message').hide();
-                $('#performance_message').hide();
-//                $('#continue_button').html("Try again");
                 $('#continue_button').html(langJson.feedback_try_again);
-                $('#continue_button').attr('onclick', 'load_experiment()');
             }
+            $('#continue_button').attr('onclick', 'onContinue()');
             $("#content").show();
 
             setContentText();
         });
 
-        function calculatePerformance(cv) {
-            var no_of_worse_results = 0;
-            for (var i = 0; i < cv_others.length; i++) {
-                console.log(cv_others[i] + " ? " + cv + " = " + (cv_others[i] > cv));
-                // if (parseInt(other, 10) > parseInt(cv, 10)) {
-                if (cv_others[i] > cv) no_of_worse_results++;
-            }
-            var fraction = no_of_worse_results / cv_others.length;
-            var percentage = Math.round(fraction * 100) + "%";
-            return percentage;
-        }
+        // function calculatePerformance(cv) {
+        //     var no_of_worse_results = 0;
+        //     for (var i = 0; i < cv_others.length; i++) {
+        //         console.log(cv_others[i] + " ? " + cv + " = " + (cv_others[i] > cv));
+        //         // if (parseInt(other, 10) > parseInt(cv, 10)) {
+        //         if (cv_others[i] > cv) no_of_worse_results++;
+        //     }
+        //     var fraction = no_of_worse_results / cv_others.length;
+        //     var percentage = Math.round(fraction * 100) + "%";
+        //     return percentage;
+        // }
 
         function onContinue() {
-            if (pass) {
-                load_postquestions();
+            if (pass && bpmAvg2 !== 0) {
+                postResult()
             } else {
+                if (pass) {
+                    bpmAvg2 = bpmAvg;
+                    experimentTries2 = experimentTries;
+                    coefficient_of_variation2 = coefficient_of_variation;
+                    intervals2 = intervals;
+                    bpmAvg = 0;
+                    experimentTries = 0;
+                    coefficient_of_variation = 0;
+                    intervals = [];
+                }
                 load_experiment();
             }
         }
@@ -84,9 +98,9 @@
             $("#fail_message").html(langJson.feedback_fail_message);
             $("#success_message").html(langJson.feedback_success_message);
             $("#feedback_tap_no").html(langJson.feedback_tap_no);
-            $("#feedback_evenness").html(langJson.feedback_evenness);
+            // $("#feedback_evenness").html(langJson.feedback_evenness);
             $("#min_taps").html(langJson.feedback_min_taps);
-            $("#min_cv").html(langJson.feedback_min_cv);
+            // $("#min_cv").html(langJson.feedback_min_cv);
             $("#too_short").html(langJson.feedback_too_short);
         }
 
@@ -97,7 +111,8 @@
 <h1 id="feedback_title" class="display-4">Results</h1>
 <br>
 <p class="lead" id="fail_message">Sorry, but your taps were either not even enough or too few.
-    <br>Remember, try to pace taps evenly at your most comfortable rate for as long as indicated by the timer.
+    <br>Remember, try to pace taps evenly at your most comfortable rate for as long as indicated by
+    the timer.
     <br>Please try again!</p>
 <p class="lead" id="success_message">Very good! Your taps were even!
     <br>Please click 'Continue', we have a few more questions for you.</p>
@@ -109,28 +124,31 @@
     <span id="no_of_taps" style="color: rgba(0,59,247,0.86); ">none</span>
     <span id="min_taps" style="color: rgba(111,111,111,0.86); ">(min. 8 taps required)</span>
 </p>
-<p>
-    <span id="feedback_evenness">EVENNESS OF TAPS:</span>
-    <br>
-    <span id="cv_value" style="color: rgba(0,59,247,0.86); ">none</span>
-    <span id="min_cv" style="color: rgba(111,111,111,0.86); ">(min. 90,2% required)</span>
-</p>
-<p id="too_short" style="color: rgb(255,0,0);>">You need to tap as long as the timer is running, please try again.</p>
-<br>
-<span class="slider-label">< 75%</span>
-<image id="sad" src="images/sad.png" style="width:5%"/>
-<input style="width:60%" id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text"
-       data-slider-min="75"
-       data-slider-max="100" data-slider-step="1"
-       data-slider-rangeHighlights='[{ "start": 90, "end": 90.5}]'/>
-<image src="images/happy.png" style="width:5%"/>
-<span class="slider-label">100%</span>
-<br>
-<br>
-<p class="lead" id="performance_message">You were better than 2% of all other participants!</p>
+<!--<p>-->
+<!--    <span id="feedback_evenness">EVENNESS OF TAPS:</span>-->
+<!--    <br>-->
+<!--    <span id="cv_value" style="color: rgba(0,59,247,0.86); ">none</span>-->
+<!--    <span id="min_cv" style="color: rgba(111,111,111,0.86); ">(min. 90,2% required)</span>-->
+<!--</p>-->
+<p id="too_short" style="color: rgb(255,0,0);>">You need to tap as long as the timer is running,
+    please try again.</p>
 <br>
 
-<p><a id="continue_button" class="btn btn-lg btn-success btn-simon" href="#" role="button">Continue</a></p>
+<!--<span class="slider-label">< 75%</span>-->
+<!--<image id="sad" src="images/sad.png" style="width:5%"/>-->
+<!--<input style="width:60%" id="ex1" data-slider-enabled="false" data-slider-id='ex1Slider' type="text"-->
+<!--       data-slider-min="75"-->
+<!--       data-slider-max="100" data-slider-step="1"-->
+<!--       data-slider-rangeHighlights='[{ "start": 90, "end": 90.5}]'/>-->
+<!--<image src="images/happy.png" style="width:5%"/>-->
+<!--<span class="slider-label">100%</span>-->
+<!--<br>-->
+<!--<br>-->
+<!--<p class="lead" id="performance_message">You were better than 2% of all other participants!</p>-->
+<!--<br>-->
+
+<p><a id="continue_button" class="btn btn-lg btn-success btn-simon" href="#"
+      role="button">Continue</a></p>
 
 
 </body>

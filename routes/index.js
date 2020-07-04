@@ -85,20 +85,25 @@ router.post('/addresult', function (req, res) {
     if (insertedDocId === "") {
         // Insert to the DB
         collection.insert({
-            "tries": req.body.tries,
-            "no_of_entries": req.body.no_of_entries,
-            "bpm": req.body.bpm,
-            "cv": req.body.cv,
-            "intervals": req.body.intervals,
+            "email": req.body.email,
             "date": date,
-            "lat": req.body.lat,
-            "long": req.body.long,
-            "accuracy": req.body.accuracy,
+            "tries": req.body.tries,
+            "tries2": req.body.tries2,
+            "cv": req.body.cv,
+            "cv2": req.body.cv2,
+            "bpm": req.body.bpm,
+            "bpm2": req.body.bpm2,
+            "intervals": req.body.intervals,
+            "intervals2": req.body.intervals2,
             "userAgent": req.body.userAgent,
-            "date_of_birth": req.body.date_of_birth,
-            "gender": req.body.gender,
-            "heritage": req.body.heritage,
-            "city_size": req.body.city_size
+            "pq0": req.body.pq0,
+            "pq1": req.body.pq1,
+            "pq2": req.body.pq2,
+            "pq3": req.body.pq3,
+            "pq5": req.body.pq5,
+            "pq6": req.body.pq6,
+            "pq7": req.body.pq7,
+            "pq8": req.body.pq8
         }, function (err, docInserted) {
             if (err) {
                 // If it failed, return error
@@ -118,6 +123,7 @@ router.post('/addresult', function (req, res) {
             {
                 $set:
                     {
+                        "email": req.body.email,
                         "tries": req.body.tries,
                         "bpm": req.body.bpm,
                         "cv": req.body.cv,
