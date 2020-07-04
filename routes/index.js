@@ -100,6 +100,7 @@ router.post('/addresult', function (req, res) {
             "pq1": req.body.pq1,
             "pq2": req.body.pq2,
             "pq3": req.body.pq3,
+            "pq4": req.body.pq4,
             "pq5": req.body.pq5,
             "pq6": req.body.pq6,
             "pq7": req.body.pq7,
