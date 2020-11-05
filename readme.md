@@ -5,6 +5,7 @@
 
 https://github.com/g-mac/slomo
 https://innertiming.slomo.uni-hamburg.de
+https://slomo-xp.herokuapp.com/
 
 -----
 
