@@ -1,11 +1,10 @@
-# "The inner BPM"
+# "The Inner Timing Experiment"
 ## SloMo Web Experiment
 
 
 
 https://github.com/g-mac/slomo
-
-https://slomo-xp.herokuapp.com/
+https://innertiming.slomo.uni-hamburg.de
 
 -----
 
