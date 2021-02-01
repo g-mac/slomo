@@ -1,15 +1,29 @@
 # "The Inner Timing Experiment"
-## SloMo Web Experiment
 
+## ERC-Project SloMo
 
+This experiment and study is part of a larger EU funded project called SloMo - "Slow Motion: Transformations of Musical Time in Perception and Performance", initiated by Prof. Dr. Clemens Wöllner at the University of Hamburg, who also leads the Institute of Musicology at the UHH.
 
-https://github.com/g-mac/slomo
-https://innertiming.slomo.uni-hamburg.de
-https://slomo-xp.herokuapp.com/
+## "The Inner Timing" Web Experiment
 
------
+This project in particular, i.e. "The Inner Timing Experiment" was built by Simon Mayrshofer (MA Systematic Musicology, and author of all code in this project) to facilitate the following study:
+'Hammerschmidt, D., Frieler, K., & Wöllner, C. (2020). Innere Zeit: Eine Online-Tappingstudie zum spontanen motorischen Tempo und dessen Einflussfaktoren. In 36. Tagungsband der Deutschen Gesellschaft für Musikpsychologie (pp. 74–75). 3rd-6th September 2020, virtual conference.'
 
-[This website](http://www.all8.com/tools/bpm.htm), called "Tap for Beat Pet Minute" was used as an example for the JS code.
+The code repository may be found at https://github.com/g-mac/slomo
+
+The experiment is/was hosted on a University of Hamburg server at: https://innertiming.slomo.uni-hamburg.de
+A DEV environment was setup for deploying new developments/features at: https://innertiming.slomo.uni-hamburg.de/dev
+A LAB environnment was setup for running in-house tests with a closed group of participants at https://innertiming.slomo.uni-hamburg.de/lab
+
+Originally, before the code base was moved to the University servers, a first version of the project was hosted using Heroku and MLAB at https://slomo-xp.herokuapp.com/
+
+## Technology used
+
+This project is based on the MEN (Mongo, Express, Node.Js) Stack. The Frontend was built using JavaScript and the Node.Js Express Framework. The Backend Infrastructure (i.e. server and database) was setup up on a Apache Server of the University of Hamburg and NGINX and Forever was used for hosting and running the website service. MongoDB was used as a database. Versioning was done using Git, the repository being hosted on GitHub.
+
+## Miscellaneous Notes
+
+[This website](http://www.all8.com/tools/bpm.htm), called "Tap for Beat Pet Minute" was used as an example for some of the JS code.
 
 -----
 
@@ -18,7 +32,6 @@ https://slomo-xp.herokuapp.com/
 -----
 
 Guide
-
 Installing NodeJs (npm)
 https://nodejs.org/en/download/
 
@@ -33,8 +46,6 @@ https://dashboard.heroku.com/apps
 
 -----
 
-
-
 to run local mongo db:
 
 1. navigate to /data: `cd data`
@@ -42,13 +53,12 @@ to run local mongo db:
 3. and use mongo console to read/write/delete etc.: `mongo`
 4. `use examplecdb` to switch between databases
 
-Other commands:
+Other relevant commands:
 `db.usercollection.insert({ "username" : "testuser1", "email" : "testuser1@testdomain.com" })`
 display all  entries in a collection
 `db.usercollection.find().pretty()
 Remove all entries from a collection
 `db.usercollection.remove({})`
-
 
 
 -----
@@ -66,7 +76,6 @@ Remove all entries from a collection
 `mongod --dbpath .`
 
 `npm install -g express-generator`
-``
 
 C:\node\nodetest1\package.json
 
