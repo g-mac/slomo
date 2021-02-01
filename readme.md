@@ -28,7 +28,7 @@ This project is based on the MEN (Mongo, Express, Node.Js) Stack. The Frontend w
 
 ## Miscellaneous Notes
 
-[This website](http://www.all8.com/tools/bpm.htm), called "Tap for Beat Pet Minute" was used as an example for some of the JS code.
+[This website](http://www.all8.com/tools/bpm.htm), called "Tap for Beat Per Minute" was used as an example for some of the JS code.
 
 -----
 
