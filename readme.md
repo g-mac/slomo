@@ -1,5 +1,7 @@
 # "The Inner Timing Experiment"
 
+![alt text](https://www.soscisurvey.de/MusicPracticeHabits/logo.eng.8585.png)
+
 ## ERC-Project SloMo
 
 This experiment and study is part of a larger EU funded project called SloMo - "Slow Motion: Transformations of Musical Time in Perception and Performance", initiated by Prof. Dr. Clemens Wöllner at the University of Hamburg, who also leads the Institute of Musicology at the UHH.
