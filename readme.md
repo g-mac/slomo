@@ -4,10 +4,13 @@
 
 This experiment and study is part of a larger EU funded project called SloMo - "Slow Motion: Transformations of Musical Time in Perception and Performance", initiated by Prof. Dr. Clemens Wöllner at the University of Hamburg, who also leads the Institute of Musicology at the UHH.
 
+For more info on the Slomo project please refer the project website: https://www.slomo.uni-hamburg.de/
+
 ## "The Inner Timing" Web Experiment
 
 This project in particular, i.e. "The Inner Timing Experiment" was built by Simon Mayrshofer (MA Systematic Musicology, and author of all code in this project) to facilitate the following study:
-'Hammerschmidt, D., Frieler, K., & Wöllner, C. (2020). Innere Zeit: Eine Online-Tappingstudie zum spontanen motorischen Tempo und dessen Einflussfaktoren. In 36. Tagungsband der Deutschen Gesellschaft für Musikpsychologie (pp. 74–75). 3rd-6th September 2020, virtual conference.'
+
+`Hammerschmidt, D., Frieler, K., & Wöllner, C. (2020). Innere Zeit: Eine Online-Tappingstudie zum spontanen motorischen Tempo und dessen Einflussfaktoren. In 36. Tagungsband der Deutschen Gesellschaft für Musikpsychologie (pp. 74–75). 3rd-6th September 2020, virtual conference.`
 
 The code repository may be found at https://github.com/g-mac/slomo
 
